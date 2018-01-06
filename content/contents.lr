@@ -2,6 +2,10 @@ title: Biosketch
 ---
 body:
 
+<div style="float:left;padding:0 20px 0 0;">
+![Gauden Galea](/static/img/gga_pic_thumb.png "Gauden Galea")
+</div>
+
 # Dr Gauden Galea
 
 **Director, Noncommunicable Diseases and Promoting Health through the Life-course, WHO, Regional Office for Europe**
@@ -13,3 +17,5 @@ He has contributed to the work on developing a national stepwise approach to NCD
 Email: **[last_name][first_initial]@who.int**
 
 Work address: **WHO Regional Office for Europe, UN City, Marmorvej 51, DK-2100 Copenhagen Ø, Denmark**
+
+For use in conference brochures: **[high resolution photo](./static/img/gga_pic_large.jpg)**

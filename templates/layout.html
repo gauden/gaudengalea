@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<link rel="stylesheet" href="{{ './static/style.css'|url }}">
 <title>{% block title %}Welcome{% endblock %} — Gauden Galea</title>
 <body>
   <header>
@@ -8,7 +8,7 @@
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Bio</a></li>
+          %}><a href="{{ './'|url }}">Bio</a></li>
       </ul>
     </nav>
   </header>

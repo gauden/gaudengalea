@@ -2,13 +2,13 @@ title: Biosketch
 ---
 body:
 
-<div style="float:left;padding:0 20px 0 0;">
+<span class="marginnote">
 ![Gauden Galea](/static/img/gga_pic_thumb.png "Gauden Galea")
-</div>
+<br>**Director, Noncommunicable Diseases and Promoting Health through the Life-course, WHO, Regional Office for Europe**
+<br>For print: **[high resolution photo](./static/img/gga_pic_large.jpg)**
+</span>
 
 # Dr Gauden Galea
-
-**Director, Noncommunicable Diseases and Promoting Health through the Life-course, WHO, Regional Office for Europe**
 
 Dr Gauden Galea is the Director of the Division of Noncommunicable Diseases and Promoting Health through the Life-course, in WHO/Europe.  He is a public health physician, who has been at the European Regional Office of WHO since January 2011, but has worked for WHO since 1998. He has previously held posts in Suva, Manila, and Geneva as technical officer, regional adviser, and coordinator respectively in areas related to NCDs and Health Promotion.
 
@@ -17,5 +17,3 @@ He has contributed to the work on developing a national stepwise approach to NCD
 Email: **[last_name][first_initial]@who.int**
 
 Work address: **WHO Regional Office for Europe, UN City, Marmorvej 51, DK-2100 Copenhagen Ø, Denmark**
-
-For use in conference brochures: **[high resolution photo](./static/img/gga_pic_large.jpg)**

@@ -1,0 +1,18 @@
+{% macro render_paper(paper, from_index=false) %}
+
+  {% if from_index %}
+    <h3><a href="{{ paper|url }}">{{ paper.title }}</a> ({{ paper.pub_date.strftime('%d %b %Y') }})</h3>
+  {% else %}
+    <h1>{{ paper.title }}</h1>
+    <p class="meta">
+      {{ paper.author }}
+      {% if paper.url %}
+        <a href="{{  paper.url  }}">{{  paper.venue  }}</a>
+      {% endif %} on {{ paper.pub_date.strftime("%d %b %Y") }}
+    </p>
+    <p>
+      {{ paper.body }}
+    </p>
+  {% endif %}
+
+{% endmacro %}

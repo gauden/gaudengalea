@@ -1,11 +1,15 @@
 {% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/paper.html" import render_paper %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+
+<h1>Docs | Publications & Talks</h1>
+
   {% for child in this.pagination.items %}
-    {{ render_blog_post(child, from_index=true) }}
+    {{ render_paper(child, from_index=true) }}
   {% endfor %}
+
 
   {{ render_pagination(this.pagination) }}
 {% endblock %}

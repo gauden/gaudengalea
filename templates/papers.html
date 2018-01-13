@@ -4,7 +4,9 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 
-<h1>Docs | Publications & Talks</h1>
+<h2>Docs</h2>
+
+<h1>Publications & Talks</h1>
 
   {% for child in this.pagination.items %}
     {{ render_paper(child, from_index=true) }}

@@ -1,0 +1,74 @@
+{'AB': 'This study presents findings on health-related hygiene behaviours of '
+       '9,013 adolescents from Vanuatu, Tonga and Pohnpei in the Federal '
+       'States of Micronesia as part of the Health Behaviour of Pacific Youth '
+       'Life surveys. We examined the prevalence of and relationship between '
+       'tooth brushing, hand washing before eating, hand washing after '
+       'toileting and a range of psychosocial factors such as sociodemographic '
+       'charac-teristics, health behaviour and school affiliation. The results '
+       'showed that patterns of prevalence and relationships were consistent '
+       'for all countries, with weaker associations observed in Pohnpei. In '
+       'general, adolescents reported moderate levels of optimal hygiene '
+       'practice. Girls reported significantly more frequent optimal hygiene '
+       'practice than boys. Logistic regression analysis confirmed that '
+       'frequent hygiene behaviours were significantly associated with gender, '
+       'parental occupations and high levels of school affiliation. These '
+       'findings suggest the need to consider psycho-social and economic '
+       'factors when examining potential influences on hygiene behaviour to '
+       'ensure effective interventions.',
+ 'AD': 'School of Public Health and Community Medicine, University of New '
+       'South Wales, Australia.',
+ 'AID': ['10.1177/10105395060180020201 [doi]'],
+ 'AU': 'Tran D, Phongsavan P, Bauman AE, Havea D, **Galea G**',
+ 'CITATION': 'Tran D, Phongsavan P, Bauman AE, Havea D, Galea G "Hygiene '
+             'behaviour of adolescents in the Pacific: associations with '
+             'socio-demographic, health behaviour and school environment." '
+             'Asia Pac J Public Health. 2006;18(2):3-11. doi: '
+             '10.1177/10105395060180020201.',
+ 'CRDT': ['2006/08/04 09:00'],
+ 'DCOM': '20060912',
+ 'DOI': 'http://dx.doi.org/10.1177/10105395060180020201',
+ 'DP': '2006',
+ 'EDAT': '2006-08-04',
+ 'FAU': ['Tran, D', 'Phongsavan, P', 'Bauman, A E', 'Havea, D', 'Galea, G'],
+ 'IP': '2',
+ 'IS': '1010-5395 (Print) 1010-5395 (Linking)',
+ 'JID': '8708538',
+ 'JT': 'Asia-Pacific journal of public health',
+ 'LA': ['eng'],
+ 'LR': '20170214',
+ 'MH': ['Adolescent',
+        '*Adolescent Behavior',
+        'Child',
+        'Demography',
+        'Female',
+        'Hand Disinfection',
+        '*Health Behavior',
+        'Humans',
+        '*Hygiene',
+        'Logistic Models',
+        'Male',
+        'Micronesia',
+        '*Schools',
+        'Social Class',
+        'Social Environment',
+        'Surveys and Questionnaires'],
+ 'MHDA': '2006/09/13 09:00',
+ 'OWN': 'NLM',
+ 'PG': '3-11',
+ 'PHST': ['2006/08/04 09:00 [pubmed]',
+          '2006/09/13 09:00 [medline]',
+          '2006/08/04 09:00 [entrez]'],
+ 'PL': 'China',
+ 'PMID': '16883964',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article', "Research Support, Non-U.S. Gov't"],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'IM',
+ 'SO': 'Asia Pac J Public Health. 2006;18(2):3-11. doi: '
+       '10.1177/10105395060180020201.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'Asia Pac J Public Health',
+ 'TI': 'Hygiene behaviour of adolescents in the Pacific: associations with '
+       'socio-demographic, health behaviour and school environment.',
+ 'VI': '18'}

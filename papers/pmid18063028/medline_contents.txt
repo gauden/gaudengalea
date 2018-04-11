@@ -1,0 +1,75 @@
+{'AB': 'Interventions to prevent morbidity and mortality from chronic diseases '
+       'need to be cost effective and financially feasible in countries of low '
+       'or middle income before recommendations for their scale-up can be '
+       'made. We review the cost-effectiveness estimates on policy '
+       'interventions (both population-based and personal) that are likely to '
+       'lead to substantial reductions in chronic diseases--in particular, '
+       'cardiovascular disease, diabetes, cancer, and chronic respiratory '
+       'disease. We reviewed data from regions of low, middle, and high '
+       'income, where available, as well as the evidence for making policy '
+       'interventions where available effectiveness or cost-effectiveness data '
+       'are lacking. The results confirm that the cost-effectiveness evidence '
+       'for tobacco control measures, salt reduction, and the use of multidrug '
+       'regimens for patients with high-risk cardiovascular disease strongly '
+       'supports the feasibility of the scale-up of these interventions. '
+       'Further assessment to determine the best national policies to achieve '
+       'reductions in consumption of saturated and trans fat--chemically '
+       'hydrogenated plant oils--could eventually lead to substantial '
+       'reductions in cardiovascular disease. Finally, we review evidence for '
+       'policy implementation in areas of strong causality or highly probable '
+       'benefit--eg, changes in personal interventions for diabetes reduction, '
+       'restructuring of health systems, and wider policy decisions.',
+ 'AD': 'Harvard Medical School, Boston, MA, USA. tgaziano@partners.org',
+ 'AID': ['S0140-6736(07)61697-3 [pii]', '10.1016/S0140-6736(07)61697-3 [doi]'],
+ 'AU': 'Gaziano TA, **Galea G**, Reddy KS',
+ 'CIN': ['Lancet. 2008 Feb 9;371(9611):473-4. PMID: 18262036'],
+ 'CITATION': 'Gaziano TA, Galea G, Reddy KS "Scaling up interventions for '
+             'chronic disease prevention: the evidence." Lancet. 2007 Dec '
+             '8;370(9603):1939-46. doi: 10.1016/S0140-6736(07)61697-3.',
+ 'CRDT': ['2007/12/08 09:00'],
+ 'DCOM': '20071220',
+ 'DOI': 'http://dx.doi.org/10.1016/S0140-6736(07)61697-3',
+ 'DP': '2007 Dec 8',
+ 'EDAT': '2007-12-08',
+ 'FAU': ['Gaziano, Thomas A', 'Galea, Gauden', 'Reddy, K Srinath'],
+ 'IP': '9603',
+ 'IS': '1474-547X (Electronic) 0140-6736 (Linking)',
+ 'JID': '2985213R',
+ 'JT': 'Lancet (London, England)',
+ 'LA': ['eng'],
+ 'LR': '20171116',
+ 'MH': ['Chronic Disease/economics/*prevention & control',
+        'Community Health Services/*organization & administration',
+        'Coronary Disease/etiology/mortality/*prevention & control',
+        '*Cost-Benefit Analysis',
+        'Developed Countries/*economics/statistics & numerical data',
+        'Developing Countries/*economics/statistics & numerical data',
+        'Evidence-Based Medicine/*methods',
+        'Female',
+        'Health Behavior',
+        'Humans',
+        'Male',
+        'Randomized Controlled Trials as Topic',
+        'Risk Factors',
+        'Smoking/adverse effects',
+        'Smoking Prevention'],
+ 'MHDA': '2007/12/21 09:00',
+ 'OWN': 'NLM',
+ 'PG': '1939-46',
+ 'PHST': ['2007/12/08 09:00 [pubmed]',
+          '2007/12/21 09:00 [medline]',
+          '2007/12/08 09:00 [entrez]'],
+ 'PL': 'England',
+ 'PMID': '18063028',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article', 'Review'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'RF': '54',
+ 'SB': 'AIM IM',
+ 'SO': 'Lancet. 2007 Dec 8;370(9603):1939-46. doi: '
+       '10.1016/S0140-6736(07)61697-3.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'Lancet',
+ 'TI': 'Scaling up interventions for chronic disease prevention: the evidence.',
+ 'VI': '370'}

@@ -3,9 +3,9 @@ title: Biosketch
 body:
 
 <span class="marginnote">
-![Gauden Galea](./gga_pic_thumb.png "Gauden Galea")
+<img src="./gga_pic_thumb.png" alt="Gauden Galea">
 <br>WHO Representative for China
-<br>For print: *[high resolution photo](./gga_pic_large.jpg)*
+<br>For print: <em><a href="./gga_pic_large.jpg">high resolution photo</a></em>
 </span>
 
 # Dr Gauden Galea

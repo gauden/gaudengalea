@@ -1,0 +1,110 @@
+{'AB': 'The leading priority for the Polish Presidency of the Council of the '
+       'European Union was to reduce health inequalities across European '
+       'societies, and, within its framework, prevention and control of '
+       'respiratory diseases in children. This very important paper contain '
+       'proposal of international cooperation on the prevention, early '
+       'detection and monitoring of asthma and allergic diseases in childhood '
+       'which will be undertaken by the EU member countries as a result of EU '
+       'conclusion developed during the Polish Presidency of the Council of '
+       'the European Union. This will result in collaboration in the field of '
+       'chronic diseases, particularly respiratory diseases, together with the '
+       'activity of the network of national institutions and NGOs in this '
+       'area. Paper also contains extensive analysis of the socio-economic, '
+       'political, epidemiological, technological and medical factors '
+       'affecting the prevention and control of childhood asthma and allergy '
+       'presented during Experts presidential conference organized in '
+       'Warsaw-Ossa 21-22 September 2011.',
+ 'AD': 'Department of Prevention of Envinronmental Hazards and Allergology, '
+       'Medical University of Warsaw, Poland. boleslaw.samolinski@wum.edu.pl',
+ 'AID': ['10.1111/j.1398-9995.2012.02822.x [doi]'],
+ 'AU': 'Samolinski B, Fronczak A, Kuna P, Akdis CA, Anto JM, Bialoszewski AZ, '
+       'Burney PG, Bush A, Czupryniak A, Dahl R, Flood B, **Galea G**, Jutel '
+       'M, Kowalski ML, Palkonen S, Papadopoulos N, Raciborski F, Sienkiewicz '
+       'D, Tomaszewska A, Von Mutius E, Willman D, Wlodarczyk A, Yusuf O, '
+       'Zuberbier T, Bousquet J',
+ 'CI': ['(c) 2012 John Wiley & Sons A/S.'],
+ 'CITATION': 'Samolinski B, Fronczak A, Kuna P, Akdis CA, Anto JM, '
+             'Bialoszewski AZ, Burney PG, Bush A, Czupryniak A, Dahl R, Flood '
+             'B, Galea G, Jutel M, Kowalski ML, Palkonen S, Papadopoulos N, '
+             'Raciborski F, Sienkiewicz D, Tomaszewska A, Von Mutius E, '
+             'Willman D, Wlodarczyk A, Yusuf O, Zuberbier T, Bousquet J '
+             '"Prevention and control of childhood asthma and allergy in the '
+             'EU from the public health point of view: Polish Presidency of '
+             'the European Union." Allergy. 2012 Jun;67(6):726-31. doi: '
+             '10.1111/j.1398-9995.2012.02822.x. Epub 2012 Apr 28.',
+ 'CN': ['Council on the European Union'],
+ 'CRDT': ['2012/05/01 06:00'],
+ 'DCOM': '20120830',
+ 'DEP': '20120428',
+ 'DOI': 'http://dx.doi.org/10.1111/j.1398-9995.2012.02822.x',
+ 'DP': '2012 Jun',
+ 'EDAT': '2012-05-01',
+ 'FAU': ['Samolinski, B',
+         'Fronczak, A',
+         'Kuna, P',
+         'Akdis, C A',
+         'Anto, J M',
+         'Bialoszewski, A Z',
+         'Burney, P G',
+         'Bush, A',
+         'Czupryniak, A',
+         'Dahl, R',
+         'Flood, B',
+         'Galea, G',
+         'Jutel, M',
+         'Kowalski, M L',
+         'Palkonen, S',
+         'Papadopoulos, N',
+         'Raciborski, F',
+         'Sienkiewicz, D',
+         'Tomaszewska, A',
+         'Von Mutius, E',
+         'Willman, D',
+         'Wlodarczyk, A',
+         'Yusuf, O',
+         'Zuberbier, T',
+         'Bousquet, J'],
+ 'GR': ['G0901214/Medical Research Council/United Kingdom'],
+ 'IP': '6',
+ 'IS': '1398-9995 (Electronic) 0105-4538 (Linking)',
+ 'JID': '7804028',
+ 'JT': 'Allergy',
+ 'LA': ['eng'],
+ 'LID': '10.1111/j.1398-9995.2012.02822.x [doi]',
+ 'LR': '20170922',
+ 'MH': ['Asthma/*epidemiology/*prevention & control',
+        'Child',
+        'Early Diagnosis',
+        'European Union',
+        'Humans',
+        'Hypersensitivity/*epidemiology/*prevention & control',
+        'International Cooperation',
+        'National Health Programs',
+        'Poland/epidemiology',
+        'Public Health/methods'],
+ 'MHDA': '2012/08/31 06:00',
+ 'OWN': 'NLM',
+ 'PG': '726-31',
+ 'PHST': ['2012/03/05 00:00 [accepted]',
+          '2012/05/01 06:00 [entrez]',
+          '2012/05/01 06:00 [pubmed]',
+          '2012/08/31 06:00 [medline]'],
+ 'PL': 'Denmark',
+ 'PMC': 'PMC3504073',
+ 'PMID': '22540290',
+ 'PST': 'ppublish',
+ 'PT': ['Consensus Development Conference',
+        'Journal Article',
+        "Research Support, Non-U.S. Gov't",
+        'Review'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'IM',
+ 'SO': 'Allergy. 2012 Jun;67(6):726-31. doi: 10.1111/j.1398-9995.2012.02822.x. '
+       'Epub 2012 Apr 28.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'Allergy',
+ 'TI': 'Prevention and control of childhood asthma and allergy in the EU from '
+       'the public health point of view: Polish Presidency of the European '
+       'Union.',
+ 'VI': '67'}

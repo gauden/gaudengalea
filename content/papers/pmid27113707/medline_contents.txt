@@ -1,0 +1,96 @@
+{'AB': 'OBJECTIVES: This paper presents a typology of available evidence to '
+       'inform physical activity policy. It aims to refine the distinction '
+       'between three types of evidence relating to physical activity and to '
+       'compare these types for the purpose of clarifying potential research '
+       'gaps. METHODS: A scoping review explored the extent, range and nature '
+       'of three types of physical activity-related evidence available in '
+       'reviews: (I) health outcomes/risk factors, (II) interventions and '
+       '(III) policy-making. A six-step qualitative, iterative process with '
+       'expert consultation guided data coding and analysis in EPPI Reviewer '
+       '4. RESULTS: 856 Type I reviews, 350 Type II reviews and 40 Type III '
+       'reviews were identified. Type I reviews heavily focused on obesity '
+       'issues (18 %). Reviews of a systematic nature were more prominent in '
+       'the Type II (>50 %). Type III reviews tended to conflate research '
+       'about policy intervention effectiveness and research about '
+       'policymaking processes. The majority of reviews came from the United '
+       'States, United Kingdom, Australia and Canada. CONCLUSIONS: Although '
+       'evidence gaps exist regarding evidence Types I and II, the most '
+       'prominent gap regards Type III, i.e. research pertaining to physical '
+       'activity policymaking. The findings presented herein will be used to '
+       'inform physical activity policy development and future research.',
+ 'AD': 'Institute of Sport Science and Sport, Friedrich Alexander University, '
+       'Erlangen, Germany. alfred.ruetten@fau.de. Institute of Sport Science '
+       'and Sport, Friedrich Alexander University, Erlangen, Germany. Division '
+       'of Noncommunicable Diseases and Life-course, WHO Regional Office for '
+       'Europe, Copenhagen, Denmark. Division of Noncommunicable Diseases and '
+       'Life-course, WHO Regional Office for Europe, Copenhagen, Denmark. '
+       'Physical Activity and Health Unit, Epidemiology, Biostatistics, and '
+       'Prevention Institute (EBPI), University of Zurich, Zurich, '
+       'Switzerland. Department of Nutrition, University Pierre et Marie Curie '
+       '- Paris 6, Pitie-Salpetriere hospital (AP-HP), Institute of '
+       'Cardiometabolism and Nutrition (ICAN), Paris, France. Department of '
+       'Public and Occupational Health and EMGO+ Institute, VU University '
+       'Medical Center, Amsterdam, The Netherlands. Department of Public and '
+       'Occupational Health and EMGO+ Institute, VU University Medical Center, '
+       'Amsterdam, The Netherlands.',
+ 'AID': ['10.1007/s00038-016-0807-y [doi]', '10.1007/s00038-016-0807-y [pii]'],
+ 'AU': 'Rutten A, Schow D, Breda J, **Galea G**, Kahlmeier S, Oppert JM, van '
+       'der Ploeg H, van Mechelen W',
+ 'CITATION': 'Rutten A, Schow D, Breda J, Galea G, Kahlmeier S, Oppert JM, van '
+             'der Ploeg H, van Mechelen W "Three types of scientific evidence '
+             'to inform physical activity policy: results from a comparative '
+             'scoping review." Int J Public Health. 2016 Jun;61(5):553-63. '
+             'doi: 10.1007/s00038-016-0807-y. Epub 2016 Apr 26.',
+ 'CRDT': ['2016/04/27 06:00'],
+ 'DCOM': '20170525',
+ 'DEP': '20160426',
+ 'DOI': 'http://dx.doi.org/10.1007/s00038-016-0807-y',
+ 'DP': '2016 Jun',
+ 'EDAT': '2016-04-27',
+ 'FAU': ['Rutten, Alfred',
+         'Schow, Diana',
+         'Breda, Joao',
+         'Galea, Gauden',
+         'Kahlmeier, Sonja',
+         'Oppert, Jean-Michel',
+         'van der Ploeg, Hidde',
+         'van Mechelen, Willem'],
+ 'GR': ['001/World Health Organization/International'],
+ 'IP': '5',
+ 'IS': '1661-8564 (Electronic) 1661-8556 (Linking)',
+ 'JID': '101304551',
+ 'JT': 'International journal of public health',
+ 'LA': ['eng'],
+ 'LID': '10.1007/s00038-016-0807-y [doi]',
+ 'LR': '20170922',
+ 'MH': ['*Exercise', '*Health Promotion', 'Humans', '*Policy Making'],
+ 'MHDA': '2017/05/26 06:00',
+ 'OT': ['Evidence',
+        'Health promotion',
+        'Physical activity',
+        'Policy',
+        'Scoping review'],
+ 'OTO': ['NOTNLM'],
+ 'OWN': 'NLM',
+ 'PG': '553-63',
+ 'PHST': ['2015/08/10 00:00 [received]',
+          '2016/01/20 00:00 [accepted]',
+          '2016/01/15 00:00 [revised]',
+          '2016/04/27 06:00 [entrez]',
+          '2016/04/27 06:00 [pubmed]',
+          '2017/05/26 06:00 [medline]'],
+ 'PL': 'Switzerland',
+ 'PMC': 'PMC4947117',
+ 'PMID': '27113707',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article', 'Review'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'IM',
+ 'SO': 'Int J Public Health. 2016 Jun;61(5):553-63. doi: '
+       '10.1007/s00038-016-0807-y. Epub 2016 Apr 26.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'Int J Public Health',
+ 'TI': 'Three types of scientific evidence to inform physical activity policy: '
+       'results from a comparative scoping review.',
+ 'VI': '61'}

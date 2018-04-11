@@ -1,0 +1,81 @@
+{'AB': 'BACKGROUND: Systematic reviews of health promotion and public health '
+       'interventions are increasingly being conducted to assist public policy '
+       'decision making. Many intra-country initiatives have been established '
+       'to conduct systematic reviews in their relevant public health areas. '
+       'The Cochrane Collaboration, an international organisation established '
+       'to conduct and publish systematic reviews of healthcare interventions, '
+       'is committed to high quality reviews that are regularly updated, '
+       'published electronically, and meeting the needs of the consumers. '
+       'AIMS: To identify global priorities for Cochrane systematic reviews of '
+       'public health topics. METHODS: Systematic reviews of public health '
+       'interventions were identified and mapped against global health risks. '
+       'Global health organisations were engaged and nominated policy-urgent '
+       'titles, evidence based selection criteria were applied to set '
+       'priorities. RESULTS: 26 priority systematic review titles were '
+       'identified, addressing interventions such as community building '
+       'activities, pre-natal and early infancy psychosocial outcomes, and '
+       'improving the nutrition status of refugee and displaced populations. '
+       'DISCUSSION: The 26 priority titles provide an opportunity for '
+       'potential reviewers and indeed, the Cochrane Collaboration as a whole, '
+       'to address the previously unmet needs of global health policy and '
+       'research agencies.',
+ 'AD': 'Cochrane Health Promotion and Public Health Field, USA.',
+ 'AID': ['59/3/193 [pii]', '10.1136/jech.2003.019547 [doi]'],
+ 'AU': 'Doyle J, Waters E, Yach D, McQueen D, De Francisco A, Stewart T, Reddy '
+       'P, Gulmezoglu AM, **Galea G**, Portela A',
+ 'CITATION': 'Doyle J, Waters E, Yach D, McQueen D, De Francisco A, Stewart T, '
+             'Reddy P, Gulmezoglu AM, Galea G, Portela A "Global priority '
+             'setting for Cochrane systematic reviews of health promotion and '
+             'public health research." J Epidemiol Community Health. 2005 '
+             'Mar;59(3):193-7. doi: 10.1136/jech.2003.019547.',
+ 'CRDT': ['2005/02/15 09:00'],
+ 'DCOM': '20050602',
+ 'DOI': 'http://dx.doi.org/10.1136/jech.2003.019547',
+ 'DP': '2005 Mar',
+ 'EDAT': '2005-02-15',
+ 'FAU': ['Doyle, J',
+         'Waters, E',
+         'Yach, D',
+         'McQueen, D',
+         'De Francisco, A',
+         'Stewart, T',
+         'Reddy, P',
+         'Gulmezoglu, A M',
+         'Galea, G',
+         'Portela, A'],
+ 'IP': '3',
+ 'IS': '0143-005X (Print) 0143-005X (Linking)',
+ 'JID': '7909766',
+ 'JT': 'Journal of epidemiology and community health',
+ 'LA': ['eng'],
+ 'LR': '20141120',
+ 'MH': ['Evidence-Based Medicine',
+        '*Global Health',
+        'Health Promotion',
+        'Health Services Needs and Demand',
+        'Humans',
+        '*Public Health',
+        'Publishing',
+        'Research',
+        '*Review Literature as Topic'],
+ 'MHDA': '2005/06/03 09:00',
+ 'OWN': 'NLM',
+ 'PG': '193-7',
+ 'PHST': ['2005/02/15 09:00 [pubmed]',
+          '2005/06/03 09:00 [medline]',
+          '2005/02/15 09:00 [entrez]'],
+ 'PL': 'England',
+ 'PMC': 'PMC1733031',
+ 'PMID': '15709077',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article', "Research Support, Non-U.S. Gov't"],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'IM',
+ 'SO': 'J Epidemiol Community Health. 2005 Mar;59(3):193-7. doi: '
+       '10.1136/jech.2003.019547.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'J Epidemiol Community Health',
+ 'TI': 'Global priority setting for Cochrane systematic reviews of health '
+       'promotion and public health research.',
+ 'VI': '59'}

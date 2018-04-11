@@ -1,0 +1,76 @@
+{'AB': 'As world leaders prepare for the United Nations High Level Meeting on '
+       'Noncommunicable Diseases, to take place in September 2011, '
+       'international organizations, nongovernmental organizations, and '
+       'economic and business fora have created new alliances and initiatives '
+       'to accelerate research, advocacy, and political commitment. This '
+       'article argues that the time is propitious to reflect on the social '
+       'nature of the most common behavioral noncommunicable disease '
+       'determinants, including tobacco and alcohol use, physical inactivity, '
+       'and unhealthy diet. Evidence is presented related to the fact that '
+       'these diseases are profoundly rooted in social and community ties and '
+       'points to the need for a modern communication strategy to serve as a '
+       'linchpin of any successful action to address these public health '
+       'threats. Several proposals, aimed at promoting health literacy, '
+       'strengthening health workforce skills, capturing the power of new '
+       'media and technologies, and targeting vulnerable groups, are '
+       'discussed.',
+ 'AD': 'World Health Organization Regional Office for Europe, Copenhagen, '
+       'Denmark.',
+ 'AID': ['10.1080/10810730.2011.596915 [doi]'],
+ 'AU': 'Martin-Moreno JM, Apfel F, Sanchez JL, **Galea G**, Jakab Z',
+ 'CITATION': 'Martin-Moreno JM, Apfel F, Sanchez JL, Galea G, Jakab Z "The '
+             'social nature of chronic noncommunicable diseases and how to '
+             'tackle them through communication technology, training, and '
+             'outreach." J Health Commun. 2011 Aug;16 Suppl 2:94-106. doi: '
+             '10.1080/10810730.2011.596915.',
+ 'CRDT': ['2011/09/16 06:00'],
+ 'DCOM': '20120118',
+ 'DOI': 'http://dx.doi.org/10.1080/10810730.2011.596915',
+ 'DP': '2011 Aug',
+ 'EDAT': '2011-09-23',
+ 'FAU': ['Martin-Moreno, Jose M',
+         'Apfel, Franklin',
+         'Sanchez, Jose Luis Alfonso',
+         'Galea, Gauden',
+         'Jakab, Zsuzsanna'],
+ 'IS': '1087-0415 (Electronic) 1081-0730 (Linking)',
+ 'JID': '9604100',
+ 'JT': 'Journal of health communication',
+ 'LA': ['eng'],
+ 'LID': '10.1080/10810730.2011.596915 [doi]',
+ 'LR': '20171116',
+ 'MH': ['Alcohol Drinking/*prevention & control/psychology',
+        'Chronic Disease',
+        'Diet/psychology',
+        '*Health Communication',
+        'Health Literacy',
+        'Health Promotion/*methods',
+        'Humans',
+        'Medical Informatics',
+        'Obesity/*prevention & control',
+        'Occupational Health Services',
+        'Sedentary Lifestyle',
+        'Smoking/psychology',
+        '*Smoking Prevention',
+        '*Social Behavior',
+        'Vulnerable Populations'],
+ 'MHDA': '2012/01/19 06:00',
+ 'OWN': 'NLM',
+ 'PG': '94-106',
+ 'PHST': ['2011/09/16 06:00 [entrez]',
+          '2011/09/23 06:00 [pubmed]',
+          '2012/01/19 06:00 [medline]'],
+ 'PL': 'United States',
+ 'PMID': '21916717',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'T',
+ 'SO': 'J Health Commun. 2011 Aug;16 Suppl 2:94-106. doi: '
+       '10.1080/10810730.2011.596915.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'J Health Commun',
+ 'TI': 'The social nature of chronic noncommunicable diseases and how to '
+       'tackle them through communication technology, training, and outreach.',
+ 'VI': '16 Suppl 2'}

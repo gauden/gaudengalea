@@ -1,0 +1,113 @@
+{'AB': 'Neural tube (NT) formation in the spinal region of the mammalian '
+       'embryo involves a wave of "zippering" that passes down the elongating '
+       'spinal axis, uniting the neural fold tips in the dorsal midline. '
+       'Failure of this closure process leads to open spina bifida, a common '
+       'cause of severe neurologic disability in humans. Here, we combined a '
+       'tissue-level strain-mapping workflow with laser ablation of '
+       'live-imaged mouse embryos to investigate the biomechanics of mammalian '
+       'spinal closure. Ablation of the zippering point at the embryonic '
+       'dorsal midline causes far-reaching, rapid separation of the elevating '
+       'neural folds. Strain analysis revealed tissue expansion around the '
+       'zippering point after ablation, but predominant tissue constriction in '
+       'the caudal and ventral neural plate zone. This zone is biomechanically '
+       'coupled to the zippering point by a supracellular F-actin network, '
+       'which includes an actin cable running along the neural fold tips. '
+       'Pharmacologic inhibition of F-actin or laser ablation of the cable '
+       'causes neural fold separation. At the most advanced somite stages, '
+       'when completion of spinal closure is imminent, the cable forms a '
+       'continuous ring around the neuropore, and simultaneously, a new '
+       'caudal-to-rostral zippering point arises. Laser ablation of this new '
+       'closure initiation point causes neural fold separation, demonstrating '
+       'its biomechanical activity. Failure of spinal closure in pre-spina '
+       'bifida Zic2(Ku) mutant embryos is associated with altered tissue '
+       'biomechanics, as indicated by greater neuropore widening after '
+       'ablation. Thus, this study identifies biomechanical coupling of the '
+       'entire region of active spinal neurulation in the mouse embryo as a '
+       'prerequisite for successful NT closure.',
+ 'AD': 'Newlife Birth Defects Research Centre, UCL Great Ormond Street '
+       'Institute of Child Health, University College London, London WC1N 1EH, '
+       'United Kingdom; g.galea@ucl.ac.uk. Newlife Birth Defects Research '
+       'Centre, UCL Great Ormond Street Institute of Child Health, University '
+       'College London, London WC1N 1EH, United Kingdom. Division of '
+       'Noncommunicable Diseases and Promoting Health Through the Life Course, '
+       'World Health Organization Regional Office for Europe, Copenhagen '
+       'DK-2100, Denmark. Newlife Birth Defects Research Centre, UCL Great '
+       'Ormond Street Institute of Child Health, University College London, '
+       'London WC1N 1EH, United Kingdom. Newlife Birth Defects Research '
+       'Centre, UCL Great Ormond Street Institute of Child Health, University '
+       'College London, London WC1N 1EH, United Kingdom. Newlife Birth Defects '
+       'Research Centre, UCL Great Ormond Street Institute of Child Health, '
+       'University College London, London WC1N 1EH, United Kingdom. Newlife '
+       'Birth Defects Research Centre, UCL Great Ormond Street Institute of '
+       'Child Health, University College London, London WC1N 1EH, United '
+       'Kingdom. Newlife Birth Defects Research Centre, UCL Great Ormond '
+       'Street Institute of Child Health, University College London, London '
+       'WC1N 1EH, United Kingdom. Newlife Birth Defects Research Centre, UCL '
+       'Great Ormond Street Institute of Child Health, University College '
+       'London, London WC1N 1EH, United Kingdom. Newlife Birth Defects '
+       'Research Centre, UCL Great Ormond Street Institute of Child Health, '
+       'University College London, London WC1N 1EH, United Kingdom. Newlife '
+       'Birth Defects Research Centre, UCL Great Ormond Street Institute of '
+       'Child Health, University College London, London WC1N 1EH, United '
+       'Kingdom.',
+ 'AID': ['1700934114 [pii]', '10.1073/pnas.1700934114 [doi]'],
+ 'AU': 'Galea GL, Cho YJ, **Galea G**, Mole MA, Rolo A, Savery D, Moulding D, '
+       'Culshaw LH, Nikolopoulou E, Greene NDE, Copp AJ',
+ 'AUID': ['ORCID: http://orcid.org/0000-0003-2515-1342',
+          'ORCID: http://orcid.org/0000-0002-8683-4991',
+          'ORCID: http://orcid.org/0000-0002-4170-5248',
+          'ORCID: http://orcid.org/0000-0002-2544-9117'],
+ 'CITATION': 'Galea GL, Cho YJ, Galea G, Mole MA, Rolo A, Savery D, Moulding '
+             'D, Culshaw LH, Nikolopoulou E, Greene NDE, Copp AJ '
+             '"Biomechanical coupling facilitates spinal neural tube closure '
+             'in mouse embryos." Proc Natl Acad Sci U S A. 2017 Jun '
+             '27;114(26):E5177-E5186. doi: 10.1073/pnas.1700934114. Epub 2017 '
+             'Jun 12.',
+ 'COIS': ['The authors declare no conflict of interest.'],
+ 'CRDT': ['2017/06/14 06:00'],
+ 'DEP': '20170612',
+ 'DOI': 'http://dx.doi.org/10.1073/pnas.1700934114',
+ 'DP': '2017 Jun 27',
+ 'EDAT': '2017-06-14',
+ 'FAU': ['Galea, Gabriel L',
+         'Cho, Young-June',
+         'Galea, Gauden',
+         'Mole, Matteo A',
+         'Rolo, Ana',
+         'Savery, Dawn',
+         'Moulding, Dale',
+         'Culshaw, Lucy H',
+         'Nikolopoulou, Evanthia',
+         'Greene, Nicholas D E',
+         'Copp, Andrew J'],
+ 'GR': ['Wellcome Trust/United Kingdom'],
+ 'IP': '26',
+ 'IS': '1091-6490 (Electronic) 0027-8424 (Linking)',
+ 'JID': '7505876',
+ 'JT': 'Proceedings of the National Academy of Sciences of the United States '
+       'of America',
+ 'LA': ['eng'],
+ 'LID': '10.1073/pnas.1700934114 [doi]',
+ 'LR': '20171227',
+ 'MHDA': '2017/06/14 06:00',
+ 'OT': ['F-actin', 'Zic2', 'biomechanics', 'mouse', 'neural tube'],
+ 'OTO': ['NOTNLM'],
+ 'OWN': 'NLM',
+ 'PG': 'E5177-E5186',
+ 'PHST': ['2017/06/14 06:00 [pubmed]',
+          '2017/06/14 06:00 [medline]',
+          '2017/06/14 06:00 [entrez]'],
+ 'PL': 'United States',
+ 'PMC': 'PMC5495245',
+ 'PMID': '28607062',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SO': 'Proc Natl Acad Sci U S A. 2017 Jun 27;114(26):E5177-E5186. doi: '
+       '10.1073/pnas.1700934114. Epub 2017 Jun 12.',
+ 'STAT': 'In-Data-Review',
+ 'TA': 'Proc Natl Acad Sci U S A',
+ 'TI': 'Biomechanical coupling facilitates spinal neural tube closure in mouse '
+       'embryos.',
+ 'VI': '114'}

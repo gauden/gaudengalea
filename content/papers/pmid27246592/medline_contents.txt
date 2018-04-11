@@ -1,0 +1,81 @@
+{'AB': 'Tobacco is responsible for the death of 6 million people every year '
+       'globally, of whom 700 000 are in Europe. Effective policies for '
+       'tobacco control exist; however, the status of their implementation '
+       'varies across the World Health Organization (WHO) European Region. In '
+       'order to tackle the tobacco epidemic, action has been taken though the '
+       'implementation of both legally binding and non-legally binding '
+       'measures. This article aims to present the achievements and challenges '
+       'of tobacco control in Europe, focussing on the available legally '
+       'binding instruments such as the WHO Framework Convention on Tobacco '
+       'Control and the revision of the Tobacco Products Directive at the '
+       'European Union level. Tobacco still faces heavy lobbying of the '
+       'tobacco industry, which has systematically contrasted policies to '
+       'achieve public health objectives. The legal instruments for tobacco '
+       'control in Europe presented here are not always adequately enforced in '
+       'all the countries and there is certainly room for improving their '
+       'implementation. Finally, the need for a strong political commitment '
+       'towards the end-game of the tobacco epidemic is emphasised.',
+ 'AD': 'WHO Office at the European Union, Brussels, Belgium '
+       'bertollinir@weu.who.int. WHO Office at the European Union, Brussels, '
+       'Belgium. WHO Regional Office for Europe, Copenhagen, Denmark. WHO '
+       'Regional Office for Europe, Copenhagen, Denmark.',
+ 'AID': ['25/140/151 [pii]', '10.1183/16000617.0021-2016 [doi]'],
+ 'AU': 'Bertollini R, Ribeiro S, Mauer-Stender K, **Galea G**',
+ 'CI': ['The content of this work is (c)the authors or their employers. Design '
+        'and',
+        'branding are (c)ERS 2016.'],
+ 'CITATION': 'Bertollini R, Ribeiro S, Mauer-Stender K, Galea G "Tobacco '
+             'control in Europe: a policy review." Eur Respir Rev. 2016 '
+             'Jun;25(140):151-7. doi: 10.1183/16000617.0021-2016.',
+ 'CRDT': ['2016/06/02 06:00'],
+ 'DCOM': '20170412',
+ 'DOI': 'http://dx.doi.org/10.1183/16000617.0021-2016',
+ 'DP': '2016 Jun',
+ 'EDAT': '2016-06-02',
+ 'FAU': ['Bertollini, Roberto',
+         'Ribeiro, Sofia',
+         'Mauer-Stender, Kristina',
+         'Galea, Gauden'],
+ 'GR': ['001/World Health Organization/International'],
+ 'IP': '140',
+ 'IS': '1600-0617 (Electronic) 0905-9180 (Linking)',
+ 'JID': '9111391',
+ 'JT': 'European respiratory review : an official journal of the European '
+       'Respiratory Society',
+ 'LA': ['eng'],
+ 'LID': '10.1183/16000617.0021-2016 [doi]',
+ 'LR': '20171116',
+ 'MH': ['Europe',
+        '*Government Regulation',
+        'Health Policy/*legislation & jurisprudence',
+        'Humans',
+        'Lobbying',
+        'Policy Making',
+        'Public Health/*legislation & jurisprudence',
+        'Risk Assessment',
+        'Risk Factors',
+        'Smoking/adverse effects/epidemiology/*legislation & jurisprudence',
+        'Smoking Cessation/*legislation & jurisprudence',
+        '*Smoking Prevention',
+        'Tobacco Use/*legislation & jurisprudence/*prevention & control'],
+ 'MHDA': '2017/04/13 06:00',
+ 'OWN': 'NLM',
+ 'PG': '151-7',
+ 'PHST': ['2016/03/01 00:00 [received]',
+          '2016/03/25 00:00 [accepted]',
+          '2016/06/02 06:00 [entrez]',
+          '2016/06/02 06:00 [pubmed]',
+          '2017/04/13 06:00 [medline]'],
+ 'PL': 'England',
+ 'PMID': '27246592',
+ 'PST': 'ppublish',
+ 'PT': ['Journal Article', 'Review'],
+ 'PUBLISH': 1,
+ 'RELEASED': 0,
+ 'SB': 'IM',
+ 'SO': 'Eur Respir Rev. 2016 Jun;25(140):151-7. doi: '
+       '10.1183/16000617.0021-2016.',
+ 'STAT': 'MEDLINE',
+ 'TA': 'Eur Respir Rev',
+ 'TI': 'Tobacco control in Europe: a policy review.',
+ 'VI': '25'}

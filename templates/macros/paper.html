@@ -1,10 +1,10 @@
 {% macro render_paper(paper, from_index=false) %}
 
   {% if from_index %}
-    <h3 style="margin-right: 4rem;">
+    <p style="margin-right: 4rem;">
       <a href="{{ paper|url }}">{{ paper.title }}</a>
       ({{ paper.pub_date.strftime('%d %b %Y') }})
-    </h3>
+    </p>
   {% else %}
     <h1 style="margin-right: 4rem;">{{ paper.title }}</h1>
     <p class="meta">

@@ -11,6 +11,8 @@
       {{ paper.author }}
       {% if paper.url %}
         <a href="{{  paper.url  }}">{{  paper.venue  }}</a>
+      {% else %}
+        {{  paper.venue  }}
       {% endif %} on {{ paper.pub_date.strftime("%d %b %Y") }}
     </p>
     <p>

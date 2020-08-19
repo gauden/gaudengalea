@@ -103,3 +103,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+content/.DS_Store
+.DS_Store
+.DS_Store
+content/.DS_Store

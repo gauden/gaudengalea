@@ -3,34 +3,58 @@
 <link rel="stylesheet" href="{{ '/static/tufte.css'|url }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}Welcome{% endblock %} — Gauden Galea</title>
+
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Home</a></li>
-        <li{% if this._path.startswith('/papers/') or this._path == '/papers' %} class="active"{% endif
-          %}><a href="{{ '/papers'|url }}">Docs</a></li>
-        <li{% if this._path == '/bio' %} class="active"{% endif
-          %}><a href="{{ '/bio'|url }}">Bio</a></li>
+
+        <li{% if this._path=='/' %} class="active" {% endif %}>
+          {% if this._path!='/' %}
+          <a href="{{ '/'|url }}">&#8962;</a>
+          {% else %}
+          &#8962;
+          {% endif %}
+          </li>&middot;
+          <li{% if this._path.startswith('/pub/') or this._path=='/pub' %} class="active" {% endif %}>
+            {% if not this._path.startswith('/pub/') and this._path!='/pub' %}
+            <a href="{{ '/pub'|url }}">Pub</a>
+            {% else %}
+            Pub
+            {% endif %}
+            </li> &middot;
+            <li{% if this._path.startswith('/lab/') or this._path=='/lab' %} class="active" {% endif %}>
+              {% if not this._path.startswith('/lab/') and this._path!='/lab' %}
+              <a href="{{ '/lab'|url }}">Lab</a>
+              {% else %}
+              Lab
+              {% endif %}
+              </li> &middot;
+              <li{% if this._path=='/bio' %} class="active" {% endif %}>
+                {% if this._path!='/bio' %}
+                <a href="{{ '/bio'|url }}">Bio</a>
+                {% else %}
+                Bio
+                {% endif %}
+                </li>
       </ul>
     </nav>
   </header>
 
   <article>
     <section>
-    {% block body %}{% endblock %}
+      {% block body %}{% endblock %}
     </section>
   </article>
   <footer class="fullwidth">
-      Site developed and maintained by Gauden Galea. Email mail@[this_domain].
-      Published under
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-        Built with <a href="https://www.getlektor.com/">Lektor</a>,
-        <a href="https://www.python.org/">Python</a>,
-        <a href="https://pages.github.com/">Github Pages</a>, and
-        <a href="https://travis-ci.org/">Travis-CI</a>.
-        Styled with <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
-        Hosted on <a href="https://github.com/gauden/gaudengalea">Github</a>.
+    Site developed and maintained by Gauden Galea. Email mail@[this_domain].
+    Published under
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+      License</a>.
+    Built with <a href="https://www.getlektor.com/">Lektor</a>,
+    <a href="https://www.python.org/">Python</a>,
+    <a href="https://pages.github.com/">Github Pages</a>.
+    Styled with <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+    Hosted on <a href="https://github.com/gauden/gaudengalea">Github</a>.
   </footer>
 </body>

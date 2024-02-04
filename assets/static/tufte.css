@@ -461,32 +461,3 @@ label.margin-toggle:not(.sidenote-number) {
         width: 100%;
     }
 }
-
-
-/* Modifications to original tufte.css */
-
-header h1 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 42px;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 8px 0 0;
-    margin: 0;
-}
-
-.pagination {
-    margin-top: 10%;
-}
-
-.active {
-    font-style: italic;
-}

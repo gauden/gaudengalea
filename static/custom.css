@@ -1,0 +1,53 @@
+/* Modifications to original tufte.css */
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 42px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 8px 0 0;
+    margin: 0;
+}
+
+.pagination {
+    margin-top: 10%;
+}
+
+.active {
+    font-style: italic;
+}
+
+/* Keep the navbar at the top of the page */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fffff8;
+    padding: 10px 5px;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px 5px;
+    border-top: 1px solid #e2e2e2;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}

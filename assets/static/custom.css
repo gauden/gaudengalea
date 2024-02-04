@@ -36,6 +36,12 @@ header {
     padding: 10px 5px;
 }
 
+footer {
+    margin-top: 20px;
+    padding: 10px 5px;
+    border-top: 1px solid #e2e2e2;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;

@@ -41,21 +41,24 @@
       </ul>
     </nav>
   </header>
-
-  <article>
-    <section>
-      {% block body %}{% endblock %}
-    </section>
-  </article>
-  <footer class="fullwidth">
-    Site developed and maintained by Gauden Galea. Email mail@[this_domain].<br>
-    Published under
-    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
-      License</a>.<br>
-    Built with <a href="https://www.getlektor.com/">Lektor</a>,
-    <a href="https://www.python.org/">Python</a>,
-    <a href="https://pages.github.com/">Github Pages</a>.<br>
-    Styled with <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.<br>
-    Hosted on <a href="https://github.com/gauden/gaudengalea">Github</a>.<br>
-  </footer>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          {% block body %}{% endblock %}
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth">
+      Site developed and maintained by Gauden Galea. Email mail@[this_domain].<br>
+      Published under
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>.
+      Styled with <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      Hosted on <a href="https://github.com/gauden/gaudengalea">Github</a>.
+    </footer>
+  </div> <!-- page-container -->
 </body>

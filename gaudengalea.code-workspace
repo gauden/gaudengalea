@@ -4,5 +4,9 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"yaml.schemas": {
+			"https://json.schemastore.org/yamllint.json": "file:///Users/gauden/dev/gaudengalea/.github/workflows/deploy.yml"
+		}
+	}
 }

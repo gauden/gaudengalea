@@ -1,11 +1,12 @@
-name: Build and Deploy Lektor Site
+name: Build and Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - master # Or your default branch
+      - master # Or our default branch
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,19 +14,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.x" # Use the latest version of Python 3
+          python-version: "3.x" # Adjust this to the version we need
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install lektor
 
-      - name: Build site
-        run: |
-          lektor build --output-path .lektoroutput
+      # Build with Lektor specifying the output directory explicitly
+      - name: Build site with Lektor
+        run: lektor build --output-path .lektoroutput
+        # ".lektoroutput" is the directory where the site will be built;
+        # adjust to taste!
+
+      # Add CNAME to the build directory
+      - name: Add CNAME
+        run: echo "gaudengalea.com" > .lektoroutput/CNAME
+        # Adjust to the custom domain and build directory.
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN is generated in the action itself and deleted afterwards;
+          # no manual action is needed, reducing risk of secrets leaking.
           publish_dir: ./.lektoroutput
+          # Make sure this matches the directory specified in the build step.

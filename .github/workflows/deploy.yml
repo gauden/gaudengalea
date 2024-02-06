@@ -29,7 +29,7 @@ jobs:
 
       # Add CNAME to the build directory
       - name: Add CNAME
-        run: echo "gaudengalea.com" > .lektoroutput/CNAME
+        run: echo "www.gaudengalea.com" > .lektoroutput/CNAME
         # Adjust to the custom domain and build directory.
 
       - name: Deploy to GitHub Pages

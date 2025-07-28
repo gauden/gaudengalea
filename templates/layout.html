@@ -21,6 +21,13 @@
           &#8962;
           {% endif %}
           </li>&middot;
+          <li{% if this._path.startswith('/log/') or this._path=='/log' %} class="active" {% endif %}>
+            {% if not this._path.startswith('/log/') and this._path!='/log' %}
+            <a href="{{ '/log'|url }}">Log</a>
+            {% else %}
+            Log
+            {% endif %}
+            </li> &middot;
           <li{% if this._path.startswith('/pub/') or this._path=='/pub' %} class="active" {% endif %}>
             {% if not this._path.startswith('/pub/') and this._path!='/pub' %}
             <a href="{{ '/pub'|url }}">Pub</a>

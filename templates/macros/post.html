@@ -1,0 +1,24 @@
+{% macro render_post(post, from_index=false) %}
+
+  {% if from_index %}
+    <p style="margin-right: 4rem;">
+      <a href="{{ post|url }}">{{ post.title }}</a>
+      {{ post.summary }}
+      ({{ post.pub_date.strftime('%d %b %Y') }})
+    </p>
+  {% else %}
+    <h1 style="margin-right: 4rem;">{{ post.title }}</h1>
+    <p class="meta">
+      {{ post.author }}
+      {% if post.url %}
+        <a href="{{  post.url  }}">{{  post.venue  }}</a>
+      {% else %}
+        {{  post.venue  }}
+      {% endif %} on {{ post.pub_date.strftime("%d %b %Y") }}
+    </p>
+    <p>
+      {{ post.body }}
+    </p>
+  {% endif %}
+
+{% endmacro %}

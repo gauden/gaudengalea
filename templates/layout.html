@@ -21,11 +21,11 @@
           &#8962;
           {% endif %}
           </li>&middot;
-          <li{% if this._path.startswith('/log/') or this._path=='/log' %} class="active" {% endif %}>
-            {% if not this._path.startswith('/log/') and this._path!='/log' %}
-            <a href="{{ '/log'|url }}">Log</a>
+          <li{% if this._path.startswith('/blog/') or this._path=='/blog' %} class="active" {% endif %}>
+            {% if not this._path.startswith('/blog/') and this._path!='/blog' %}
+            <a href="{{ '/blog'|url }}">Blog</a>
             {% else %}
-            Log
+            Blog
             {% endif %}
             </li> &middot;
           <li{% if this._path.startswith('/pub/') or this._path=='/pub' %} class="active" {% endif %}>
@@ -61,13 +61,14 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
+      © 2025 Gauden Galea. All rights reserved.<br>
       Published under
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>
       Built with <a href="https://www.getlektor.com/">Lektor</a>,
       <a href="https://www.python.org/">Python</a>,
       <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
-      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email mail@[this_domain].
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
     </footer>
   </div> <!-- page-container -->
 </body>

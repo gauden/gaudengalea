@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
-{% from "macros/paper.html" import render_paper %}
-{% from "macros/pagination.html" import render_pagination %}
+{% from "macros/post.html" import render_post %}
+{% from "macros/post_pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 
-<h2>Docs</h2>
+<h2>Blog</h2>
 
-<h1>Research and Publications</h1>
+<h1>Writings and Speeches</h1>
 
   {% for child in this.pagination.items %}
-    {{ render_paper(child, from_index=true) }}
+    {{ render_post(child, from_index=true) }}
   {% endfor %}
 
 

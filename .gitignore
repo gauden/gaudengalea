@@ -1,5 +1,6 @@
 # MacOS specific files
 .DS_Store
+_archive/
 
 
 # Byte-compiled / optimized / DLL files

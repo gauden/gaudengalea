@@ -37,9 +37,26 @@ header {
 }
 
 
+/* Keep footer sticking to the bottom */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+}
+
+.page-container {
+  flex: 1; /* Allows the content to expand */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrap {
+  flex: 1; /* Ensures content takes up remaining space */
+}
 
 footer {
-    margin-top: 20px;
-    padding: 10px 5px;
-    border-top: 1px solid #e2e2e2;
+  padding: 10px 10px 20px 20px;
+  border-top: 1px solid #e2e2e2;
 }

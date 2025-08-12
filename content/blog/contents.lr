@@ -1,9 +1,3 @@
-_model: posts
+_model: listing
 ---
 title: Blog
----
-body:
-
-# Hello, world!
-
-Testing the blog layout.

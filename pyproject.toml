@@ -1,0 +1,9 @@
+[project]
+name = "gaudengalea"
+version = "0.1.0"
+description = "Personal Website for Gauden Galea"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "lektor>=3.3.12",
+]

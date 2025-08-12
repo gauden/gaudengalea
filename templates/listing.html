@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.title or 'Posts' }} — {{ site.name }}{% endblock %}
+
+{% block body %}
+<h2>{{ this.title or 'Posts' }}</h2>
+
+<h1>Writings and Speeches</h1>
+
+<ul class="post-list">
+  {% for child in this.children.order_by('-pub_date', 'title') %}
+    <li class="post-list-item">
+      <a class="post-title" href="{{ child|url }}">{{ child.title }}</a>
+
+      {% if child.children.count() %}
+        <span class="badge">Series</span>
+        {{ child.children.count() }} part{% if child.children.count() != 1 %}s{% endif %}
+        
+      {% endif %}
+
+      {% set excerpt = child.summary or (child.body|striptags) %}
+      {% if excerpt %}
+        <div class="excerpt">
+          {{ excerpt|truncate(160, killwords=False, end='…') }}
+      {% if child.pub_date %}
+         — {{ child.pub_date|dateformat('d MMM YYYY') }}
+      {% endif %}
+        </div>
+      {% endif %}
+    </li>
+  {% else %}
+    <li><em>No entries yet.</em></li>
+  {% endfor %}
+</ul>
+{% endblock %}
+

@@ -4,28 +4,55 @@
 
 {% block body %}
 
-  <h2>{{ this.title }}</h2>
+  <h2>Gauden Galea</h2>
 
   {{ this.intro }}
 
-  <ul>
-    {% set blog = site.get('/blog') %}
-    {% if blog %}
-      {% for post in blog.children.order_by('-pub_date').limit(5) %}
-        <li>
-          <a href="{{ post|url }}">{{ post.title }}</a>
-          {% if post.summary %}
-            <div class="summary">{{ post.summary }}
-            {% if post.pub_date %} — {{ post.pub_date|dateformat('d MMM YYYY') }}{% endif %}
-            </div>
-          {% endif %}
-        </li>
-      {% else %}
-        <li><em>No posts yet.</em></li>
+  {# Collect recent items from /blog, /pub, /lab, /bio #}
+  {% set section_paths = ['/blog', '/pub', '/lab', '/bio'] %}
+  {% set items = [] %}
+
+  {% for p in section_paths %}
+    {% set sec = site.get(p) %}
+    {% if sec %}
+      {% for child in sec.children %}
+        {% if child.pub_date %}{% set _ = items.append(child) %}{% endif %}
       {% endfor %}
-    {% else %}
-      <li><em>/blog not found.</em></li>
     {% endif %}
+  {% endfor %}
+
+  {# Sort newest-first and take top N #}
+  {% set posts = items|sort(attribute='pub_date', reverse=true) %}
+  {% set posts = posts[:8] %}
+
+  <ul>
+    {% for post in posts %}
+      {# Label by section, based on path prefix #}
+      {% set label = 'Blog' %}
+      {% if post.path.startswith('/pub/') %}
+        {% set label = 'Pub' %}
+      {% elif post.path.startswith('/lab/') %}
+        {% set label = 'Lab' %}
+      {% elif post.path.startswith('/bio/') %}
+        {% set label = 'Bio' %}
+      {% endif %}
+
+      <li>
+        <a href="{{ post|url }}">{{ post.title }}</a>
+
+        {% set excerpt = post.summary or (post.body|striptags) %}
+        {% if excerpt %}
+          <div class="summary">
+            {{ excerpt|truncate(160, killwords=False, end='…') }} <br>
+            <small>{{ post.pub_date|dateformat('d MMM YYYY') }} in {{ label }}</small>
+          </div>
+        {% endif %}
+      </li>
+    {% else %}
+      <li><em>No recent items found under /blog, /pub, /lab, or /bio.</em></li>
+    {% endfor %}
   </ul>
   
 {% endblock %}
+
+

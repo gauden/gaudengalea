@@ -1,0 +1,61 @@
+{% macro render_prism_css() %}
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+{% endmacro %} 
+
+{% macro render_prism_code_block() %}
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+{% endmacro %}

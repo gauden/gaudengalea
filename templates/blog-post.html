@@ -47,16 +47,19 @@
 
   {% set total = parts.count() %}
   {% if ns.index is not none %}
-    <nav class="series-nav">
+    <section>
+      <nav class="series-nav">
       <div class="series-meta">
         Part {{ ns.index + 1 }} of {{ total }} in the <a href="{{ parent|url }}">{{ parent.title }}</a> Series.
       </div>
       <div class="series-links">
-        {% if ns.prev %}<a class="prev" href="{{ ns.prev|url }}">&larr; Previous</a>{% endif %}
-        <a class="up" href="{{ parent|url }}">Back to series</a>
-        {% if ns.next %}<a class="next" href="{{ ns.next|url }}">Next &rarr;</a>{% endif %}
+        {% if ns.prev %}&larr; <a class="prev" href="{{ ns.prev|url }}">Previous</a>{% endif %}
+         &middot;
+        <!-- <a class="up" href="{{ parent|url }}">Back to series</a> -->
+        {% if ns.next %}<a class="next" href="{{ ns.next|url }}">Next</a>  &rarr;{% endif %}
       </div>
     </nav>
+    </section>
   {% endif %}
 {% endif %}
 {% endblock %}

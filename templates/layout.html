@@ -19,42 +19,21 @@
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li{% if this._path=='/' %} class="active" {% endif %}>
-          {% if this._path!='/' %}
           <a href="{{ '/'|url }}">&#8962;</a>
-          {% else %}
-          &#8962;
-          {% endif %}
-          </li>&middot;
-          <li{% if this._path.startswith('/blog/') or this._path=='/blog' %} class="active" {% endif %}>
-            {% if not this._path.startswith('/blog/') and this._path!='/blog' %}
-            <a href="{{ '/blog'|url }}">Blog</a>
-            {% else %}
-            Blog
-            {% endif %}
-            </li> &middot;
-          <li{% if this._path.startswith('/pub/') or this._path=='/pub' %} class="active" {% endif %}>
-            {% if not this._path.startswith('/pub/') and this._path!='/pub' %}
-            <a href="{{ '/pub'|url }}">Pub</a>
-            {% else %}
-            Pub
-            {% endif %}
-            </li> &middot;
-            <li{% if this._path.startswith('/lab/') or this._path=='/lab' %} class="active" {% endif %}>
-              {% if not this._path.startswith('/lab/') and this._path!='/lab' %}
-              <a href="{{ '/lab'|url }}">Lab</a>
-              {% else %}
-              Lab
-              {% endif %}
-              </li> &middot;
-              <li{% if this._path=='/bio' %} class="active" {% endif %}>
-                {% if this._path!='/bio' %}
-                <a href="{{ '/bio'|url }}">Bio</a>
-                {% else %}
-                Bio
-                {% endif %}
-                </li>
+        </li>&middot;
+        <li{% if this._path.startswith('/blog/') or this._path=='/blog' %} class="active" {% endif %}>
+          <a href="{{ '/blog'|url }}">Blog</a>
+        </li> &middot;
+        <li{% if this._path.startswith('/pub/') or this._path=='/pub' %} class="active" {% endif %}>
+          <a href="{{ '/pub'|url }}">Pub</a>
+        </li> &middot;
+        <li{% if this._path.startswith('/lab/') or this._path=='/lab' %} class="active" {% endif %}>
+          <a href="{{ '/lab'|url }}">Lab</a>
+        </li> &middot;
+        <li{% if this._path=='/bio' %} class="active" {% endif %}>
+          <a href="{{ '/bio'|url }}">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>

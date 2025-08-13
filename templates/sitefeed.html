@@ -1,0 +1,49 @@
+{# Atom 1.0 feed for the entire site — includes ANY record with a pub_date #}
+<?xml version="1.0" encoding="utf-8"?>
+{% set root = site.get('/') %}
+{% set items = [] %}
+
+{# Recursively collect records that define pub_date #}
+{% macro collect(node) -%}
+  {% for child in node.children %}
+    {% if child.pub_date %}{% set _ = items.append(child) %}{% endif %}
+    {{ collect(child) }}
+  {% endfor %}
+{%- endmacro %}
+{{ collect(root) }}
+
+{# Sort newest-first, take top N #}
+{% set posts = items|sort(attribute='pub_date', reverse=true) %}
+{% set posts = posts[:40] %}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ this.title or (site.name ~ ' — Updates') }}</title>
+  {% if this.subtitle %}<subtitle>{{ this.subtitle }}</subtitle>{% endif %}
+  <id>{{ site.url or 'http://localhost:5000' }}{{ this|url }}</id>
+
+  {# Updated = newest item date or today #}
+  {% set newest = posts[0].pub_date if posts else date() %}
+  <updated>{{ newest }}T00:00:00Z</updated>
+
+  <link rel="self" href="{{ (site.url or 'http://localhost:5000') }}{{ this|url }}" />
+  <link rel="alternate" href="{{ (site.url or 'http://localhost:5000') }}{{ '/'|url }}" />
+
+  {% for p in posts %}
+  <entry>
+    <title>{{ p.title }}</title>
+    <id>{{ (site.url or 'http://localhost:5000') }}{{ p|url }}</id>
+    {% if p.pub_date %}<updated>{{ p.pub_date }}T00:00:00Z</updated>{% endif %}
+    <link rel="alternate" href="{{ (site.url or 'http://localhost:5000') }}{{ p|url }}" />
+    {% if p.summary %}
+      <summary type="html"><![CDATA[ {{ p.summary }} ]]></summary>
+    {% else %}
+      {% set excerpt = (p.body|striptags)|truncate(200, killwords=False, end='…') %}
+      <summary type="text">{{ excerpt }}</summary>
+    {% endif %}
+    <content type="html"><![CDATA[
+      {{ p.body }}
+    ]]></content>
+    {% if site.author %}<author><name>{{ site.author }}</name></author>{% endif %}
+  </entry>
+  {% endfor %}
+</feed>

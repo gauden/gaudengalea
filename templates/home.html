@@ -38,13 +38,16 @@
       {% endif %}
 
       <li>
-        <a href="{{ post|url }}">{{ post.title }}</a>
+        <a href="{{ post|url }}">{{ post.title }}</a> 
 
         {% set excerpt = post.summary or (post.body|striptags) %}
         {% if excerpt %}
+          <span class="marginnote">
+          {{ label }}
+          </span>
           <div class="summary">
-            {{ excerpt|truncate(160, killwords=False, end='…') }} <br>
-            <small>{{ post.pub_date|dateformat('d MMM YYYY') }} in {{ label }}</small>
+             {{ excerpt|truncate(160, killwords=False, end='…') }} <br>
+              {{ post.pub_date|dateformat('d MMM YYYY') }} 
           </div>
         {% endif %}
       </li>

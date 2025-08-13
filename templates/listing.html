@@ -5,7 +5,7 @@
 {% block body %}
 <h2>{{ this.title or 'Posts' }}</h2>
 
-<h1>Writings and Speeches</h1>
+<h1>{{ this.subtitle or 'Listing' }}</h1>
 
 <ul class="post-list">
   {% for child in this.children.order_by('-pub_date', 'title') %}

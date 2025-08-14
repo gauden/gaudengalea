@@ -43,11 +43,10 @@
         {% set excerpt = post.summary or (post.body|striptags) %}
         {% if excerpt %}
           <span class="marginnote">
-          {{ label }}
+          {{ post.pub_date|dateformat('d MMM YYYY') }} &middot; {{ label }}
           </span>
           <div class="summary">
-             {{ excerpt|truncate(160, killwords=False, end='…') }} <br>
-              {{ post.pub_date|dateformat('d MMM YYYY') }} 
+             {{ excerpt|truncate(160, killwords=False, end='…') }}
           </div>
         {% endif %}
       </li>

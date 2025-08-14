@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../static/tufte.css">
-<link rel="stylesheet" href="../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sandbox and Playground — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../static/tufte.css">
+  <link rel="stylesheet" href="../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Lab —  — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../blog/">Blog</a>
-            
-            </li> &middot;
-          <li>
-            
-            <a href="../pub/">Pub</a>
-            
-            </li> &middot;
-            <li class="active" >
-              
-              Lab
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../bio/">Bio</a>
-                
-                </li>
+          <a href="../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../blog/">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../pub/">Pub</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="./">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -47,25 +101,51 @@
       <article>
         <section>
           
-  <h2>Sandbox and Playground</h2>
-  <h1>Experiments in Code</h1>
-<p><span class="marginnote">
-<a href="https://github.com/gauden">
-    <img src="github-mark.svg" alt="Github Profile">
-</a> 
-<a href="https://stackoverflow.com/users/1290420/daedalus">
-    <img src="logo-stackoverflow.svg" width="81" height="96" alt="Github Profile">
-</a>
-</span></p>
-<p>I started my coding life in the 80s with a ZX Spectrum and a book on Basic. I was hooked. I've been coding ever since. I've worked in a variety of languages and environments, including Hypertalk, Perl, PHP, Processing, Python, R, and ZX Basic (in alphabetical order, because I loved each of them at different times). These days, my mainstay is Python, a happy coincidence given its current dominance in the field of AI. It also explains why I have chosen to use <a href="https://www.getlektor.com/">Lektor</a> for this site.</p>
-<p>But I will try any new language or framework, just for the thrill. My hard drive is littered with half-finished projects and experiments. Here are a few of them, in no particular order. In recent months I have been able to take them to a fuller stage of completion with the assistance of AI copilots.</p>
+<h2>Lab</h2>
 
+<h1>Code Sandbox and Playground</h1>
+
+<ul class="post-list">
+  
+    <li class="post-list-item">
+      <a class="post-title" href="one-hundred-week-banner/">One-Hundred-Week Banner</a>
+
+      
+
+      
+      
+        <div class="excerpt">
+          From October 2023, I used a p5.js banner at webinars, counting weeks to the UN HLM on NCDs in 2025. Over time, it acquired new and unexpected significance.
+      
+         — 10 Aug 2025
+      
+        </div>
+      
+    </li>
+  
+    <li class="post-list-item">
+      <a class="post-title" href="introduction-to-the-lab-section/">Experiments in Code</a>
+
+      
+
+      
+      
+        <div class="excerpt">
+          I started my coding life in the 80s with a ZX Spectrum and a book on Basic. I was hooked. I&#39;ve been coding ever since. I&#39;ve worked in a variety of languages…
+      
+         — 17 Jul 2025
+      
+        </div>
+      
+    </li>
+  
+</ul>
 
         </section>
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

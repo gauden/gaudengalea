@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,25 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study.</h1>
+    <h1 style="margin-right: 4rem;">The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study.</h1>
     <p class="meta">
       <p>Webber L, Divajeva D, Marsh T, McPherson K, Brown M, <strong>Galea G</strong>, Breda J</p>
 
       
-        <a href="http://dx.doi.org/10.1136/bmjopen-2014-004787">BMJ open</a>
-       on 27 Jul 2014
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25063459/">BMJ Open</a>
+       on 25 Jul 2014
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>OBJECTIVE: Non-communicable diseases (NCDs) are the biggest cause of death in Europe putting an unsustainable burden on already struggling health systems. Increases in obesity are a major cause of NCDs. This paper projects the future burden of coronary heart disease (CHD), stroke, type 2 diabetes and seven cancers by 2030 in 53 WHO European Region countries based on current and past body mass index (BMI) trends. It also tests the impact of obesity interventions on the future disease burden. SETTING AND PARTICIPANTS: Secondary data analysis of country-specific epidemiological data using a microsimulation modelling process. INTERVENTIONS: The effect of three hypothetical scenarios on the future burden of disease in 2030 was tested: baseline scenario, BMI trends go unchecked; intervention 1, population BMI decreases by 1%; intervention 2, BMI decreases by 5%. PRIMARY AND SECONDARY OUTCOME MEASURES: Quantifying the future burden of major NCDs and the impact of interventions on this future disease burden. RESULTS: By 2030 in the whole of the European region, the prevalence of diabetes, CHD and stroke and cancers was projected to reach an average of 3990, 4672 and 2046 cases/100 000, respectively. The highest prevalence of diabetes was predicted in Slovakia (10 870), CHD and stroke-in Greece (11 292) and cancers-in Finland (5615 cases/100 000). A 5% fall in population BMI was projected to significantly reduce cumulative incidence of diseases. The largest reduction in diabetes and CHD and stroke was observed in Slovakia (3054 and 3369 cases/100 000, respectively), and in cancers was predicted in Germany (331/100 000). CONCLUSIONS: Modelling future disease trends is a useful tool for policymakers so that they can allocate resources effectively and implement policies to prevent NCDs. Future research will allow real policy interventions to be tested; however, better surveillance data on NCDs and their risk factors are essential for research and policy.</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Non-communicable diseases (NCDs) are the biggest cause of death in Europe putting an unsustainable burden on already struggling health systems. Increases in obesity are a major cause of NCDs. This paper projects the future burden of coronary heart disease (CHD), stroke, type 2 diabetes and seven cancers by 2030 in 53 WHO European Region countries based on current and past body mass index (BMI) trends. It also tests the impact of obesity interventions on the future disease burden.
+Secondary data analysis of country-specific epidemiological data using a microsimulation modelling process.
+The effect of three hypothetical scenarios on the future burden of disease in 2030 was tested: baseline scenario, BMI trends go unchecked; intervention 1, population BMI decreases by 1%; intervention 2, BMI decreases by 5%.
+Quantifying the future burden of major NCDs and the impact of interventions on this future disease burden.
+By 2030 in the whole of the European region, the prevalence of diabetes, CHD and stroke and cancers was projected to reach an average of 3990, 4672 and 2046 cases/100 000, respectively. The highest prevalence of diabetes was predicted in Slovakia (10 870), CHD and stroke-in Greece (11 292) and cancers-in Finland (5615 cases/100 000). A 5% fall in population BMI was projected to significantly reduce cumulative incidence of diseases. The largest reduction in diabetes and CHD and stroke was observed in Slovakia (3054 and 3369 cases/100 000, respectively), and in cancers was predicted in Germany (331/100 000).
+Modelling future disease trends is a useful tool for policymakers so that they can allocate resources effectively and implement policies to prevent NCDs. Future research will allow real policy interventions to be tested; however, better surveillance data on NCDs and their risk factors are essential for research and policy.</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Webber L, Divajeva D, Marsh T, McPherson K, Brown M, Galea G, Breda J &quot;The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study.&quot; BMJ Open. 2014 Jul 25;4(7):e004787. doi: 10.1136/bmjopen-2014-004787.</p>
+<p>BMJ Open. 2014. 4 (7). e004787.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/25063459?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +134,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

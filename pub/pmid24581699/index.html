@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] Public-private partnerships with large corporations: setting the ground rules for better health. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Public-private partnerships with large corporations: setting the ground rules for better health. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,20 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] Public-private partnerships with large corporations: setting the ground rules for better health.</h1>
+    <h1 style="margin-right: 4rem;">Public-private partnerships with large corporations: setting the ground rules for better health.</h1>
     <p class="meta">
       <p><strong>Galea G</strong>, McKee M</p>
 
       
-        <a href="http://dx.doi.org/10.1016/j.healthpol.2014.02.003">Health policy (Amsterdam, Netherlands)</a>
-       on 04 Mar 2014
+        <a href="https://pubmed.ncbi.nlm.nih.gov/24581699/">Health Policy</a>
+       on 01 Apr 2014
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>Public-private partnerships with large corporations offer potential benefits to the health sector but many concerns have been raised, highlighting the need for appropriate safeguards. In this paper we propose five tests that public policy makers may wish to apply when considering engaging in such a public-private partnership. First, are the core products and services provided by the corporation health enhancing or health damaging? In some cases, such as tobacco, the answer is obvious but others, such as food and alcohol, are contested. In such cases, the burden of proof is on the potential partners to show that their activities are health enhancing. Second, do potential partners put their policies into practice in the settings where they can do so, their own workplaces? Third, are the corporate social responsibility activities of potential partners independently audited? Fourth, do potential partners make contributions to the commons rather than to narrow programmes of their choosing? Fifth, is the role of the partner confined to policy implementation rather than policy development, which is ultimately the responsibility of government alone?</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Public-private partnerships with large corporations offer potential benefits to the health sector but many concerns have been raised, highlighting the need for appropriate safeguards. In this paper we propose five tests that public policy makers may wish to apply when considering engaging in such a public-private partnership. First, are the core products and services provided by the corporation health enhancing or health damaging? In some cases, such as tobacco, the answer is obvious but others, such as food and alcohol, are contested. In such cases, the burden of proof is on the potential partners to show that their activities are health enhancing. Second, do potential partners put their policies into practice in the settings where they can do so, their own workplaces? Third, are the corporate social responsibility activities of potential partners independently audited? Fourth, do potential partners make contributions to the commons rather than to narrow programmes of their choosing? Fifth, is the role of the partner confined to policy implementation rather than policy development, which is ultimately the responsibility of government alone?</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Galea G, McKee M &quot;Public-private partnerships with large corporations: setting the ground rules for better health.&quot; Health Policy. 2014 Apr;115(2-3):138-40. doi: 10.1016/j.healthpol.2014.02.003. Epub 2014 Feb 13.</p>
+<p>Health Policy. 2014. 115 (2-3). 138-40.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/24581699?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +129,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

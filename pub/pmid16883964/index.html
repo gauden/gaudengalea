@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] Hygiene behaviour of adolescents in the Pacific: associations with socio-demographic, health behaviour and school environment. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Hygiene behaviour of adolescents in the Pacific: associations with socio-demographic, health behaviour and school environment. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,20 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] Hygiene behaviour of adolescents in the Pacific: associations with socio-demographic, health behaviour and school environment.</h1>
+    <h1 style="margin-right: 4rem;">Hygiene behaviour of adolescents in the Pacific: associations with socio-demographic, health behaviour and school environment.</h1>
     <p class="meta">
-      <p>Tran D, Phongsavan P, Bauman AE, Havea D, <strong>Galea G</strong></p>
+      <p>Tran D, Phongsavan P, Bauman A, Havea D, <strong>Galea G</strong></p>
 
       
-        <a href="http://dx.doi.org/10.1177/10105395060180020201">Asia-Pacific journal of public health</a>
-       on 04 Aug 2006
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16883964/">Asia Pac J Public Health</a>
+       on 01 Jan 2006
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>This study presents findings on health-related hygiene behaviours of 9,013 adolescents from Vanuatu, Tonga and Pohnpei in the Federal States of Micronesia as part of the Health Behaviour of Pacific Youth Life surveys. We examined the prevalence of and relationship between tooth brushing, hand washing before eating, hand washing after toileting and a range of psychosocial factors such as sociodemographic charac-teristics, health behaviour and school affiliation. The results showed that patterns of prevalence and relationships were consistent for all countries, with weaker associations observed in Pohnpei. In general, adolescents reported moderate levels of optimal hygiene practice. Girls reported significantly more frequent optimal hygiene practice than boys. Logistic regression analysis confirmed that frequent hygiene behaviours were significantly associated with gender, parental occupations and high levels of school affiliation. These findings suggest the need to consider psycho-social and economic factors when examining potential influences on hygiene behaviour to ensure effective interventions.</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>This study presents findings on health-related hygiene behaviours of 9,013 adolescents from Vanuatu, Tonga and Pohnpei in the Federal States of Micronesia as part of the Health Behaviour of Pacific Youth Life surveys. We examined the prevalence of and relationship between tooth brushing, hand washing before eating, hand washing after toileting and a range of psychosocial factors such as sociodemographic charac-teristics, health behaviour and school affiliation. The results showed that patterns of prevalence and relationships were consistent for all countries, with weaker associations observed in Pohnpei. In general, adolescents reported moderate levels of optimal hygiene practice. Girls reported significantly more frequent optimal hygiene practice than boys. Logistic regression analysis confirmed that frequent hygiene behaviours were significantly associated with gender, parental occupations and high levels of school affiliation. These findings suggest the need to consider psycho-social and economic factors when examining potential influences on hygiene behaviour to ensure effective interventions.</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Tran D, Phongsavan P, Bauman AE, Havea D, Galea G &quot;Hygiene behaviour of adolescents in the Pacific: associations with socio-demographic, health behaviour and school environment.&quot; Asia Pac J Public Health. 2006;18(2):3-11. doi: 10.1177/10105395060180020201.</p>
+<p>Asia Pac J Public Health. 2006. 18 (2). 3-11.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/16883964?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +129,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

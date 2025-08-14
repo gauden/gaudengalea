@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Definition and diagnostic criteria of clinical obesity. — Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  
+
+  
+    <h1 style="margin-right: 4rem;">Definition and diagnostic criteria of clinical obesity.</h1>
+    <p class="meta">
+      <p>Rubino F, Cummings D, Eckel R, Cohen R, Wilding J, Brown W, Stanford F, Batterham R, Farooqi I, Farpour-Lambert N, le Roux C, Sattar N, Baur L, Morrison K, Misra A, Kadowaki T, Tham K, Sumithran P, Garvey W, Kirwan J, Fernández-Real J, Corkey B, Toplak H, Kokkinos A, Kushner R, Branca F, Valabhji J, Blüher M, Bornstein S, Grill H, Ravussin E, Gregg E, Al Busaidi N, Alfaris N, Al Ozairi E, Carlsson L, Clément K, Després J, Dixon J, <strong>Galea G</strong>, Kaplan L, Laferrère B, Laville M, Lim S, Luna Fuentes J, Mooney V, Nadglowski J, Urudinachi A, Olszanecka-Glinianowicz M, Pan A, Pattou F, Schauer P, Tschöp M, van der Merwe M, Vettor R, Mingrone G</p>
+
+      
+        <a href="https://pubmed.ncbi.nlm.nih.gov/39824205/">Lancet Diabetes Endocrinol</a>
+       on 14 Jan 2025
+    </p>
+    <p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Current BMI-based measures of obesity can both underestimate and overestimate adiposity and provide inadequate information about health at the individual level, which undermines medically-sound approaches to health care and policy. This Commission sought to define clinical obesity as a condition of illness that, akin to the notion of chronic disease in other medical specialties, directly results from the effect of excess adiposity on the function of organs and tissues. The specific aim of the Commission was to establish objective criteria for disease diagnosis, aiding clinical decision making and prioritisation of therapeutic interventions and public health strategies. To this end, a group of 58 experts—representing multiple medical specialties and countries—discussed available evidence and participated in a consensus development process. Among these commissioners were people with lived experience of obesity to ensure consideration of patients’ perspectives. The Commission defines obesity as a condition characterised by excess adiposity, with or without abnormal distribution or function of adipose tissue, and with causes that are multifactorial and still incompletely understood. We define clinical obesity as a chronic, systemic illness characterised by alterations in the function of tissues, organs, the entire individual, or a combination thereof, due to excess adiposity. Clinical obesity can lead to severe end-organ damage, causing life-altering and potentially life-threatening complications (eg, heart attack, stroke, and renal failure). We define preclinical obesity as a state of excess adiposity with preserved function of other tissues and organs and a varying, but generally increased, risk of developing clinical obesity and several other non-communicable diseases (eg, type 2 diabetes, cardiovascular disease, certain types of cancer, and mental disorders). Although the risk of mortality and obesity-associated diseases can rise as a continuum across increasing levels of fat mass, we differentiate between preclinical and clinical obesity (ie, health  illness) for clinical and policy-related purposes. We recommend that BMI should be used only as a surrogate measure of health risk at a population level, for epidemiological studies, or for screening purposes, rather than as an individual measure of health. Excess adiposity should be confirmed by either direct measurement of body fat, where available, or at least one anthropometric criterion (eg, waist circumference, waist-to-hip ratio, or waist-to-height ratio) in addition to BMI, using validated methods and cutoff points appropriate to age, gender, and ethnicity. In people with very high BMI (ie, &gt;40 kg/m), however, excess adiposity can pragmatically be assumed, and no further confirmation is required. We also recommend that people with confirmed obesity status (ie, excess adiposity with or without abnormal organ or tissue function) should be assessed for clinical obesity. The diagnosis of clinical obesity requires one or both of the following main criteria: evidence of reduced organ or tissue function due to obesity (ie, signs, symptoms, or diagnostic tests showing abnormalities in the function of one or more tissue or organ system); or substantial, age-adjusted limitations of daily activities reflecting the specific effect of obesity on mobility, other basic activities of daily living (eg, bathing, dressing, toileting, continence, and eating), or both. People with clinical obesity should receive timely, evidence-based treatment, with the aim to induce improvement (or remission, when possible) of clinical manifestations of obesity and prevent progression to end-organ damage. People with preclinical obesity should undergo evidence-based health counselling, monitoring of their health status over time, and, when applicable, appropriate intervention to reduce risk of developing clinical obesity and other obesity-related diseases, as appropriate for the level of individual health risk. Policy makers and health authorities should ensure adequate and equitable access to available evidence-based treatments for individuals with clinical obesity, as appropriate for people with a chronic and potentially life-threatening illness. Public health strategies to reduce the incidence and prevalence of obesity at population levels must be based on current scientific evidence, rather than unproven assumptions that blame individual responsibility for the development of obesity. Weight-based bias and stigma are major obstacles in efforts to effectively prevent and treat obesity; health-care professionals and policy makers should receive proper training to address this important issue of obesity. All recommendations presented in this Commission have been agreed with the highest level of consensus among the commissioners (grade of agreement 90–100%) and have been endorsed by 76 organisations worldwide, including scientific societies and patient advocacy groups.</p>
+</blockquote>
+<h3>Citation</h3>
+<p>Lancet Diabetes Endocrinol. 2025. 13 (3). 221-262.</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/39824205?report=medline&amp;format=text">Download citation in Medline format</a></p>
+
+    </p>
+  
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

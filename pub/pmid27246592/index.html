@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] Tobacco control in Europe: a policy review. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Tobacco control in Europe: a policy review. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,20 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] Tobacco control in Europe: a policy review.</h1>
+    <h1 style="margin-right: 4rem;">Tobacco control in Europe: a policy review.</h1>
     <p class="meta">
       <p>Bertollini R, Ribeiro S, Mauer-Stender K, <strong>Galea G</strong></p>
 
       
-        <a href="http://dx.doi.org/10.1183/16000617.0021-2016">European respiratory review : an official journal of the European Respiratory Society</a>
-       on 02 Jun 2016
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27246592/">Eur Respir Rev</a>
+       on 01 Jun 2016
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>Tobacco is responsible for the death of 6 million people every year globally, of whom 700 000 are in Europe. Effective policies for tobacco control exist; however, the status of their implementation varies across the World Health Organization (WHO) European Region. In order to tackle the tobacco epidemic, action has been taken though the implementation of both legally binding and non-legally binding measures. This article aims to present the achievements and challenges of tobacco control in Europe, focussing on the available legally binding instruments such as the WHO Framework Convention on Tobacco Control and the revision of the Tobacco Products Directive at the European Union level. Tobacco still faces heavy lobbying of the tobacco industry, which has systematically contrasted policies to achieve public health objectives. The legal instruments for tobacco control in Europe presented here are not always adequately enforced in all the countries and there is certainly room for improving their implementation. Finally, the need for a strong political commitment towards the end-game of the tobacco epidemic is emphasised.</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Tobacco is responsible for the death of 6 million people every year globally, of whom 700 000 are in Europe. Effective policies for tobacco control exist; however, the status of their implementation varies across the World Health Organization (WHO) European Region. In order to tackle the tobacco epidemic, action has been taken though the implementation of both legally binding and non-legally binding measures. This article aims to present the achievements and challenges of tobacco control in Europe, focussing on the available legally binding instruments such as the WHO Framework Convention on Tobacco Control and the revision of the Tobacco Products Directive at the European Union level. Tobacco still faces heavy lobbying of the tobacco industry, which has systematically contrasted policies to achieve public health objectives. The legal instruments for tobacco control in Europe presented here are not always adequately enforced in all the countries and there is certainly room for improving their implementation. Finally, the need for a strong political commitment towards the end-game of the tobacco epidemic is emphasised.</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Bertollini R, Ribeiro S, Mauer-Stender K, Galea G &quot;Tobacco control in Europe: a policy review.&quot; Eur Respir Rev. 2016 Jun;25(140):151-7. doi: 10.1183/16000617.0021-2016.</p>
+<p>Eur Respir Rev. 2016. 25 (140). 151-7.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/27246592?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +129,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

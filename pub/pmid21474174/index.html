@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] Priority actions for the non-communicable disease crisis. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Priority actions for the non-communicable disease crisis. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,20 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] Priority actions for the non-communicable disease crisis.</h1>
+    <h1 style="margin-right: 4rem;">Priority actions for the non-communicable disease crisis.</h1>
     <p class="meta">
-      <p>Beaglehole R, Bonita R, Horton R, Adams C, Alleyne G, Asaria P, Baugh V, Bekedam H, Billo N, Casswell S, Cecchini M, Colagiuri R, Colagiuri S, Collins T, Ebrahim S, Engelgau M, <strong>Galea G</strong>, Gaziano T, Geneau R, Haines A, Hospedales J, Jha P, Keeling A, Leeder S, Lincoln P, McKee M, Mackay J, Magnusson R, Moodie R, Mwatsama M, Nishtar S, Norrving B, Patterson D, Piot P, Ralston J, Rani M, Reddy KS, Sassi F, Sheron N, Stuckler D, Suh I, Torode J, Varghese C, Watt J</p>
+      <p>Beaglehole R, Bonita R, Horton R, Adams C, Alleyne G, Asaria P, Baugh V, Bekedam H, Billo N, Casswell S, Cecchini M, Colagiuri R, Colagiuri S, Collins T, Ebrahim S, Engelgau M, <strong>Galea G</strong>, Gaziano T, Geneau R, Haines A, Hospedales J, Jha P, Keeling A, Leeder S, Lincoln P, McKee M, Mackay J, Magnusson R, Moodie R, Mwatsama M, Nishtar S, Norrving B, Patterson D, Piot P, Ralston J, Rani M, Reddy K, Sassi F, Sheron N, Stuckler D, Suh I, Torode J, Varghese C, Watt J, ,</p>
 
       
-        <a href="http://dx.doi.org/10.1016/S0140-6736(11)60393-0">Lancet (London, England)</a>
-       on 09 Apr 2011
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21474174/">Lancet</a>
+       on 23 Apr 2011
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>The UN High-Level Meeting on Non-Communicable Diseases (NCDs) in September, 2011, is an unprecedented opportunity to create a sustained global movement against premature death and preventable morbidity and disability from NCDs, mainly heart disease, stroke, cancer, diabetes, and chronic respiratory disease. The increasing global crisis in NCDs is a barrier to development goals including poverty reduction, health equity, economic stability, and human security. The Lancet NCD Action Group and the NCD Alliance propose five overarching priority actions for the response to the crisis--leadership, prevention, treatment, international cooperation, and monitoring and accountability--and the delivery of five priority interventions--tobacco control, salt reduction, improved diets and physical activity, reduction in hazardous alcohol intake, and essential drugs and technologies. The priority interventions were chosen for their health effects, cost-effectiveness, low costs of implementation, and political and financial feasibility. The most urgent and immediate priority is tobacco control. We propose as a goal for 2040, a world essentially free from tobacco where less than 5% of people use tobacco. Implementation of the priority interventions, at an estimated global commitment of about US$9 billion per year, will bring enormous benefits to social and economic development and to the health sector. If widely adopted, these interventions will achieve the global goal of reducing NCD death rates by 2% per year, averting tens of millions of premature deaths in this decade.</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>The UN High-Level Meeting on Non-Communicable Diseases (NCDs) in September, 2011, is an unprecedented opportunity to create a sustained global movement against premature death and preventable morbidity and disability from NCDs, mainly heart disease, stroke, cancer, diabetes, and chronic respiratory disease. The increasing global crisis in NCDs is a barrier to development goals including poverty reduction, health equity, economic stability, and human security. The Lancet NCD Action Group and the NCD Alliance propose five overarching priority actions for the response to the crisis--leadership, prevention, treatment, international cooperation, and monitoring and accountability--and the delivery of five priority interventions--tobacco control, salt reduction, improved diets and physical activity, reduction in hazardous alcohol intake, and essential drugs and technologies. The priority interventions were chosen for their health effects, cost-effectiveness, low costs of implementation, and political and financial feasibility. The most urgent and immediate priority is tobacco control. We propose as a goal for 2040, a world essentially free from tobacco where less than 5% of people use tobacco. Implementation of the priority interventions, at an estimated global commitment of about US$9 billion per year, will bring enormous benefits to social and economic development and to the health sector. If widely adopted, these interventions will achieve the global goal of reducing NCD death rates by 2% per year, averting tens of millions of premature deaths in this decade.</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Beaglehole R, Bonita R, Horton R, Adams C, Alleyne G, Asaria P, Baugh V, Bekedam H, Billo N, Casswell S, Cecchini M, Colagiuri R, Colagiuri S, Collins T, Ebrahim S, Engelgau M, Galea G, Gaziano T, Geneau R, Haines A, Hospedales J, Jha P, Keeling A, Leeder S, Lincoln P, McKee M, Mackay J, Magnusson R, Moodie R, Mwatsama M, Nishtar S, Norrving B, Patterson D, Piot P, Ralston J, Rani M, Reddy KS, Sassi F, Sheron N, Stuckler D, Suh I, Torode J, Varghese C, Watt J &quot;Priority actions for the non-communicable disease crisis.&quot; Lancet. 2011 Apr 23;377(9775):1438-47. doi: 10.1016/S0140-6736(11)60393-0. Epub 2011 Apr 5.</p>
+<p>Lancet. 2011. 377 (9775). 1438-47.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/21474174?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +129,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

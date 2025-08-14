@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>The perspectives of politicians on tobacco control in Turkey. — Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  
+
+  
+    <h1 style="margin-right: 4rem;">The perspectives of politicians on tobacco control in Turkey.</h1>
+    <p class="meta">
+      <p>Ozcebe H, Erguder T, Balcilar M, Ursu P, Reeves A, Stuckler D, Snell A, <strong>Galea G</strong>, Mikkelsen B, Mauer-Stender K</p>
+
+      
+        <a href="https://pubmed.ncbi.nlm.nih.gov/30371833/">Eur J Public Health</a>
+       on 01 Oct 2018
+    </p>
+    <p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Tobacco use is a leading but preventable cause of non-communicable diseases and premature death. The legislature has a key role in setting tobacco control policies. Smoking trends are decreasing thanks to the introduction of effective tobacco control policies in Turkey and these policies may have been shaped by how politicians' interpreted social problems that were prominent during the development and implementation of tobacco regulations.
+This paper explores the long-term national relationship between tobacco consumption, tobacco control policies and the associated political discourse in Turkey, considering the varying influences through national leadership on this important public health agenda. This relationship is studied by comparing a time series analysis of tobacco consumption trends with a policy analysis of the minutes of deliberations at the Grand National Assembly of Turkey (GNAT).
+This study uses Bayesian time series analysis in order investigate whether the tobacco control policies and related activities influenced the annual per adult cigarette consumption in Turkey. We used a novel method to identify change points in tobacco trends and whether they correspond with key policy changes intended to alter usage after adjusting for the effect of other non-policy related covariates, such as the purchasing power. The policy analysis included an examination of the minutes of deliberations at the GNAT-which is the Turkish parliament and unicameral Turkish legislature-1 year before and 1 year after the break years associated with an increase or decrease in tobacco consumption.
+Tobacco consumption increased with the encouragement of tobacco production and the entrance of multinational companies in the country in 1976 and 1993, respectively. The National Tobacco Law of 1996 and comprehensive amendments in 2008, including smoke-free public places and tax increases, appear to have helped reduce tobacco consumption in Turkey. The focus of Parliamentary discussions throughout this period changed, becoming less supportive of tobacco over time. However, throughout the period there remained discussions focussing on concerns around the implications for the economy and the privatization agenda, national agriculture and the welfare of farmers. Effective control appears to require certain political ingredients to be implemented: politicians who are well informed on tobacco control measures and understand the range of issues surrounding the policies (not only those directly health-related); and supportive public health information in the community. Evidence-based public health policy should be introduced to the politicians.</p>
+</blockquote>
+<h3>Citation</h3>
+<p>Eur J Public Health. 2018. 28 (suppl_2). 17-21.</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/30371833?report=medline&amp;format=text">Download citation in Medline format</a></p>
+
+    </p>
+  
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

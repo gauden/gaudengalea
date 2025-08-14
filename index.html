@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="static/tufte.css">
-<link rel="stylesheet" href="static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="static/tufte.css">
+  <link rel="stylesheet" href="static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title> — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li class="active" >
-          
-          &#8962;
-          
-          </li>&middot;
-          <li>
-            
-            <a href="blog/">Blog</a>
-            
-            </li> &middot;
-          <li>
-            
-            <a href="pub/">Pub</a>
-            
-            </li> &middot;
-            <li>
-              
-              <a href="lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="bio/">Bio</a>
-                
-                </li>
+          <a href="./">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="blog/">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -47,27 +101,329 @@
       <article>
         <section>
           
-  <h2>Home</h2>
+
+  <h2>Gauden Galea</h2>
+
   <h1>“Only Connect”</h1>
 <p><label for="mn-demo" class="margin-toggle">⊕</label></p>
 <p><input type="checkbox" id="mn-demo" class="margin-toggle">
 <span class="marginnote">
 The tagline, “Only Connect”, a <a href="https://en.wikiquote.org/wiki/E._M._Forster">fragment from E. M. Forster</a>, provides a motto for this personal site, which serves as a sandbox and a hub, connecting my public health practice to extracurricular fields of interest.
 </span></p>
-<p>I am a public health physician, operating at national and global levels since the mid-1980s. I am also deeply interested in computer programming and the applications of data science to the practice of public health today. This site is intended to fuse the two interests, a place to explore and demonstrate the connections between the two areas.</p>
-<h2>Sections</h2>
-<ul>
-<li><a href="./pub"><span class="newthought">Pub</span></a> compiles selected publications and talks.</li>
-<li><a href="./lab/"><span class="newthought">Lab</span></a> gives a glimpse of how I play with code.</li>
-<li><a href="./bio/"><span class="newthought">Bio</span></a> summarises my work experience.</li>
-</ul>
+<p>I use this site to compile my occasional <a href="blog">writing and speeches</a>, my peer-reviewed <a href="pub">papers</a>, my <a href="lab">coding</a> experiments, and my updated <a href="bio">résumé</a>. Do subscribe to my <a href="feed">RSS/Atom feed</a> if you are so inclined.</p>
+<h2>Latest Posts</h2>
 
+
+  
+  
+  
+
+  
+    
+    
+      
+        
+      
+    
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    
+    
+      
+        
+      
+        
+      
+    
+  
+    
+    
+      
+    
+  
+
+  
+  
+  
+
+  <ul>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="lab/one-hundred-week-banner/">One-Hundred-Week Banner</a> 
+
+        
+        
+          <span class="marginnote">
+          10 Aug 2025 &middot; Lab
+          </span>
+          <div class="summary">
+             From October 2023, I used a p5.js banner at webinars, counting weeks to the UN HLM on NCDs in 2025. Over time, it acquired new and unexpected significance.
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="lab/introduction-to-the-lab-section/">Experiments in Code</a> 
+
+        
+        
+          <span class="marginnote">
+          17 Jul 2025 &middot; Lab
+          </span>
+          <div class="summary">
+             I started my coding life in the 80s with a ZX Spectrum and a book on Basic. I was hooked. I&#39;ve been coding ever since. I&#39;ve worked in a variety of languages…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid39956133/">Labels warning about alcohol-attributable cancer risks should be mandated urgently.</a> 
+
+        
+        
+          <span class="marginnote">
+          1 May 2025 &middot; Pub
+          </span>
+          <div class="summary">
+             In January, 2025, the US Surgeon General released an Advisory on alcohol consumption and cancer risk. He briefly summarised the evidence on alcohol and…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid40452915/">Quick buys for prevention and control of noncommunicable diseases.</a> 
+
+        
+        
+          <span class="marginnote">
+          1 May 2025 &middot; Pub
+          </span>
+          <div class="summary">
+             Despite their established effectiveness, uptake of the WHO best buys for tackling non-communicable diseases (NCDs) has been uneven and disappointing. Here we…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid40154157/">Can behavioural nudges promote reduced-salt dish orders on meal delivery apps?</a> 
+
+        
+        
+          <span class="marginnote">
+          27 Mar 2025 &middot; Pub
+          </span>
+          <div class="summary">
+             This study aimed to evaluate the effectiveness of educational health message and menu default options on a Meal Delivery App (MDA) in nudging consumers…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid40130371/">Innovation leadership perspective in public health.</a> 
+
+        
+        
+          <span class="marginnote">
+          25 Mar 2025 &middot; Pub
+          </span>
+          <div class="summary">
+             Innovation leadership in public health has become increasingly crucial in an era of complex global health challenges and rapid technological advancements.…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid39824205/">Definition and diagnostic criteria of clinical obesity.</a> 
+
+        
+        
+          <span class="marginnote">
+          14 Jan 2025 &middot; Pub
+          </span>
+          <div class="summary">
+             Current BMI-based measures of obesity can both underestimate and overestimate adiposity and provide inadequate information about health at the individual…
+          </div>
+        
+      </li>
+    
+      
+      
+      
+        
+      
+
+      <li>
+        <a href="pub/pmid39759887/">Confronting alcohol&#39;s costly toll: why the European region needs clearer, evidence-based policy.</a> 
+
+        
+        
+          <span class="marginnote">
+          12 Dec 2024 &middot; Pub
+          </span>
+          <div class="summary">
+             Despite decades of research on alcohol’s harms, the reality remains striking: the health risks of alcohol are largely misunderstood or downplayed, both in the…
+          </div>
+        
+      </li>
+    
+  </ul>
+  
 
         </section>
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

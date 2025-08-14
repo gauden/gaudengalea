@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Public awareness of the alcohol-cancer link in the EU and UK: a scoping review. — Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  
+
+  
+    <h1 style="margin-right: 4rem;">Public awareness of the alcohol-cancer link in the EU and UK: a scoping review.</h1>
+    <p class="meta">
+      <p>Kokole D, Ferreira-Borges C, <strong>Galea G</strong>, Tran A, Rehm J, Neufeld M</p>
+
+      
+        <a href="https://pubmed.ncbi.nlm.nih.gov/37802887/">Eur J Public Health</a>
+       on 09 Dec 2023
+    </p>
+    <p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Alcohol increases cancer risk, but less is known about public awareness of this link. This scoping review summarizes recent findings on the public awareness of alcohol as a cancer risk factor in European Union and UK.
+Four databases (Web of Science, MEDLINE, PsycInfo, CINAHL) were searched for papers containing data on awareness of alcohol as cancer risk factor in EU or UK published between January 2017 and December 2022, and complemented with grey literature searches.
+In total, 45 studies were included covering 18 EU countries (Austria, Belgium, Cyprus, Czechia, Denmark, Finland, France, Germany, Hungary, Ireland, Italy, Netherlands, Poland, Romania, Slovakia, Slovenia, Spain, Sweden) and UK, presenting data collected between 2009 and 2022. Studies covered general population (17 studied a nationally representative sample), women, health professionals, patients and young people. Awareness of alcohol causing cancer in general was higher and studied more often than awareness of alcohol's impact on specific cancers. Among the EU general population, awareness of the link between alcohol and breast cancer ranged between 10% and 20%, head and neck cancer 15-25%, colorectal and oesophagus cancer 15-45% and liver cancer 40%. Awareness was higher among young people and specialized health professions and lower among women (the latter specifically for the breast cancer).
+While awareness rates varied depending on the exact question wording, many studies showed low awareness of the alcohol-cancer link, especially for specific types such as breast and colon cancer. Public should be better informed about alcohol consumption-related cancer risk.</p>
+</blockquote>
+<h3>Citation</h3>
+<p>Eur J Public Health. 2023. 33 (6). 1128-1147.</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/37802887?report=medline&amp;format=text">Download citation in Medline format</a></p>
+
+    </p>
+  
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../../static/tufte.css">
+  <link rel="stylesheet" href="../../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title> — Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+
+<h2>Papers</h2>
+
+<h1>Peer-Reviewed Publications</h1>
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid27246592/">Tobacco control in Europe: a policy review.</a>
+      (01 Jun 2016)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid26164654/">European Code against Cancer 4th Edition: 12 ways to reduce your cancer risk.</a>
+      (01 Dec 2015)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid25646899/">Cancer control capacity in 50 low- and middle-income countries.</a>
+      (01 Oct 2015)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid25063459/">The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study.</a>
+      (25 Jul 2014)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid24731403/">Cancer in Russia: reflections from WHO in Europe.</a>
+      (01 Apr 2014)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid24581699/">Public-private partnerships with large corporations: setting the ground rules for better health.</a>
+      (01 Apr 2014)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid23488503/">Relationship of soft drink consumption to global overweight, obesity, and diabetes: a cross-national analysis of 75 countries.</a>
+      (01 Nov 2013)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid22691632/">Nutritional determinants of worldwide diabetes: an econometric study of food markets and diabetes prevalence in 173 countries.</a>
+      (01 Jan 2013)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid22080067/">Enduring principles in a fast-changing world.</a>
+      (01 Dec 2011)
+    </p>
+  
+
+
+  
+    
+
+  
+    <p style="margin-right: 4rem;">
+      <a href="../../pmid21836748/">Development at risk: addressing noncommunicable diseases at the United Nations high-level meeting.</a>
+      (01 Aug 2011)
+    </p>
+  
+
+
+  
+
+
+  
+  <div class="pagination">
+  
+    
+      <a href="../3/">&laquo; Previous</a>
+    
+    | 4 |
+    
+      <a href="../5/">Next &raquo;</a>
+    
+  
+  </div>
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

@@ -1,44 +1,98 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../../static/tufte.css">
-<link rel="stylesheet" href="../../static/custom.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[Paper] Biomechanical coupling facilitates spinal neural tube closure in mouse embryos. — Gauden Galea</title>
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/static/img/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Biomechanical coupling facilitates spinal neural tube closure in mouse embryos. — Gauden Galea</title>
+</head>
 <body>
   <header>
     <nav>
       <ul class="nav navbar-nav">
-
         <li>
-          
-          <a href="../../">&#8962;</a>
-          
-          </li>&middot;
-          <li>
-            
-            <a href="../../blog/">Blog</a>
-            
-            </li> &middot;
-          <li class="active" >
-            
-            Pub
-            
-            </li> &middot;
-            <li>
-              
-              <a href="../../lab/">Lab</a>
-              
-              </li> &middot;
-              <li>
-                
-                <a href="../../bio/">Bio</a>
-                
-                </li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li>
+          <a href="../../blog/">Blog</a>
+        </li> &middot;
+        <li class="active" >
+          <a href="../">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,20 +104,20 @@
   
 
   
-    <h1 style="margin-right: 4rem;">[Paper] Biomechanical coupling facilitates spinal neural tube closure in mouse embryos.</h1>
+    <h1 style="margin-right: 4rem;">Biomechanical coupling facilitates spinal neural tube closure in mouse embryos.</h1>
     <p class="meta">
-      <p>Galea GL, Cho YJ, <strong>Galea G</strong>, Mole MA, Rolo A, Savery D, Moulding D, Culshaw LH, Nikolopoulou E, Greene NDE, Copp AJ</p>
+      <p><strong>Galea G</strong>, Cho Y, <strong>Galea G</strong>, Molè M, Rolo A, Savery D, Moulding D, Culshaw L, Nikolopoulou E, Greene N, Copp A</p>
 
       
-        <a href="http://dx.doi.org/10.1073/pnas.1700934114">Proceedings of the National Academy of Sciences of the United States of America</a>
-       on 14 Jun 2017
+        <a href="https://pubmed.ncbi.nlm.nih.gov/28607062/">Proc Natl Acad Sci U S A</a>
+       on 27 Jun 2017
     </p>
     <p>
-      <h3>Abstract/Extract</h3>
-<blockquote><p>Neural tube (NT) formation in the spinal region of the mammalian embryo involves a wave of &quot;zippering&quot; that passes down the elongating spinal axis, uniting the neural fold tips in the dorsal midline. Failure of this closure process leads to open spina bifida, a common cause of severe neurologic disability in humans. Here, we combined a tissue-level strain-mapping workflow with laser ablation of live-imaged mouse embryos to investigate the biomechanics of mammalian spinal closure. Ablation of the zippering point at the embryonic dorsal midline causes far-reaching, rapid separation of the elevating neural folds. Strain analysis revealed tissue expansion around the zippering point after ablation, but predominant tissue constriction in the caudal and ventral neural plate zone. This zone is biomechanically coupled to the zippering point by a supracellular F-actin network, which includes an actin cable running along the neural fold tips. Pharmacologic inhibition of F-actin or laser ablation of the cable causes neural fold separation. At the most advanced somite stages, when completion of spinal closure is imminent, the cable forms a continuous ring around the neuropore, and simultaneously, a new caudal-to-rostral zippering point arises. Laser ablation of this new closure initiation point causes neural fold separation, demonstrating its biomechanical activity. Failure of spinal closure in pre-spina bifida Zic2(Ku) mutant embryos is associated with altered tissue biomechanics, as indicated by greater neuropore widening after ablation. Thus, this study identifies biomechanical coupling of the entire region of active spinal neurulation in the mouse embryo as a prerequisite for successful NT closure.</p>
+      <h3>Abstract/Excerpt</h3>
+      <blockquote><p>Neural tube (NT) formation in the spinal region of the mammalian embryo involves a wave of "zippering" that passes down the elongating spinal axis, uniting the neural fold tips in the dorsal midline. Failure of this closure process leads to open spina bifida, a common cause of severe neurologic disability in humans. Here, we combined a tissue-level strain-mapping workflow with laser ablation of live-imaged mouse embryos to investigate the biomechanics of mammalian spinal closure. Ablation of the zippering point at the embryonic dorsal midline causes far-reaching, rapid separation of the elevating neural folds. Strain analysis revealed tissue expansion around the zippering point after ablation, but predominant tissue constriction in the caudal and ventral neural plate zone. This zone is biomechanically coupled to the zippering point by a supracellular F-actin network, which includes an actin cable running along the neural fold tips. Pharmacologic inhibition of F-actin or laser ablation of the cable causes neural fold separation. At the most advanced somite stages, when completion of spinal closure is imminent, the cable forms a continuous ring around the neuropore, and simultaneously, a new caudal-to-rostral zippering point arises. Laser ablation of this new closure initiation point causes neural fold separation, demonstrating its biomechanical activity. Failure of spinal closure in pre-spina bifida  mutant embryos is associated with altered tissue biomechanics, as indicated by greater neuropore widening after ablation. Thus, this study identifies biomechanical coupling of the entire region of active spinal neurulation in the mouse embryo as a prerequisite for successful NT closure.</p>
 </blockquote>
 <h3>Citation</h3>
-<p>Galea GL, Cho YJ, Galea G, Mole MA, Rolo A, Savery D, Moulding D, Culshaw LH, Nikolopoulou E, Greene NDE, Copp AJ &quot;Biomechanical coupling facilitates spinal neural tube closure in mouse embryos.&quot; Proc Natl Acad Sci U S A. 2017 Jun 27;114(26):E5177-E5186. doi: 10.1073/pnas.1700934114. Epub 2017 Jun 12.</p>
+<p>Proc Natl Acad Sci U S A. 2017. 114 (26). E5177-E5186.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/28607062?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     </p>
@@ -75,7 +129,7 @@
       </article>
     </div> <!-- content-wrap -->
     <footer class="fullwidth">
-      © 2025 Gauden Galea. All rights reserved.<br>
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
       Published under
       <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
         License</a>.<br>

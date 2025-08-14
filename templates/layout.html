@@ -21,7 +21,7 @@
     <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path=='/' %} class="active" {% endif %}>
-          <a href="{{ '/'|url }}">&#8962;</a>
+          <a href="{{ '/'|url }}"><img src="/static/img/favicon-16x16.png" alt="Logo" class="logo"></a>
         </li>&middot;
         <li{% if this._path.startswith('/blog/') or this._path=='/blog' %} class="active" {% endif %}>
           <a href="{{ '/blog'|url }}">Blog</a>

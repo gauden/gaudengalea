@@ -185,6 +185,27 @@
     
     
   
+    
+    
+    
+    
+    
+    
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
   
 
 
@@ -198,11 +219,367 @@
 
   
   
-  <updated>2025-08-10T00:00:00Z</updated>
+  <updated>2025-08-17T00:00:00Z</updated>
 
   <link rel="self" href="http://localhost:5000./" />
   <link rel="alternate" href="http://localhost:5000../" />
 
+  
+  <entry>
+    <title>PyLadies, PacMan, and Public Health</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/" />
+    
+      <summary type="html"><![CDATA[ My reflections on the EuroPython 2025 adventure ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>EuroPython 2025: A Retrospective</h2>
+<p><span class="marginnote">
+    <img src="ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>On 29 March 2025, the programme committee informed me that my abstract (“Python, Politics, and Public Health”) had been accepted for a talk at EuroPython 2025 in Prague. As luck would have it, I ended up delivering it on the first day after my retirement from WHO. The talk thus became a manifesto for where I hope to go next, uniting my work in public health with my long-standing love of Python.</p>
+<p>I’ve divided my notes into short sections, aiming to capture the essence of the conference from many perspectives. I want to jog happy memories among those who attended, and to entice others to join next year. Skip to the parts that interest you.</p>
+<p>As delighted as I was to hear the news that the abstract proposal had been accepted, many questions remained: how would the Python community respond to a retired public health official from a different world? Would there be kindred spirits interested in the health and social impact of code?</p>
+
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Health and Society</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/health-and-society/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/health-and-society/" />
+    
+      <summary type="html"><![CDATA[ Politics, equity and fairness, outbreak responses, disaster relief, cancer real-world evidence, diagnosis of genetic diseases -- the many facets of Python&#39;s health and social impact. ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>Teaching Me a Lesson</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>I am embarrassed by the arrogance in my abstract where I said:</p>
+<blockquote><p>“Python is everywhere—except, it seems, in public health. ... Despite its versatility, Python remains underutilised in public health. Why does this gap exist? How can we bridge the divide between Python as a tool for developers and its potential as an engine for hacking health?”</p>
+</blockquote>
+<p>I could not have strayed farther from the truth. Indeed, in hallway conversations, I had several encounters with participants who have worked in either clinical or public health applications of Python and who would appreciate opportunities to do so again in the future. Indeed, the many health-related talks summarised below serve as a good illustration of some of the essential functions of public health.</p>
+<h2>Public Health Talks at EP2025</h2>
+<h3>Python, Politics, and Public Health</h3>
+<p>In my own presentation, I gave a selection of historical examples of how I have used Python to either analyse public health data with political relevance or to help advocate for public health policies. The war stories covered:</p>
+<ul>
+<li>a 2015 network analysis of a Twitter conversation on vaping and how it turned out to have a surprising connection to Brexit, </li>
+<li>a data pipeline for the graphics in a report on women’s health in Europe and how its long tail has culminated in a programme on violence against women, and </li>
+<li>the visualisation of a thought experiment that I used to illustrate the inequity in chronic diseases (NCDs) between East and West in Europe. </li>
+</ul>
+<p>My examples illustrated the application of Python's data visualisation tools to public health advocacy, both within WHO as well as in discussion with policy makers in the Member States.</p>
+<figure>
+    <img src="gauden_speaking.jpeg" alt="Gauden Galea speaking">
+</figure><p>Two phrases that I used seemed to resonate with the audience; some of the participants approached me afterwards to react to them:</p>
+<ol>
+<li><strong>Code as social organisation</strong>—by this I meant that many of the inequities in society have structural causes (poverty, education, access to health services), and code is part of the causal chain in all of these determinants.</li>
+<li><strong>Code as activism</strong>—one would love to live in a world where code is a neutral artefact, but this is far from the truth. Code generates a host of benefits, yet it also empowers weapons, enables surveillance capitalism, and contributes to inequity in society. Can we envisage ways, I asked, where at least code does no harm? Or where it is used more actively to advocate for public good?</li>
+</ol>
+<p><span class="marginnote">
+The AI-generated report of the poll are summarised in <a href="./annex-responses-to-my-poll">this Annex</a>.
+</span></p>
+<p>At the end of my presentation, I asked the audience to respond to a very open (and intentionally vague) question: How might Python and its community bring about a vision of an "open source public health operating system"? The answers they gave were summarised by in the annexed <a href="../blog/pyladies-pacman-and-public-health/health-and-society/annex-responses-to-my-poll">AI-generated report</a>.</p>
+<p>Let me now pay tribute to other speakers who gave impressive examples of the intersection between Python and population health. The following section summarises key presentations that reflected different ways in which Python can be used in both clinical and public health applications.</p>
+<h3><code>Fairlearn</code>: assessing and mitigating harm in AI systems (Tamara Atanasoska)</h3>
+<p><span class="marginnote">
+Weerts H, Dudík M, Edgar R, Jalali A, Lutz R, Madaio M. <a href="http://jmlr.org/papers/v24/23-0389.html">Fairlearn: Assessing and Improving Fairness of AI Systems</a>. Journal of Machine Learning Research. 2023; 24.  (accessed Aug 2, 2025)
+</span></p>
+<p>Tamara started off by presenting examples of unfair AI systems. They included a sentencing model in the US justice system that was racially biased, and child care applications in the Netherlands that were processed by an AI model biased against migrants. She pointed out that fairness concerns can arise across the whole machine learning lifecycle and thus needs disaggregated evaluation; assessing fairness is a process not a solution. She pointed out that algorithms and data frames sit within decisions made by humans and institutions at all stages in the process.</p>
+<p>She explained core concepts in handling fairness, such as: looking out for abstraction traps, attending to construct validity, defining harms (e.g. to quality of service, allocation of resources, and representation), and then bringing all these together with fairness metrics. She introduced <a href="https://fairlearn.org">Fairlearn</a>,  a community-led OSS library, that is <code>scikit-learn</code> compatible and helps integrate fairness into one’s pipeline.</p>
+<p>She gave a health example: readmission of people with diabetes released from hospitals in the US. The question: are the aftercare resources allocated fairly by race? The <a href="https://fairlearn.org/main/quickstart.html#fairlearn-in-10-minutes">ten-minute tutorial on the Fairlearn site</a> covers this example.</p>
+<p>Afterwards Tamara and I chatted about the fact that fairness and privacy are at loggerheads in public health. The privacy laws that protect patients make it impossible to collect the datasets that can emit fairness metrics. Possibly the <a href="https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en">European Health Data Space</a> could create opportunities to resolve this paradox. Possibly, <code>Fairlearn</code> could be used at facility level to analyse equity of access, provision, and outcomes within each facility's own population and this could be mandated by national or European legislation.</p>
+<h3>Stopping Epidemics using the <code>Atomica</code> Python Tool (Eloisa Pérez Bennetts)</h3>
+<p>Sadly, Eloisa’s talk was scheduled in the same time slot as mine, so I was not able to attend it. Her abstract, briefly summarised, said:</p>
+<p><span class="marginnote">
+atomicateam/atomica. 2025. <a href="https://github.com/atomicateam/atomica">https://github.com/atomicateam/atomica</a> (accessed Aug 2, 2025).
+</span></p>
+<blockquote><p>Infectious diseases kill over 13 million people each year, and finding the best response to outbreaks depends on many shifting factors. <code>Atomica</code>, a free and open-source Python tool, makes it easier to build and analyse disease models that incorporate real-world data, interventions, and budget constraints. [The] talk demonstrated how to use <code>Atomica</code> to simulate a typhoid epidemic and guide funding decisions for maximum public health impact.</p>
+</blockquote>
+<p>Though I could not attend her talk, I was lucky to get a chance to catch up with her in person later and, together with Jannis Lübbe (see below), to discuss her work on <code>Atomica</code>—a tool that has the advantage not just of modelling an outbreak from known characteristics of the pathogen, but also to bring in social factors and resource allocation decisions to guide the response.</p>
+<p><span class="marginnote">
+Bowring AL, Martin-Hughes R, Brink D ten, et al. <a href="https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0004548&type=printable">Optimising TB investments in Belarus, Moldova, Kyrgyz Republic, Tajikistan and Uzbekistan: An allocative efficiency analysis</a>. PLOS Global Public Health 2025; 5: e0004548.
+</span></p>
+<p>Later I read her most recent paper: “Optimising TB investments in Belarus, Moldova, Kyrgyz Republic, Tajikistan and Uzbekistan: An allocative efficiency analysis”—discovering that not only were we working in the same region of Europe, but also that her team was bringing these new tools to bear on matters deeply connected with the TB-Free Central Asia Initiative recently launched by WHO/Europe.</p>
+<p><span class="marginnote">
+WHO/Europe. <a href="https://iris.who.int/handle/10665/381812">TB-Free Central Asia Initiative</a>. 2025. (accessed July 27, 2025)
+</span></p>
+<p>Eloisa, Jannis, and I had a delightful discussion about their projects and noted that we were not exceptional in our shared interest, but that there are many participants at this conference who are applying Python to health and social concerns. I lose track of who of us brought up the idea that this might be a theme to be proposed for an “Open Space” or an explicit thread of presentations in next year’s EuroPython.</p>
+<h3>Offline Disaster Relief Coordination (Jannis Lübbe)</h3>
+<p><span class="marginnote">
+<a href="https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206](https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206">Technisches Hilfswerk</a>. Wikipedia. 2025. (accessed July 27, 2025).
+</span></p>
+<p>Somewhere I heard that good design starts with defining the constraints. There could not be a better example of this than Jannis’ project for mapping disaster relief efforts. Germany’s <em>Federal Agency for Technical Relief</em> is a civil protection support agency where 97% of the eighty thousand members are volunteers, like Jannis.</p>
+<p>JL’s project assumes a number of realistic constraints facing the staff and helpers during a disaster. They cannot assume that the command and control vehicle has a power supply beyond fuel for its own engine. They must assume they have no internet access in any form. They cannot assume that the vehicle has its own computer (this was not clear whether this was a budget issue or an additional constraint imposed by the fact that the generator is in another vehicle, likely being deployed elsewhere).</p>
+<p>The problem: how to accurately map the affected locality using only local resources and how to use that map to deploy assistance wherever it is needed?</p>
+<p>JL presented the (real and not infrequent) example of a WWII bomb discovered at a construction site. THW is called in to evacuate the surrounding buildings before controlled detonation. He demonstrated how his Raspberry Pi-powered Python project provides the following features:</p>
+<ol>
+<li>Local map downloaded from OSM and available fully offline, with resolution down to the house number.</li>
+<li>Ability to delineate the affected area (by annotating the map using basic shapes e.g. to draw a 1km evacuation circle around the bomb thus defining buildings within and outside the affected area).</li>
+<li>Ability to locate specific points of intervention (e.g. a marker on a house where residents are refusing to evacuate and where police need to be called in).</li>
+<li>In the absence of GPS services, the location of teams can be added to the system using a LORAWAN gateway to receive positional information from relief workers.</li>
+</ol>
+<p>Jannis and I had many conversations about the utility of such a system in disaster relief and civil protection, including during conflict.</p>
+<p><span class="marginnote">
+Schafer M, Strohmeier M, Lenders V, Martinovic I, Wilhelm M. Bringing up OpenSky: A large-scale ADS-B sensor network for research. In: IPSN-14 Proceedings of the 13th International Symposium on Information Processing in Sensor Networks. Berlin, Germany: IEEE, 2014: 83–94.
+</span></p>
+<p>I also learned about Jannis’ other volunteer work with the OpenSky Network, that provides flight data for <a href="https://opensky-network.org/about/social-impact#">social impact and academic research</a>. The paper that launched the OpenSky Network has over 250 citations with applications that include studies on environmental impact of aviation, on the modelling of COVID-19, and on the effects of the Ukraine war on global air transportation.</p>
+<h3>Privacy-Enhancing Cancer Data Processing (Florian Stefan)</h3>
+<p>Florian introduced the data pipeline for <a href="https://flatiron.com/">Flatiron Health</a>, a company that provides privacy-enhanced cancer data for health research (usually providing Real World Evidence — RWE — for pharma companies testing novel chemotherapeutic agents).</p>
+<p>He described a model of data processing with several strengths:</p>
+<ol>
+<li>All raw data is owned by the health care facility and resides on their servers. </li>
+<li>Anonymised data is then transferred to AWS for pre-processing on cloud instances managed by Flatiron. </li>
+<li>From then on various tools are used to clean, normalise, and harmonise the data before providing access to the client. </li>
+<li>The data flow involves engineers, data scientists, and clinicians — a division of labour that allows quality control,  iteration, experimentation, and innovation.</li>
+<li>The pipeline allows Flatiron to switch between Snowflake, the standard data provider for the external clients, and a simple notebook interface that permits internal users to experiment on the pipeline, seeking efficiencies, testing quality, and adding features easily. </li>
+</ol>
+<p>In chatting with Florian afterwards, I asked how they handled image data (very important for cancer patients, but they could have embedded identifiers). In certain markets, with strict privacy rules, image data is discarded. In the US it is retained. The conflict between privacy rules and population benefit kept emerging throughout these talks.</p>
+<p>I asked him about applications of their data in public health research and he pointed out to an intriguing example of breast cancer in men, a cancer that is real enough, but so rare that no company has the incentive to run expensive clinical trials for such a small group of patients. Using Real World Evidence it becomes a possibility to at least investigate the potential impact of existing chemotherapeutic agents for this new application.</p>
+<h3>Prenatal Diagnosis of Genetic Diseases (Helena Gómez Pozo, Marina Moro López)</h3>
+<p>HGP and MML, two computational biologists, gave a gentle introduction to genetics and DNA sequencing (explained very elegantly to a lay audience) as the basis for their talk. For context, they stated that 10% of the population suffer from one of 6,000 genetic diseases and pointed out that prenatal diagnosis applies to inherited genetic disorders.</p>
+<p>Their talk focused on a project looking for <em>Epidermolysis bullosa</em>, a condition occurring in 1:6000 of newborns. They illustrated their workflow. They began by downloading reference gene sequences from the NIH database. They wrote a script using <code>tkinter</code> to provide a simple GUI making the tool accessible to non-programmers. Their script read off the reference and patient sequences, aligned the two, identified the positions of mutations, and displaying the difference. Effectively a <code>git diff</code> on a strand of DNA.</p>
+<p>Apart from introducing the audience to their methods, they made several, highly valid ethical points:</p>
+<ul>
+<li>The tool, even though a “simple” script, is regarded as a medical device and has to be regulated by EU regulations for <em>in vitro</em> medical devices. This has implications for anyone thinking of building a library of open source public health tools...</li>
+<li>The system is very simple for programmers to understand, and even to replicate, but their admonition was “don’t try this at home” as this sort of diagnostic work should only be done in the context of genetic counselling. </li>
+<li>They also counselled the audience to be cautious in the face of overly-optimistic media reports of advances in genetics. They discussed the example of mis-reporting success in the “treatment” of Down’s Syndrome, with reporters getting the science wrong quite dramatically. </li>
+<li>They reminded the audience that the human genome is under the protection of the universal declaration on human rights — one of the safeguards against eugenics. </li>
+</ul>
+
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Community at the Heart</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/community-at-the-heart/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/community-at-the-heart/" />
+    
+      <summary type="html"><![CDATA[ The ubiquity of PyLadies, the Conference Code of Conduct, the youthful energy of EuroPython, an invitation to pitch in... and to ignore the haters, plus a sneak preview of The Python Documentary. ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>Speakers’ Dinner</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>If I felt any tensions or self-consciousness, they dissipated at the Speakers’ Dinner. Three hours that flowed serenely and imperceptibly in the Manes restaurant overlooking the Vltava River, spanning sunset and early evening. The dinner gives you an easy entry point to conversations, since all the other guests are speakers: you just have to ask what their speech is about and you have a conversation starter. (The image quilt below is sewn from the <a href="https://ep2025.europython.eu/speakers/">speaker profile photos</a> on the EuroPython 2025 website).</p>
+<figure>
+<a href="https://ep2025.europython.eu/speakers/" alt="Image quilt of speaker profile photos at EuroPython 2025" target="_blank"><img src="speaker_quilt.webp" alt="Image quilt of speaker photos from EuroPython 2025"></a>
+</figure><p>It was different with <strong>Georgi Ker</strong> (Board of Directors, Python Software Foundation). Our chat went straight to the theme of community, an aspect of Python that I have observed with interest since my first EuroPython a decade ago in Florence. We discussed three attributes of the community:</p>
+<ul>
+<li>The <strong>ubiquity of <a href="https://pyladies.com/">PyLadies</a></strong> at Python meetings and in the life of the language: I am used to attending public health meetings where gender representation has to be very carefully planned, where vocal criticism of <em>manels</em> (panels composed entirely of men) is frequent, and where the invitation of female speakers that is also geographically diverse is a constant challenge. In Python, the creation of PyLadies has been hugely effective and their leadership in the community is organic and evident everywhere. The PyLadies presence goes well beyond mere gender representation, it brings an inclusiveness to the language itself and I would suggest is one of the reasons for Python’s success, as much as any internal feature.</li>
+</ul>
+<p><label for="mn-demo" class="margin-toggle">⊕</label></p>
+<p><input type="checkbox" id="mn-demo" class="margin-toggle">
+<span class="marginnote">
+In the main conference, later, I learned about the <strong>PacMan rule</strong>. It goes like this: if there is a circle of people talking in a hallway or over tea and a new person approaches, the circle should open up to include the newcomer. Clever naming, and such an enabler!
+</span></p>
+<ul>
+<li><p>The power and detail of the <strong><a href="https://www.europython-society.org/coc/">EuroPython Society code of conduct</a></strong> stands as role model even for conferences outside the Python community. It is detailed, transparent, and strictly enforced. I thoroughly enjoyed reading it, noting the transparency reports that accompany it, the frequent mentions of it during the conference, and the clear reporting lines for incidents. I think it is a model of good practice; I tip my virtual hat to all involved in creating, maintaining, and implementing it.</p>
+</li>
+<li><p>A third element: the <strong>young median age of the conference</strong>. In public health policy conferences, the age of the participants gradually advances with the seniority of the representation. In one sense it is natural that the conferences I am used to attending include older people from the executive levels, and often there has to be a search for young talent to “represent” that age cohort. But this creates the problem of how to select the representatives, and how to go beyond tokenism. In EuroPython, youth are just <em>there</em>, they <em>are</em> the community.</p>
+</li>
+</ul>
+<h2>Keynotes</h2>
+<p>Two keynote speakers had more to say on the theme of community or served as effective role models.</p>
+<ul>
+<li>Python core developers are gods to mere mortals like me. In a modest, humorous, intensely personal talk, <strong>Savannah Bailey</strong> demystified her journey into becoming a core developer. From triaging issues, to tinkering with documentation, to contributions to the standard library (she focused her energy on <code>argparse</code>), to eventually leveraging her DevOps skills to contributing to the Python JIT compiler, she made it all seem so accessible, so inviting. A place for everyone. </li>
+</ul>
+<p><label for="mn-demo" class="margin-toggle">⊕</label></p>
+<p><input type="checkbox" id="mn-demo" class="margin-toggle">
+<span class="marginnote">
+I couldn’t unsee the fact that the two accented vowels in Sebastián Ramírez’s name are AI. Was this foreshadowing? And is this a stale joke by now?
+</span></p>
+<ul>
+<li><strong>Sebastián Ramírez (@tiangolo)</strong>, developer of FastAPI, a library that has <em>3 Million downloads... a day</em>, gave forty-five minutes of rapid-fire tips. The sort of talk that’s wasted if you take notes, and lost if you don’t. I just decided to set my notebook aside and enjoy his burst of Colombian energy. He broke stereotypes on innovation. “Solve a problem,” he said, “It’s not about <em>innovation</em> or <em>disruption</em>. Just solve a problem, and innovation follows”. And he gave surprisingly practical advice (“Brush your teeth,” he said, “No, seriously. Brush your teeth. Especially at night. Or they will fall off.”) He did have a lot to say about community including this gem: “Avoid the dark places,” he said, “Hacker News, and Reddit.” (Amazing, I thought. Even @tiangolo gets haters.) He joked that he is more a Markdown programmer than a Python programmer since he emphasises the writing of extensive documentation. He did not so much give a recipe for community, he just stood out as an embodiment of its principles. </li>
+</ul>
+<h2>Python, the documentary</h2>
+<p>We thronged to the Forum Hall to watch a sneak preview of The Python Documentary that will be released on <a href="https://www.cultrepo.com/#films">cult.repo</a> soon. We watched highlights of two major milestones in the life of Python: the transition from a male-dominated to a more diverse community, and the painful switch from version 2 to version 3 of the language. Language, community. The inescapable double helix of Python’s DNA.</p>
+<p>The panel pictured below, Brett Cannon, Armin Ronacher, Paul Everitt (yes, a manel, with one male and one female moderator) exchanged war stories and discussed the future of both Python and its people.</p>
+<figure>
+<img src="panel.jpeg" alt="Speakers' panel following screening of The Python Documentary">
+</figure><p>Armin Ronacher’s revolt during the 2-to-3 transition had featured in the video. “Time healed and I came back, of course” he said. Brett Cannon noted how they had underestimated the extent of the existing codebase and the resistance they would encounter in the switch. Paul Everitt remembered how the transition contributed to Zope’s not surviving. All of them expressed the worry they had had at the time, that Python would not survive or risk fracturing the community, as has happened in other languages. They recalled dark times and lessons learned.</p>
+<p>They spoke about growing the community, about mentorship, role models, about older members needing to “get out of the way”, about elders giving support to newcomers but consciously doing so in a subordinate role, and about celebrating the achievement that is PyLadies.</p>
+<p>Their final note was one of optimism: AI is recruiting a new cohort into the Python community; we should be welcoming them, they concluded. As of course we should.</p>
+
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Voice and Participation</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/voice-and-participation/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/voice-and-participation/" />
+    
+      <summary type="html"><![CDATA[ An invitation to pitch in next year with your own talk; and some tips I gleaned on what talks make the greatest impact. ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>An Invitation, and My Tips for Talks</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>Savannah Bailey's keynote invited the audience deeper into the heart of the language. Not everyone will be a core developer, but she laid out a host of other ways of getting involved that are accessible to anyone in the audience.</p>
+<p>One of them, I believe, is giving a talk on some aspect of Python that you are passionate about or expert in. If anyone reads this with an interest in submitting an abstract for next year, here are some lessons I took away from speakers who packed the room and kept the audience engaged.</p>
+<p>If you are not a core developer, or you are not an expert on the frontiers of AI, then you need to work a bit harder 😉 to draw people in:</p>
+<ul>
+<li><p>Propose a deep dive into a highly focused skill or technique. It doesn't matter if the subject feels niche, only that it is useful or fun.</p>
+</li>
+<li><p>Make a promise in the proposal that the audience will go away with something they can replicate, and then deliver on your promise.</p>
+</li>
+<li><p>A highly successful technique, that I saw repeated over and over: start with an ordinary script, and layer on features stepwise, revealing new power in the language, the library, or the skill that you are demonstrating.</p>
+</li>
+<li><p>Note that you do not need for the theme to be at the cutting edge just that the audience will go away with a deeper practical knowledge, one thing they can try out (even if AI in the title was a huge draw, so were tutorials on concurrency and caching).</p>
+</li>
+<li><p>This also applies for more esoteric themes — a talk “slithering through audio data” also filled the room because it held the double promise that the audience would be entertained and that participants would be able “to identify key python libraries for exploring audio datasets, state what outputs we can get from the python libraries, and explain what the outputs tell us about the data”.</p>
+</li>
+<li><p>Remember for next time that the majority of participants are first timers at the conference; there is always a fund of beginners (to the community, not necessarily to the language) and there is no shame in catering to their needs.</p>
+</li>
+<li><p>Showing code is very useful, but far from essential. It can even be a distraction if there is so much of it that it can’t be read at the back of the room. The best uses of code that I saw were by people who used <a href="https://github.com/hakimel/reveal.js">reveal.js</a> to progressively highlight single lines in a wall of code as they spoke.</p>
+</li>
+<li><p>Humour was as prevalent in the successful talks as it was in the community. Perhaps you have heard the adage that you should never crack a joke when public speaking as you are sure to offend someone. But I have also learned over time that clowns are universally funny across cultures, and you can use that to your advantage. You don't need to perform slapstick, but gentle self-deprecation can be both funny and humble. This applies to both the proposal (e.g., a gentle joke to explain how you learned from a mistake) and to the presentation itself. It makes you come across as modest and endearing, especially if the rest of the talk shows how expert or successful you really are at the solution.</p>
+</li>
+</ul>
+<p>In short, it's about making the tool, the language, the community, or the skill that you are presenting more accessible, in bite-sized chunks, with vision, humility, and humour. I just hope that doesn't sound more daunting than inviting.</p>
+
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Lightning, Emotion, and Learning</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/lightning-emotion-and-learning/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/lightning-emotion-and-learning/" />
+    
+      <summary type="html"><![CDATA[ In which I sample the sheer variety of the talks, and hint at the energy, the joy, the surprises, the insights and delights of the conference. ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>Lightning Talks</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>The lightning talks stunned me. I kept thinking it was time for me to leave, since they came at the end of each intense day, but like a forbidden snack, I kept staying for just one more. Ultra-short presentations with sudden shifts from the emotional, to the weird, to the hilarious. The Lightning Talks serve as a sampler of the community at large, incredibly diverse, incredibly joyful:</p>
+<ul>
+<li>Armin Ronacher, star developer whose tools have been used by every single person in the hall, moved us all: “Python gave me my life and this community made me who I am”, he said, paying tribute to those who had inducted him into the language.</li>
+<li>Then a medley: <ul>
+<li>knitting as a binary pattern, whether knitting kittens or fractals; </li>
+<li>how to pronounce PyPI (it is Py, P, I, not PyPy, which is something else entirely); </li>
+<li>weird and wonderful Olympic mascots; </li>
+<li>building underwater, Python-driven robots; </li>
+<li>the thriving Python Community in Africa; </li>
+<li>riding Python-powered e-bikes from Switzerland to Prague (for the conference) and back; </li>
+<li>And an amazing teen (was he the youngest at the conference?) who set the audience abuzz with applause and hilarity as he showed off his school project: playing the buzzer on an Arduino.</li>
+</ul>
+</li>
+</ul>
+<figure>
+<img src="flash_mob.jpeg" alt="a flash mob of musicians playing the language anthem">
+<span class="marginnote">
+A flash mob of musicians from the audience playing the language anthem: <em>always look on the bright side of life</em>. Photo credit: Gauden Galea
+</span>
+</figure><h2>TL;DR for Selected Talks</h2>
+<p>Here are my summaries of the extensive notes I took from talks I attended, with personal lessons and reactions. Any inaccuracies or errors are, of course, my own.</p>
+<h3>📦 Caching in Python (Akshita Gupta)</h3>
+<p>Wow, this was a masterclass in content and style. Akshita Gupta gets my award for "highest bandwidth" presentation: a deep dive into caching in Python with a fully visual set of slides, the most explained with the least words on screen.</p>
+<p>AG took us on a journey through caching, from DNS caches in browsers, to the use of <code>functools</code> decorators, to distributed systems built on Redis and Memcached, to JobLib for parallel execution of data-intensive tasks. She layered on the patterns: starting with storing the results of function given a set of inputs; later, looking for the same inputs and retrieving the results; on a miss, computing and storing the new result. She covered setting policies on expiry, eviction, and refreshing of cached entries.</p>
+<p>I came away keen to start experimenting with optimising some of my own code.  And... am I tempted to try to improve my times in last December's <a href="https://adventofcode.com">Advent of Code</a>?  Baby steps: start with the more routine use of the <code>functools.lru_cache</code> and <code>functools.cache</code> decorators.</p>
+<h3>🌐 Democratizing Serverless AI Apps (Yuichiro Tachibana)</h3>
+<p>Yuichiro Tachibana converted a prosaic data processing script step by step into a serverless <code>Streamlit</code> AI app using <code>Pyodide</code> and <code>Stlite</code>, finally layering on <code>transformers.js.py</code> for sentiment analysis on the data set. The result: a fully client-side AI-enabled web app (HTML-only), that preserves privacy, enables easy sharing, and reduces cost.</p>
+<p>I had a double-take towards the end of the talk, realising belatedly that YT (<a href="https://github.com/whitphx">whitphx</a>) is himself the developer of both <code>stlite</code> and <code>transformers.js.py</code>, the libraries he was so expertly yet playfully demonstrating. I shall definitely explore these.</p>
+<h3>📚 PyScript + EduBlocks (Josh Lowe)</h3>
+<p>Josh Lowe runs <a href="https://edublocks.org/">EduBlocks</a>, a block-based Python learning site for schoolchildren. He demonstrated how he needs to achieve massive scale (300K monthly users and over a million projects) without incurring any server costs.</p>
+<p>His secret: Josh uses <a href="https://pyscript.net/">PyScript</a>. No backend infrastructure needed; everything happens on the client side.</p>
+<p>I have to admit that I tried out PyScript too early after its release and I wasn't impressed. But Josh unveiled a totally different world of possibilities. Amazing! Maybe I won’t be writing another EduBlocks web app, but it would certainly be interesting to try adding PyScript to mini-apps hosted on “static” pages, such as on this blog. Watch this space.</p>
+<h3>🧠 Generative AI's Promises &amp; Pitfalls (Keynote by Nerea Luis)</h3>
+<p>Nerea Luis' keynote covered GenAI’s rapid rise, shifting tech roles, and blurring lines of accountability: who can claim to have written the code when AI pair programmers are used? Who takes the blame when AI agents are in the loop?</p>
+<p>Her key message to developers: cultivate adaptable AI habits, not tool dependency. Over the next five years, she said, expect significant, unforeseeable change, particularly in areas such as search, information analysis, service consumption, communication, and the development of digital products and projects.</p>
+<p>She introduced us (or was that just me?) to two invaluable resources:</p>
+<ol>
+<li>the OWASP lists for new vulnerabilities (e.g., <a href="https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/">the OWASP Top 10 for LLM Applications 2025</a>), and </li>
+<li>the <a href="https://aiceoletters.com/">AI CEO letters site</a> for AI dreams at the head of large companies.</li>
+</ol>
+<h3>⚙️ Async Python Basics (Krzysztof Wilczyński &amp; Mateusz Zaremba)</h3>
+<p><span class="marginnote">
+<img src="./sceptre.jpeg" alt="The concurrency sceptre">
+KW and MZ used a clever metaphor for concurrency: they passed the Python-baton to each other as they took turns speaking. It stood for control flow, as Python shifts from executing to waiting. Loved it.
+Photo credit: Krzysztof Wilczyński & Mateusz Zaremba.
+</span></p>
+<p>KW and MZ gave us fast, accessible introduction to Python concurrency: <code>async</code>/<code>await</code>, coroutines, the event loop, and <code>asyncio.gather</code>. They started with the standard library and delved deep into the logic and pitfalls of concurrency. Tools also mentioned: <code>anyio</code>, <code>asyncer</code>.</p>
+<p>Finally, I felt I understood the concepts -- I had had threads, processes, and concurrency in a jumble in my mind, and I just avoided all of that. KW and MZ invited me in again, another neglected space to explore.</p>
+<h3>🐍 Python Performance “Snake Oil” (Sindre Nistad)</h3>
+<p>With tongue firmly in cheek and sheer virtuosity, Sindre delivered real speed gains in Python leveraging C, Rust, Numba, and others. He first introduced the original Mandelbrot set, plotted in asterisks on a dot matrix printer, then he went on to animate it, step by step, live, at high FPS, zooming rapidly down as far as Python's floating point numbers would allow him.</p>
+<p>Sindre has a deadpan comedy style, funny and brilliant, with punchlines in Python. I even loved the <em>snake</em> oil pun for Python performance (geddit?). Not sure there was much Python code left on screen by the end, after all the C, Rust, and Numba took over. Nor that I will be able to emulate any of this any time soon. It was just astounding to watch. It felt like staring into a wind machine, as close to flying as possible.</p>
+<h3>🤖 Automating the Unloved Project (Sebastian Witowski)</h3>
+<p>Sebastian told us how he automated a side project (stock-trading signals) with Python, n8n, and Telegram bots. He had started the project to "scratch his own itch" while day-trading during the lockdowns. He discovered that he could package it for others to use, and some people subscribed.</p>
+<p>However, he fell out of love with it. He stopped trading and no longer had any use for it. Customer support started taking too much of his time, with little income to show for it. So he automated himself out of it, handing over on-boarding, trial subscriptions, renewal information, and other repetitive tasks to a combination of scripts and n8n flow, with Telegram bots for when his intervention (approval, rejection, exceptions) was needed.</p>
+<p>His key lessons to the audience: thinking of a side project? Don't buy a new house yet. And automate early, set boundaries, don’t confuse passive income with no effort, and plan your exit. Candid, and practical.</p>
+<h3>🛠️ Building &amp; Deploying AI Agents in VS Code (Sharon Xu)</h3>
+<p>Sharon Xu used Microsoft’s <a href="https://code.visualstudio.com/docs/intelligentapps/overview">AI Toolkit in VS Code</a> to build and deploy an AI agent locally, live, in real time. She used GitHub Copilot to create both front and back ends, and deployed to the cloud. It took her less than 30 minutes, including a few minutes of projector glitch.</p>
+<p>This talk made agents and MCP much more accessible and provided an elegant example of a basic but effective app at the end. SX made it look so effortless, as experts always do, I guess. Added to my list for exploring.</p>
+
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Hey Python...</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/hey-python/</id>
+    <updated>2025-08-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/hey-python/" />
+    
+      <summary type="html"><![CDATA[ As we await the announcement of the 2026 venue for EuroPython, it is surely time for reflection on the language, the community, and the conference. And to air a niggling concern. ]]></summary>
+    
+    <content type="html"><![CDATA[
+      <h2>Hey Python, are you OK?</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>Am I concerned?</p>
+<p>Why should I be? After all, did I not witness many signs of energy, growth and support? Is not Python sitting right at the heart of the AI revolution?</p>
+<h3>The Community, out in full force...</h3>
+<p>I have written enthusiastically about the diversity, the joy, and the power of the Python Community, and I hope that I have provided ample evidence of the power and versatility of the language itself. Truly the idiom still holds, <em>batteries included</em>, not only in the standard library, but in the vibrant ecosystem and the energy of the people involved. It was amazing to witness the sheer creativity and virtuosity on prominent display at EP2025.</p>
+<figure>
+    <label for="ep25_org" class="margin-toggle">⊕</label><input type="checkbox" id="ep25_org" class="margin-toggle"><span class="marginnote">A big vote of thanks goes to the organisers and volunteers seen here in a group photo at the closing ceremony. These people not only organised the formal conference, but also the tutorials, the sprints, the language summits, the "open spaces", and the social events!</span>
+    <img src="ep25_org.jpeg" alt="Group photo of organisers and volunteers.">
+</figure><h3>With Numerous Supporters...</h3>
+<p>Thanks are also due to the sponsors. They supported the meeting financially. And their representatives inserted themselves organically into the life of the conference. They deserve our appreciation.</p>
+<figure>
+    <label for="import_this" class="margin-toggle">⊕</label><input type="checkbox" id="ep25_sponsors" class="margin-toggle"><span class="marginnote">The reps manned the stands, gave their own technical talks, asked attendees to solve Rubik's cubes or to scrape websites in friendly contests, distributed swag, and held recruitment chats with anyone interested.</span>
+    <img src="ep25_sponsors.jpeg" alt="EuroPython 2025 sponsors slide.">
+</figure><h3><code>import this</code></h3>
+<p>I remember (not sure how accurately) that David Crystal, in "The Stories of English", partly ascribed the global dominance of the English language to its remarkable capacity for adaptation and incorporation, borrowing vocabulary and structure, surviving by accretion of words and grammar.</p>
+<p>I was reminded of that idea during the conference, where Pythonistas rubbed shoulders with Rustaceans, where summits were held on C and Rust and WebAssembly with equal prominence to any of the other, more Pythonic concerns, such as packaging or AI, and where Python felt more solid in the browser, with Pyodide and PyScript. And this is nothing new to Python: C extensions have always been a staple and even <code>NumPy</code> has some <a href="https://github.com/numpy/numpy/blob/main/numpy/f2py/src/fortranobject.c">legacy Fortran code</a> lurking inside it.</p>
+<p><label for="asset_trends" class="margin-toggle">⊕</label><input type="checkbox" id="asset_trends" class="margin-toggle">
+<span class="marginnote">PEP 20: <a href="https://peps.python.org/pep-0020/" alt="Link to PEP 20, the Zen of Python" target="_blank">The Zen of Python</a>.</span></p>
+<p>Maybe, when the Zen of Python was first written, the strength of the language lay not in any of the nineteen precepts but in the very invocation: <code>import this</code>.</p>
+<h3>So why the niggling concern?</h3>
+<p><label for="import_this" class="margin-toggle">⊕</label></p>
+<p><input type="checkbox" id="import_this" class="margin-toggle">
+<span class="marginnote">
+    <img src="psf_asset_trends.png" alt="graph of asset trends in the Python Software Foundation website">
+    Source: <a href="https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html" alt="Link to PSF announcement on the pause of the grants program" target="_blank">
+    The PSF has paused our Grants Program.
+    </a> Accessed 17 August 2025.
+</span></p>
+<p>Soon after we closed the conference in celebration, there was an announcement on the conference Discord channel that <a href="https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html" alt="Link to PSF announcement on the pause of the grants program" target="_blank">the Python Software Foundation has paused its grants program for 2025</a>.</p>
+<p>In the announcement, the Board pointed out the massive rise in Python popularity, but they also show this graph and commented:</p>
+<blockquote><p>By contrast, the PSF’s available resources have decreased over the last three years and are projected to decrease again in 2025 due to increasing PyCon US and foundation costs. Much of the growth shown before 2022 in the chart below comes from grants we received that were restricted funds dedicated to specific staffing and other programs. The result is increasing global community activity against a decreasing pool of available funds.</p>
+</blockquote>
+<p>I could not fail to hear familiar echoes of <a href="https://healthpolicy-watch.news/nations-approve-who-membership-fee-increase-as-us-exit-squeezes-budget/">what is happening in WHO</a>. The fall in income. The need to shift whatever donations are received from earmarked grants to flexible funding. The possibility that a global good may be choked from lack of resources. The dissonance between the centrality of a major global good (whether Python or global health), and the drop in funding.</p>
+<p>Was 2022 a peak? Or was 2024 an outlier?</p>
+<p>Perhaps I am overthinking it. Surely all will be well. Surely companies and countries profiting from the AI boom will step in. Surely the community will not takes its gains for granted and rise to the challenge.</p>
+<p>And am I really going to end this celebratory essay with an anti-climax? Am I? If I do, it will only be because I care, because I would be interested to explore what I can do, and because I would like to spur others to act: to give of their time, money, or ideas.</p>
+<p>(And anyway, who on Earth reads down to the last paragraph in a long, five-part blog?)</p>
+
+    ]]></content>
+    
+  </entry>
   
   <entry>
     <title>One-Hundred-Week Banner</title>
@@ -246,6 +623,80 @@
 <p>I started my coding life in the 80s with a ZX Spectrum and a book on Basic. I was hooked. I've been coding ever since. I've worked in a variety of languages and environments, including Hypertalk, Perl, PHP, Processing, Python, R, and ZX Basic (in alphabetical order, because I loved each of them at different times). These days, my mainstay is Python, a happy coincidence given its current dominance in the field of AI. It also explains why I have chosen to use <a href="https://www.getlektor.com/">Lektor</a> for this site.</p>
 <p>But I will try any new language or framework, just for the thrill. My hard drive is littered with half-finished projects and experiments. Here are a few of them, in no particular order. In recent months I have been able to take them to a fuller stage of completion with the assistance of AI copilots.</p>
 
+    ]]></content>
+    
+  </entry>
+  
+  <entry>
+    <title>Annex: Responses to my Poll</title>
+    <id>http://localhost:5000../blog/pyladies-pacman-and-public-health/health-and-society/annex-responses-to-my-poll/</id>
+    <updated>2025-07-17T00:00:00Z</updated>
+    <link rel="alternate" href="http://localhost:5000../blog/pyladies-pacman-and-public-health/health-and-society/annex-responses-to-my-poll/" />
+    
+      
+      <summary type="text">← Back to &#34;Health and Society&#34; post.Context At the end of my talk at EuroPython 2025, I ran a quick brainstorm among the audience in the room. I generated this report on the spot, but there was no…</summary>
+    
+    <content type="html"><![CDATA[
+      <p class="meta">&larr; Back to "<a href="../" alt="Health and Society">Health and Society</a>" post.</p><h2>Context</h2>
+<p><span class="marginnote">
+    <img src="../../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>At the end of my talk at EuroPython 2025, I ran a quick brainstorm among the audience in the room. I generated this report on the spot, but there was no time to discuss it on the day. Several promising ideas did emerge, and I share the report here as Annex to my "<a href="../" alt="Health and Society">Health and Society</a>" post.</p>
+<h3>Acknowledgment</h3>
+<blockquote><p>This poll was conducted using the Pera tool (an internal WHO/Europe app) managed and created by Nebi Bekiri and Miguel Guadarrama (I had a hand in its ideation and the MVP creation as did Nuwan Weerasinghe). Sincere gratitude to Nebi for sanctioning this use.</p>
+</blockquote>
+<h2>Poll Question</h2>
+<blockquote><p>How might Python and its community bring about a vision of an "open source public health operating system"?</p>
+</blockquote>
+<h2>LLM Prompt</h2>
+<blockquote><p>You are an expert meeting facilitator. You are collecting inputs from a gathering of Python programmers asked to submit their ideas on possible intersections between Python, its community, and the idea of an open source public health operating system. You are requested to summarise basic concepts, opportunities, reservations or cautions. Be professional in tone and style. Limit the report to three pages maximum. Be ready to use Python in-jokes or allusions where useful but do this sparingly (e.g. the "essential functions of public health" as the "standard library" of the discipline).</p>
+</blockquote>
+<h2>AI-Generated Report</h2>
+<h3>Introduction</h3>
+<p>This document summarises the feedback collected from a group of Python programmers on the potential intersections between Python, its community, and the vision of an open source public health operating system. This summary aims to provide a clear and concise overview of the community's insights and suggestions.</p>
+<h3>Experience with Open Source and Community Management</h3>
+<ul>
+<li><strong>Relevance</strong>: Several participants emphasised the importance of leveraging the community's experience with open source and community management. This foundational knowledge is crucial for the development and maintenance of an open source public health operating system.</li>
+</ul>
+<h3>Education and Training</h3>
+<ul>
+<li><strong>University Modules</strong>: Incorporating public health and statistics modules into university curricula, specifically using Python and tools like Matplotlib, was a recurring theme. This approach aims to build a strong foundation for future contributors.</li>
+<li><strong>Medical Practitioner Training</strong>: Training medical practitioners in Python could enhance their ability to analyse and visualise public health data effectively.</li>
+</ul>
+<h3>Hackathons and Sprints</h3>
+<ul>
+<li><strong>Public Health Data Visualisations</strong>: Organising hackathons focused on public health data visualisations can foster innovation and collaboration within the community.</li>
+<li><strong>Conference Sprints</strong>: Adding sprints to conferences that utilise open health data for various regions or countries can help explore new insights and applications.</li>
+</ul>
+<h3>Conferences and Summits</h3>
+<ul>
+<li><strong>PyCon Summits</strong>: Holding specific summits at major PyCon conferences dedicated to public health topics can increase awareness and engagement.</li>
+<li><strong>Involvement of Organizations</strong>: Involving organizations like the Python Software Foundation (PSF) in public health discussions at international forums such as the WHO can bridge gaps between technology and health sectors.</li>
+</ul>
+<h3>Standardization and Tools</h3>
+<ul>
+<li><strong>Common Standards</strong>: Developing common standards for accessing public health data is crucial. Providing tools that enable the development of useful applications can significantly impact public health initiatives.</li>
+</ul>
+<h3>Collaboration Platforms</h3>
+<ul>
+<li><strong>Marketplace for Groups</strong>: Creating a marketplace for groups focusing on specific tasks, where participants can sign up for sprints, can enhance collaboration and project management.</li>
+<li><strong>Discussion Groups</strong>: Establishing discussion groups can facilitate continuous dialogue and idea exchange among community members.</li>
+</ul>
+<h3>Data Privacy and Security</h3>
+<ul>
+<li><strong>Sensitive Data</strong>: Handling public health data involves significant privacy and security concerns. Ensuring robust data protection measures is essential to maintain trust and compliance with regulations.</li>
+</ul>
+<h3>Resource Allocation</h3>
+<ul>
+<li><strong>Sustainability</strong>: Sustaining an open source public health operating system requires substantial resources, including funding, time, and expertise. Ensuring long-term commitment and support is critical.</li>
+</ul>
+<h3>Inclusivity and Accessibility</h3>
+<ul>
+<li><strong>Broad Participation</strong>: Ensuring that the initiative is inclusive and accessible to a diverse range of participants, including those from different regions and backgrounds, is vital for its success.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Key areas of focus include leveraging existing open source and community management experience, enhancing education and training, organizing hackathons and sprints, and establishing common standards and collaboration platforms. Addressing reservations around data privacy, resource allocation, and inclusivity will be essential to the initiative's success.</p>
+<p class="meta">&larr; Back to "<a href="../" alt="Health and Society">Health and Society</a>" post.</p>
     ]]></content>
     
   </entry>
@@ -669,8 +1120,7 @@ The contextual factors and key enabling mechanisms through the use of policy ins
       <summary type="html"><![CDATA[ A speech in which I draw parallels between Jin Yong and James Joyce, in a narrative of mentorship, cultural touchstones, and philosophical musings. ]]></summary>
     
     <content type="html"><![CDATA[
-      <p><a href="../blog/talk20181123/acceptance_speech.pdf">PDF version</a></p>
-<h2>Acceptance Speech on the Award of DSc (Honoris Causa) by the University of Malta</h2>
+      <h2>Acceptance Speech on the Award of DSc (Honoris Causa) by the University of Malta</h2>
 <p>Distinguished Chancellor,<br>
 Distinguished Rector and Pro-Rectors,<br>
 Honourable Minister for Education,<br>
@@ -679,6 +1129,9 @@ Members of the Academic Body,<br>
 Fellow Graduands,<br>
 Distinguished Guests,<br>
 Ladies and Gentlemen,</p>
+<p><span class="marginnote">
+Download the <a href="./acceptance_speech.pdf" alt="link to the PDF version of the speech">PDF version</a> of the speech.
+</span></p>
 <p>I feel privileged and deeply grateful for the honour that you are
 bestowing upon me today.</p>
 <p>Twenty years ago, I joined the World Health Organization. I have worked
@@ -1006,152 +1459,6 @@ Although evidence gaps exist regarding evidence Types I and II, the most promine
 <h3>Citation</h3>
 <p>Int J Public Health. 2016. 61 (5). 553-63.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/27113707?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>Tobacco control in Europe: a policy review.</title>
-    <id>http://localhost:5000../pub/pmid27246592/</id>
-    <updated>2016-06-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid27246592/" />
-    
-      
-      <summary type="text">Tobacco is responsible for the death of 6 million people every year globally, of whom 700 000 are in Europe. Effective policies for tobacco control exist; however, the status of their implementation…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>Tobacco is responsible for the death of 6 million people every year globally, of whom 700 000 are in Europe. Effective policies for tobacco control exist; however, the status of their implementation varies across the World Health Organization (WHO) European Region. In order to tackle the tobacco epidemic, action has been taken though the implementation of both legally binding and non-legally binding measures. This article aims to present the achievements and challenges of tobacco control in Europe, focussing on the available legally binding instruments such as the WHO Framework Convention on Tobacco Control and the revision of the Tobacco Products Directive at the European Union level. Tobacco still faces heavy lobbying of the tobacco industry, which has systematically contrasted policies to achieve public health objectives. The legal instruments for tobacco control in Europe presented here are not always adequately enforced in all the countries and there is certainly room for improving their implementation. Finally, the need for a strong political commitment towards the end-game of the tobacco epidemic is emphasised.</p>
-</blockquote>
-<h3>Citation</h3>
-<p>Eur Respir Rev. 2016. 25 (140). 151-7.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/27246592?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>European Code against Cancer 4th Edition: 12 ways to reduce your cancer risk.</title>
-    <id>http://localhost:5000../pub/pmid26164654/</id>
-    <updated>2015-12-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid26164654/" />
-    
-      
-      <summary type="text">This overview describes the principles of the 4th edition of the European Code against Cancer and provides an introduction to the 12 recommendations to reduce cancer risk. Among the 504.6 million…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>This overview describes the principles of the 4th edition of the European Code against Cancer and provides an introduction to the 12 recommendations to reduce cancer risk. Among the 504.6 million inhabitants of the member states of the European Union (EU28), there are annually 2.64 million new cancer cases and 1.28 million deaths from cancer. It is estimated that this cancer burden could be reduced by up to one half if scientific knowledge on causes of cancer could be translated into successful prevention. The Code is a preventive tool aimed to reduce the cancer burden by informing people how to avoid or reduce carcinogenic exposures, adopt behaviours to reduce the cancer risk, or to participate in organised intervention programmes. The Code should also form a base to guide national health policies in cancer prevention. The 12 recommendations are: not smoking or using other tobacco products; avoiding second-hand smoke; being a healthy body weight; encouraging physical activity; having a healthy diet; limiting alcohol consumption, with not drinking alcohol being better for cancer prevention; avoiding too much exposure to ultraviolet radiation; avoiding cancer-causing agents at the workplace; reducing exposure to high levels of radon; encouraging breastfeeding; limiting the use of hormone replacement therapy; participating in organised vaccination programmes against hepatitis B for newborns and human papillomavirus for girls; and participating in organised screening programmes for bowel cancer, breast cancer, and cervical cancer.</p>
-</blockquote>
-<h3>Citation</h3>
-<p>Cancer Epidemiol. 2015. 39 Suppl 1. S1-10.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/26164654?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>Cancer control capacity in 50 low- and middle-income countries.</title>
-    <id>http://localhost:5000../pub/pmid25646899/</id>
-    <updated>2015-10-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid25646899/" />
-    
-      
-      <summary type="text">Within the World Health Organization-International Atomic Energy Agency (WHO-IAEA) collaboration for delivery of technical assistance to its Member States, the National Cancer Control Programme/Plan…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>Within the World Health Organization-International Atomic Energy Agency (WHO-IAEA) collaboration for delivery of technical assistance to its Member States, the National Cancer Control Programme/Plan (NCCP) Core Capacity Self-Assessment Tool has been used to obtain a simple and quick qualitative overview of national cancer control planning and on-going activities. The NCCP tool was applied in 50 Member States, which were classified as low- and middle-income countries in 2012. Results show that half of these countries reported having officially endorsed an NCCP and 42% were in the process of preparing or updating one. Overall, the most relevant cancer control interventions reported to be partially developed or well established in most countries were related to the cancer prevention, early detection of cervical and breast cancers, as well as diagnosis and treatment of curable cancers. Contrarily, patient's rehabilitation, psychosocial support, human papilloma virus vaccination, breast cancer screening with mammography and control of occupational carcinogens were noted as being in early development phases. The availability of crucial resources to support interventions was perceived to be the highest in upper middle-income countries. These findings highlight specific areas where WHO, IAEA and partners could strengthen collaboration with countries to leverage on-going interventions and improve availability of resources.</p>
-</blockquote>
-<h3>Citation</h3>
-<p>Glob Public Health. 2015. 10 (9). 1017-31.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/25646899?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>The future burden of obesity-related diseases in the 53 WHO European-Region countries and the impact of effective interventions: a modelling study.</title>
-    <id>http://localhost:5000../pub/pmid25063459/</id>
-    <updated>2014-07-25T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid25063459/" />
-    
-      
-      <summary type="text">Non-communicable diseases (NCDs) are the biggest cause of death in Europe putting an unsustainable burden on already struggling health systems. Increases in obesity are a major cause of NCDs. This…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>Non-communicable diseases (NCDs) are the biggest cause of death in Europe putting an unsustainable burden on already struggling health systems. Increases in obesity are a major cause of NCDs. This paper projects the future burden of coronary heart disease (CHD), stroke, type 2 diabetes and seven cancers by 2030 in 53 WHO European Region countries based on current and past body mass index (BMI) trends. It also tests the impact of obesity interventions on the future disease burden.
-Secondary data analysis of country-specific epidemiological data using a microsimulation modelling process.
-The effect of three hypothetical scenarios on the future burden of disease in 2030 was tested: baseline scenario, BMI trends go unchecked; intervention 1, population BMI decreases by 1%; intervention 2, BMI decreases by 5%.
-Quantifying the future burden of major NCDs and the impact of interventions on this future disease burden.
-By 2030 in the whole of the European region, the prevalence of diabetes, CHD and stroke and cancers was projected to reach an average of 3990, 4672 and 2046 cases/100 000, respectively. The highest prevalence of diabetes was predicted in Slovakia (10 870), CHD and stroke-in Greece (11 292) and cancers-in Finland (5615 cases/100 000). A 5% fall in population BMI was projected to significantly reduce cumulative incidence of diseases. The largest reduction in diabetes and CHD and stroke was observed in Slovakia (3054 and 3369 cases/100 000, respectively), and in cancers was predicted in Germany (331/100 000).
-Modelling future disease trends is a useful tool for policymakers so that they can allocate resources effectively and implement policies to prevent NCDs. Future research will allow real policy interventions to be tested; however, better surveillance data on NCDs and their risk factors are essential for research and policy.</p>
-</blockquote>
-<h3>Citation</h3>
-<p>BMJ Open. 2014. 4 (7). e004787.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/25063459?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>Cancer in Russia: reflections from WHO in Europe.</title>
-    <id>http://localhost:5000../pub/pmid24731403/</id>
-    <updated>2014-04-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid24731403/" />
-    
-      
-      <summary type="text">Citation Lancet Oncol. 2014. 15 (5). 487-8. Download citation in Medline format</summary>
-    
-    <content type="html"><![CDATA[
-      <h3>Citation</h3>
-<p>Lancet Oncol. 2014. 15 (5). 487-8.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/24731403?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>Public-private partnerships with large corporations: setting the ground rules for better health.</title>
-    <id>http://localhost:5000../pub/pmid24581699/</id>
-    <updated>2014-04-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid24581699/" />
-    
-      
-      <summary type="text">Public-private partnerships with large corporations offer potential benefits to the health sector but many concerns have been raised, highlighting the need for appropriate safeguards. In this paper…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>Public-private partnerships with large corporations offer potential benefits to the health sector but many concerns have been raised, highlighting the need for appropriate safeguards. In this paper we propose five tests that public policy makers may wish to apply when considering engaging in such a public-private partnership. First, are the core products and services provided by the corporation health enhancing or health damaging? In some cases, such as tobacco, the answer is obvious but others, such as food and alcohol, are contested. In such cases, the burden of proof is on the potential partners to show that their activities are health enhancing. Second, do potential partners put their policies into practice in the settings where they can do so, their own workplaces? Third, are the corporate social responsibility activities of potential partners independently audited? Fourth, do potential partners make contributions to the commons rather than to narrow programmes of their choosing? Fifth, is the role of the partner confined to policy implementation rather than policy development, which is ultimately the responsibility of government alone?</p>
-</blockquote>
-<h3>Citation</h3>
-<p>Health Policy. 2014. 115 (2-3). 138-40.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/24581699?report=medline&amp;format=text">Download citation in Medline format</a></p>
-
-    ]]></content>
-    
-  </entry>
-  
-  <entry>
-    <title>Relationship of soft drink consumption to global overweight, obesity, and diabetes: a cross-national analysis of 75 countries.</title>
-    <id>http://localhost:5000../pub/pmid23488503/</id>
-    <updated>2013-11-01T00:00:00Z</updated>
-    <link rel="alternate" href="http://localhost:5000../pub/pmid23488503/" />
-    
-      
-      <summary type="text">We estimated the relationship between soft drink consumption and obesity and diabetes worldwide. We used multivariate linear regression to estimate the association between soft drink consumption and…</summary>
-    
-    <content type="html"><![CDATA[
-      <blockquote><p>We estimated the relationship between soft drink consumption and obesity and diabetes worldwide.
-We used multivariate linear regression to estimate the association between soft drink consumption and overweight, obesity, and diabetes prevalence in 75 countries, controlling for other foods (cereals, meats, fruits and vegetables, oils, and total calories), income, urbanization, and aging. Data were obtained from the Euromonitor Global Market Information Database, the World Health Organization, and the International Diabetes Federation. Bottled water consumption, which increased with per-capita income in parallel to soft drink consumption, served as a natural control group.
-Soft drink consumption increased globally from 9.5 gallons per person per year in 1997 to 11.4 gallons in 2010. A 1% rise in soft drink consumption was associated with an additional 4.8 overweight adults per 100 (adjusted B; 95% confidence interval [CI] = 3.1, 6.5), 2.3 obese adults per 100 (95% CI = 1.1, 3.5), and 0.3 adults with diabetes per 100 (95% CI = 0.1, 0.8). These findings remained robust in low- and middle-income countries.
-Soft drink consumption is significantly linked to overweight, obesity, and diabetes worldwide, including in low- and middle-income countries.</p>
-</blockquote>
-<h3>Citation</h3>
-<p>Am J Public Health. 2013. 103 (11). 2071-7.</p>
-<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/23488503?report=medline&amp;format=text">Download citation in Medline format</a></p>
 
     ]]></content>
     

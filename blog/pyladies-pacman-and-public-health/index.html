@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>PyLadies, PacMan, and Public Health —  Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li class="active" >
+          <a href="../">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../../pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  <h1>PyLadies, PacMan, and Public Health</h1>
+
+
+
+
+    
+    <p class="meta">
+      17 Aug 2025
+    </p>
+
+
+
+
+<h2>EuroPython 2025: A Retrospective</h2>
+<p><span class="marginnote">
+    <img src="ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>On 29 March 2025, the programme committee informed me that my abstract (“Python, Politics, and Public Health”) had been accepted for a talk at EuroPython 2025 in Prague. As luck would have it, I ended up delivering it on the first day after my retirement from WHO. The talk thus became a manifesto for where I hope to go next, uniting my work in public health with my long-standing love of Python.</p>
+<p>I’ve divided my notes into short sections, aiming to capture the essence of the conference from many perspectives. I want to jog happy memories among those who attended, and to entice others to join next year. Skip to the parts that interest you.</p>
+<p>As delighted as I was to hear the news that the abstract proposal had been accepted, many questions remained: how would the Python community respond to a retired public health official from a different world? Would there be kindred spirits interested in the health and social impact of code?</p>
+
+
+
+
+
+  <h3>Read more</h3>
+    <ol>
+      
+        <li>
+          <a href="community-at-the-heart/">Community at the Heart</a>
+          <div class="part-summary">The ubiquity of PyLadies, the Conference Code of Conduct, the youthful energy of EuroPython, an invitation to pitch in... and to ignore the haters, plus a sneak preview of The Python Documentary.</div>
+        </li>
+      
+        <li>
+          <a href="health-and-society/">Health and Society</a>
+          <div class="part-summary">Politics, equity and fairness, outbreak responses, disaster relief, cancer real-world evidence, diagnosis of genetic diseases -- the many facets of Python&#39;s health and social impact.</div>
+        </li>
+      
+        <li>
+          <a href="lightning-emotion-and-learning/">Lightning, Emotion, and Learning</a>
+          <div class="part-summary">In which I sample the sheer variety of the talks, and hint at the energy, the joy, the surprises, the insights and delights of the conference.</div>
+        </li>
+      
+        <li>
+          <a href="voice-and-participation/">Voice and Participation</a>
+          <div class="part-summary">An invitation to pitch in next year with your own talk; and some tips I gleaned on what talks make the greatest impact.</div>
+        </li>
+      
+        <li>
+          <a href="hey-python/">Hey Python...</a>
+          <div class="part-summary">As we await the announcement of the 2026 venue for EuroPython, it is surely time for reflection on the language, the community, and the conference. And to air a niggling concern.</div>
+        </li>
+      
+    </ol>
+
+
+
+
+
+
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth page-bottom">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

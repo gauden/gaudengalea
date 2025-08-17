@@ -1,0 +1,258 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../../static/tufte.css">
+  <link rel="stylesheet" href="../../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Voice and Participation —  Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../../">⌂</a>
+        </li>&middot;
+        <li class="active" >
+          <a href="../../">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../../../pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  <h1>Voice and Participation</h1>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+
+  
+  
+    <p  class="meta">
+      17 Aug 2025
+      <span class="divider" style="display: inline-block; width: 2em;"></span>
+      <a class="prev" href="../lightning-emotion-and-learning/">&larr;</a> 
+      Part 4 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../hey-python/">&rarr;</a>
+   </p>
+  
+  
+
+
+
+<h2>An Invitation, and My Tips for Talks</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>Savannah Bailey's keynote invited the audience deeper into the heart of the language. Not everyone will be a core developer, but she laid out a host of other ways of getting involved that are accessible to anyone in the audience.</p>
+<p>One of them, I believe, is giving a talk on some aspect of Python that you are passionate about or expert in. If anyone reads this with an interest in submitting an abstract for next year, here are some lessons I took away from speakers who packed the room and kept the audience engaged.</p>
+<p>If you are not a core developer, or you are not an expert on the frontiers of AI, then you need to work a bit harder 😉 to draw people in:</p>
+<ul>
+<li><p>Propose a deep dive into a highly focused skill or technique. It doesn't matter if the subject feels niche, only that it is useful or fun.</p>
+</li>
+<li><p>Make a promise in the proposal that the audience will go away with something they can replicate, and then deliver on your promise.</p>
+</li>
+<li><p>A highly successful technique, that I saw repeated over and over: start with an ordinary script, and layer on features stepwise, revealing new power in the language, the library, or the skill that you are demonstrating.</p>
+</li>
+<li><p>Note that you do not need for the theme to be at the cutting edge just that the audience will go away with a deeper practical knowledge, one thing they can try out (even if AI in the title was a huge draw, so were tutorials on concurrency and caching).</p>
+</li>
+<li><p>This also applies for more esoteric themes — a talk “slithering through audio data” also filled the room because it held the double promise that the audience would be entertained and that participants would be able “to identify key python libraries for exploring audio datasets, state what outputs we can get from the python libraries, and explain what the outputs tell us about the data”.</p>
+</li>
+<li><p>Remember for next time that the majority of participants are first timers at the conference; there is always a fund of beginners (to the community, not necessarily to the language) and there is no shame in catering to their needs.</p>
+</li>
+<li><p>Showing code is very useful, but far from essential. It can even be a distraction if there is so much of it that it can’t be read at the back of the room. The best uses of code that I saw were by people who used <a href="https://github.com/hakimel/reveal.js">reveal.js</a> to progressively highlight single lines in a wall of code as they spoke.</p>
+</li>
+<li><p>Humour was as prevalent in the successful talks as it was in the community. Perhaps you have heard the adage that you should never crack a joke when public speaking as you are sure to offend someone. But I have also learned over time that clowns are universally funny across cultures, and you can use that to your advantage. You don't need to perform slapstick, but gentle self-deprecation can be both funny and humble. This applies to both the proposal (e.g., a gentle joke to explain how you learned from a mistake) and to the presentation itself. It makes you come across as modest and endearing, especially if the rest of the talk shows how expert or successful you really are at the solution.</p>
+</li>
+</ul>
+<p>In short, it's about making the tool, the language, the community, or the skill that you are presenting more accessible, in bite-sized chunks, with vision, humility, and humour. I just hope that doesn't sound more daunting than inviting.</p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+
+  
+  
+    <p  class="meta" style="margin-top: 3em;">
+      <a class="prev" href="../lightning-emotion-and-learning/">&larr;</a> 
+      Part 4 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../hey-python/">&rarr;</a>
+   </p>
+  
+
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth page-bottom">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

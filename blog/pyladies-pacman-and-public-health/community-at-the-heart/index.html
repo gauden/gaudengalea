@@ -1,0 +1,251 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../../static/tufte.css">
+  <link rel="stylesheet" href="../../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Community at the Heart —  Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../../">⌂</a>
+        </li>&middot;
+        <li class="active" >
+          <a href="../../">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../../../pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  <h1>Community at the Heart</h1>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+  
+    <p  class="meta">
+      17 Aug 2025
+      <span class="divider" style="display: inline-block; width: 2em;"></span>
+      
+      Part 1 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../health-and-society/">&rarr;</a>
+   </p>
+  
+  
+
+
+
+<h2>Speakers’ Dinner</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>If I felt any tensions or self-consciousness, they dissipated at the Speakers’ Dinner. Three hours that flowed serenely and imperceptibly in the Manes restaurant overlooking the Vltava River, spanning sunset and early evening. The dinner gives you an easy entry point to conversations, since all the other guests are speakers: you just have to ask what their speech is about and you have a conversation starter. (The image quilt below is sewn from the <a href="https://ep2025.europython.eu/speakers/">speaker profile photos</a> on the EuroPython 2025 website).</p>
+<figure>
+<a href="https://ep2025.europython.eu/speakers/" alt="Image quilt of speaker profile photos at EuroPython 2025" target="_blank"><img src="speaker_quilt.webp" alt="Image quilt of speaker photos from EuroPython 2025"></a>
+</figure><p>It was different with <strong>Georgi Ker</strong> (Board of Directors, Python Software Foundation). Our chat went straight to the theme of community, an aspect of Python that I have observed with interest since my first EuroPython a decade ago in Florence. We discussed three attributes of the community:</p>
+<ul>
+<li>The <strong>ubiquity of <a href="https://pyladies.com/">PyLadies</a></strong> at Python meetings and in the life of the language: I am used to attending public health meetings where gender representation has to be very carefully planned, where vocal criticism of <em>manels</em> (panels composed entirely of men) is frequent, and where the invitation of female speakers that is also geographically diverse is a constant challenge. In Python, the creation of PyLadies has been hugely effective and their leadership in the community is organic and evident everywhere. The PyLadies presence goes well beyond mere gender representation, it brings an inclusiveness to the language itself and I would suggest is one of the reasons for Python’s success, as much as any internal feature.</li>
+</ul>
+<p><label for="mn-demo" class="margin-toggle">⊕</label></p>
+<p><input type="checkbox" id="mn-demo" class="margin-toggle">
+<span class="marginnote">
+In the main conference, later, I learned about the <strong>PacMan rule</strong>. It goes like this: if there is a circle of people talking in a hallway or over tea and a new person approaches, the circle should open up to include the newcomer. Clever naming, and such an enabler!
+</span></p>
+<ul>
+<li><p>The power and detail of the <strong><a href="https://www.europython-society.org/coc/">EuroPython Society code of conduct</a></strong> stands as role model even for conferences outside the Python community. It is detailed, transparent, and strictly enforced. I thoroughly enjoyed reading it, noting the transparency reports that accompany it, the frequent mentions of it during the conference, and the clear reporting lines for incidents. I think it is a model of good practice; I tip my virtual hat to all involved in creating, maintaining, and implementing it.</p>
+</li>
+<li><p>A third element: the <strong>young median age of the conference</strong>. In public health policy conferences, the age of the participants gradually advances with the seniority of the representation. In one sense it is natural that the conferences I am used to attending include older people from the executive levels, and often there has to be a search for young talent to “represent” that age cohort. But this creates the problem of how to select the representatives, and how to go beyond tokenism. In EuroPython, youth are just <em>there</em>, they <em>are</em> the community.</p>
+</li>
+</ul>
+<h2>Keynotes</h2>
+<p>Two keynote speakers had more to say on the theme of community or served as effective role models.</p>
+<ul>
+<li>Python core developers are gods to mere mortals like me. In a modest, humorous, intensely personal talk, <strong>Savannah Bailey</strong> demystified her journey into becoming a core developer. From triaging issues, to tinkering with documentation, to contributions to the standard library (she focused her energy on <code>argparse</code>), to eventually leveraging her DevOps skills to contributing to the Python JIT compiler, she made it all seem so accessible, so inviting. A place for everyone. </li>
+</ul>
+<p><label for="mn-demo" class="margin-toggle">⊕</label></p>
+<p><input type="checkbox" id="mn-demo" class="margin-toggle">
+<span class="marginnote">
+I couldn’t unsee the fact that the two accented vowels in Sebastián Ramírez’s name are AI. Was this foreshadowing? And is this a stale joke by now?
+</span></p>
+<ul>
+<li><strong>Sebastián Ramírez (@tiangolo)</strong>, developer of FastAPI, a library that has <em>3 Million downloads... a day</em>, gave forty-five minutes of rapid-fire tips. The sort of talk that’s wasted if you take notes, and lost if you don’t. I just decided to set my notebook aside and enjoy his burst of Colombian energy. He broke stereotypes on innovation. “Solve a problem,” he said, “It’s not about <em>innovation</em> or <em>disruption</em>. Just solve a problem, and innovation follows”. And he gave surprisingly practical advice (“Brush your teeth,” he said, “No, seriously. Brush your teeth. Especially at night. Or they will fall off.”) He did have a lot to say about community including this gem: “Avoid the dark places,” he said, “Hacker News, and Reddit.” (Amazing, I thought. Even @tiangolo gets haters.) He joked that he is more a Markdown programmer than a Python programmer since he emphasises the writing of extensive documentation. He did not so much give a recipe for community, he just stood out as an embodiment of its principles. </li>
+</ul>
+<h2>Python, the documentary</h2>
+<p>We thronged to the Forum Hall to watch a sneak preview of The Python Documentary that will be released on <a href="https://www.cultrepo.com/#films">cult.repo</a> soon. We watched highlights of two major milestones in the life of Python: the transition from a male-dominated to a more diverse community, and the painful switch from version 2 to version 3 of the language. Language, community. The inescapable double helix of Python’s DNA.</p>
+<p>The panel pictured below, Brett Cannon, Armin Ronacher, Paul Everitt (yes, a manel, with one male and one female moderator) exchanged war stories and discussed the future of both Python and its people.</p>
+<figure>
+<img src="panel.jpeg" alt="Speakers' panel following screening of The Python Documentary">
+</figure><p>Armin Ronacher’s revolt during the 2-to-3 transition had featured in the video. “Time healed and I came back, of course” he said. Brett Cannon noted how they had underestimated the extent of the existing codebase and the resistance they would encounter in the switch. Paul Everitt remembered how the transition contributed to Zope’s not surviving. All of them expressed the worry they had had at the time, that Python would not survive or risk fracturing the community, as has happened in other languages. They recalled dark times and lessons learned.</p>
+<p>They spoke about growing the community, about mentorship, role models, about older members needing to “get out of the way”, about elders giving support to newcomers but consciously doing so in a subordinate role, and about celebrating the achievement that is PyLadies.</p>
+<p>Their final note was one of optimism: AI is recruiting a new cohort into the Python community; we should be welcoming them, they concluded. As of course we should.</p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+  
+    <p  class="meta" style="margin-top: 3em;">
+      
+      Part 1 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../health-and-society/">&rarr;</a>
+   </p>
+  
+
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth page-bottom">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

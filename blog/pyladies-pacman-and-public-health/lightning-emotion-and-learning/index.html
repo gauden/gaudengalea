@@ -1,0 +1,286 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../../static/tufte.css">
+  <link rel="stylesheet" href="../../../static/custom.css">
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+  <title>Lightning, Emotion, and Learning —  Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../../">⌂</a>
+        </li>&middot;
+        <li class="active" >
+          <a href="../../">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../../../pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  <h1>Lightning, Emotion, and Learning</h1>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+  
+  
+    <p  class="meta">
+      17 Aug 2025
+      <span class="divider" style="display: inline-block; width: 2em;"></span>
+      <a class="prev" href="../health-and-society/">&larr;</a> 
+      Part 3 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../voice-and-participation/">&rarr;</a>
+   </p>
+  
+  
+
+
+
+<h2>Lightning Talks</h2>
+<p><span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span></p>
+<p>The lightning talks stunned me. I kept thinking it was time for me to leave, since they came at the end of each intense day, but like a forbidden snack, I kept staying for just one more. Ultra-short presentations with sudden shifts from the emotional, to the weird, to the hilarious. The Lightning Talks serve as a sampler of the community at large, incredibly diverse, incredibly joyful:</p>
+<ul>
+<li>Armin Ronacher, star developer whose tools have been used by every single person in the hall, moved us all: “Python gave me my life and this community made me who I am”, he said, paying tribute to those who had inducted him into the language.</li>
+<li>Then a medley: <ul>
+<li>knitting as a binary pattern, whether knitting kittens or fractals; </li>
+<li>how to pronounce PyPI (it is Py, P, I, not PyPy, which is something else entirely); </li>
+<li>weird and wonderful Olympic mascots; </li>
+<li>building underwater, Python-driven robots; </li>
+<li>the thriving Python Community in Africa; </li>
+<li>riding Python-powered e-bikes from Switzerland to Prague (for the conference) and back; </li>
+<li>And an amazing teen (was he the youngest at the conference?) who set the audience abuzz with applause and hilarity as he showed off his school project: playing the buzzer on an Arduino.</li>
+</ul>
+</li>
+</ul>
+<figure>
+<img src="flash_mob.jpeg" alt="a flash mob of musicians playing the language anthem">
+<span class="marginnote">
+A flash mob of musicians from the audience playing the language anthem: <em>always look on the bright side of life</em>. Photo credit: Gauden Galea
+</span>
+</figure><h2>TL;DR for Selected Talks</h2>
+<p>Here are my summaries of the extensive notes I took from talks I attended, with personal lessons and reactions. Any inaccuracies or errors are, of course, my own.</p>
+<h3>📦 Caching in Python (Akshita Gupta)</h3>
+<p>Wow, this was a masterclass in content and style. Akshita Gupta gets my award for "highest bandwidth" presentation: a deep dive into caching in Python with a fully visual set of slides, the most explained with the least words on screen.</p>
+<p>AG took us on a journey through caching, from DNS caches in browsers, to the use of <code>functools</code> decorators, to distributed systems built on Redis and Memcached, to JobLib for parallel execution of data-intensive tasks. She layered on the patterns: starting with storing the results of function given a set of inputs; later, looking for the same inputs and retrieving the results; on a miss, computing and storing the new result. She covered setting policies on expiry, eviction, and refreshing of cached entries.</p>
+<p>I came away keen to start experimenting with optimising some of my own code.  And... am I tempted to try to improve my times in last December's <a href="https://adventofcode.com">Advent of Code</a>?  Baby steps: start with the more routine use of the <code>functools.lru_cache</code> and <code>functools.cache</code> decorators.</p>
+<h3>🌐 Democratizing Serverless AI Apps (Yuichiro Tachibana)</h3>
+<p>Yuichiro Tachibana converted a prosaic data processing script step by step into a serverless <code>Streamlit</code> AI app using <code>Pyodide</code> and <code>Stlite</code>, finally layering on <code>transformers.js.py</code> for sentiment analysis on the data set. The result: a fully client-side AI-enabled web app (HTML-only), that preserves privacy, enables easy sharing, and reduces cost.</p>
+<p>I had a double-take towards the end of the talk, realising belatedly that YT (<a href="https://github.com/whitphx">whitphx</a>) is himself the developer of both <code>stlite</code> and <code>transformers.js.py</code>, the libraries he was so expertly yet playfully demonstrating. I shall definitely explore these.</p>
+<h3>📚 PyScript + EduBlocks (Josh Lowe)</h3>
+<p>Josh Lowe runs <a href="https://edublocks.org/">EduBlocks</a>, a block-based Python learning site for schoolchildren. He demonstrated how he needs to achieve massive scale (300K monthly users and over a million projects) without incurring any server costs.</p>
+<p>His secret: Josh uses <a href="https://pyscript.net/">PyScript</a>. No backend infrastructure needed; everything happens on the client side.</p>
+<p>I have to admit that I tried out PyScript too early after its release and I wasn't impressed. But Josh unveiled a totally different world of possibilities. Amazing! Maybe I won’t be writing another EduBlocks web app, but it would certainly be interesting to try adding PyScript to mini-apps hosted on “static” pages, such as on this blog. Watch this space.</p>
+<h3>🧠 Generative AI's Promises &amp; Pitfalls (Keynote by Nerea Luis)</h3>
+<p>Nerea Luis' keynote covered GenAI’s rapid rise, shifting tech roles, and blurring lines of accountability: who can claim to have written the code when AI pair programmers are used? Who takes the blame when AI agents are in the loop?</p>
+<p>Her key message to developers: cultivate adaptable AI habits, not tool dependency. Over the next five years, she said, expect significant, unforeseeable change, particularly in areas such as search, information analysis, service consumption, communication, and the development of digital products and projects.</p>
+<p>She introduced us (or was that just me?) to two invaluable resources:</p>
+<ol>
+<li>the OWASP lists for new vulnerabilities (e.g., <a href="https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/">the OWASP Top 10 for LLM Applications 2025</a>), and </li>
+<li>the <a href="https://aiceoletters.com/">AI CEO letters site</a> for AI dreams at the head of large companies.</li>
+</ol>
+<h3>⚙️ Async Python Basics (Krzysztof Wilczyński &amp; Mateusz Zaremba)</h3>
+<p><span class="marginnote">
+<img src="./sceptre.jpeg" alt="The concurrency sceptre">
+KW and MZ used a clever metaphor for concurrency: they passed the Python-baton to each other as they took turns speaking. It stood for control flow, as Python shifts from executing to waiting. Loved it.
+Photo credit: Krzysztof Wilczyński & Mateusz Zaremba.
+</span></p>
+<p>KW and MZ gave us fast, accessible introduction to Python concurrency: <code>async</code>/<code>await</code>, coroutines, the event loop, and <code>asyncio.gather</code>. They started with the standard library and delved deep into the logic and pitfalls of concurrency. Tools also mentioned: <code>anyio</code>, <code>asyncer</code>.</p>
+<p>Finally, I felt I understood the concepts -- I had had threads, processes, and concurrency in a jumble in my mind, and I just avoided all of that. KW and MZ invited me in again, another neglected space to explore.</p>
+<h3>🐍 Python Performance “Snake Oil” (Sindre Nistad)</h3>
+<p>With tongue firmly in cheek and sheer virtuosity, Sindre delivered real speed gains in Python leveraging C, Rust, Numba, and others. He first introduced the original Mandelbrot set, plotted in asterisks on a dot matrix printer, then he went on to animate it, step by step, live, at high FPS, zooming rapidly down as far as Python's floating point numbers would allow him.</p>
+<p>Sindre has a deadpan comedy style, funny and brilliant, with punchlines in Python. I even loved the <em>snake</em> oil pun for Python performance (geddit?). Not sure there was much Python code left on screen by the end, after all the C, Rust, and Numba took over. Nor that I will be able to emulate any of this any time soon. It was just astounding to watch. It felt like staring into a wind machine, as close to flying as possible.</p>
+<h3>🤖 Automating the Unloved Project (Sebastian Witowski)</h3>
+<p>Sebastian told us how he automated a side project (stock-trading signals) with Python, n8n, and Telegram bots. He had started the project to "scratch his own itch" while day-trading during the lockdowns. He discovered that he could package it for others to use, and some people subscribed.</p>
+<p>However, he fell out of love with it. He stopped trading and no longer had any use for it. Customer support started taking too much of his time, with little income to show for it. So he automated himself out of it, handing over on-boarding, trial subscriptions, renewal information, and other repetitive tasks to a combination of scripts and n8n flow, with Telegram bots for when his intervention (approval, rejection, exceptions) was needed.</p>
+<p>His key lessons to the audience: thinking of a side project? Don't buy a new house yet. And automate early, set boundaries, don’t confuse passive income with no effort, and plan your exit. Candid, and practical.</p>
+<h3>🛠️ Building &amp; Deploying AI Agents in VS Code (Sharon Xu)</h3>
+<p>Sharon Xu used Microsoft’s <a href="https://code.visualstudio.com/docs/intelligentapps/overview">AI Toolkit in VS Code</a> to build and deploy an AI agent locally, live, in real time. She used GitHub Copilot to create both front and back ends, and deployed to the cloud. It took her less than 30 minutes, including a few minutes of projector glitch.</p>
+<p>This talk made agents and MCP much more accessible and provided an elegant example of a basic but effective app at the end. SX made it look so effortless, as experts always do, I guess. Added to my list for exploring.</p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+        
+        
+      
+    
+  
+    
+      
+    
+  
+    
+  
+
+  
+  
+    <p  class="meta" style="margin-top: 3em;">
+      <a class="prev" href="../health-and-society/">&larr;</a> 
+      Part 3 of 5 in <a href="../">EuroPython 2025</a> series
+        <a class="next" href="../voice-and-participation/">&rarr;</a>
+   </p>
+  
+
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth page-bottom">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

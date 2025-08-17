@@ -1,0 +1,43 @@
+_model: blog-post
+---
+pub_date: 2025-08-17
+---
+summary: An invitation to pitch in next year with your own talk; and some tips I gleaned on what talks make the greatest impact.
+---
+title: Voice and Participation
+---
+order: 3
+---
+series: EP2025
+---
+body:
+
+## An Invitation, and My Tips for Talks
+
+<span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span>
+
+Savannah Bailey's keynote invited the audience deeper into the heart of the language. Not everyone will be a core developer, but she laid out a host of other ways of getting involved that are accessible to anyone in the audience. 
+
+One of them, I believe, is giving a talk on some aspect of Python that you are passionate about or expert in. If anyone reads this with an interest in submitting an abstract for next year, here are some lessons I took away from speakers who packed the room and kept the audience engaged. 
+
+If you are not a core developer, or you are not an expert on the frontiers of AI, then you need to work a bit harder 😉 to draw people in:
+
+- Propose a deep dive into a highly focused skill or technique. It doesn't matter if the subject feels niche, only that it is useful or fun.
+
+- Make a promise in the proposal that the audience will go away with something they can replicate, and then deliver on your promise.
+
+- A highly successful technique, that I saw repeated over and over: start with an ordinary script, and layer on features stepwise, revealing new power in the language, the library, or the skill that you are demonstrating.
+
+- Note that you do not need for the theme to be at the cutting edge just that the audience will go away with a deeper practical knowledge, one thing they can try out (even if AI in the title was a huge draw, so were tutorials on concurrency and caching).
+
+- This also applies for more esoteric themes — a talk “slithering through audio data” also filled the room because it held the double promise that the audience would be entertained and that participants would be able “to identify key python libraries for exploring audio datasets, state what outputs we can get from the python libraries, and explain what the outputs tell us about the data”.
+
+- Remember for next time that the majority of participants are first timers at the conference; there is always a fund of beginners (to the community, not necessarily to the language) and there is no shame in catering to their needs.
+
+- Showing code is very useful, but far from essential. It can even be a distraction if there is so much of it that it can’t be read at the back of the room. The best uses of code that I saw were by people who used [reveal.js](https://github.com/hakimel/reveal.js) to progressively highlight single lines in a wall of code as they spoke.
+
+- Humour was as prevalent in the successful talks as it was in the community. Perhaps you have heard the adage that you should never crack a joke when public speaking as you are sure to offend someone. But I have also learned over time that clowns are universally funny across cultures, and you can use that to your advantage. You don't need to perform slapstick, but gentle self-deprecation can be both funny and humble. This applies to both the proposal (e.g., a gentle joke to explain how you learned from a mistake) and to the presentation itself. It makes you come across as modest and endearing, especially if the rest of the talk shows how expert or successful you really are at the solution.
+
+In short, it's about making the tool, the language, the community, or the skill that you are presenting more accessible, in bite-sized chunks, with vision, humility, and humour. I just hope that doesn't sound more daunting than inviting.

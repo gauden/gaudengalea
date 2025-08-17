@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h2>{{ this.title }}</h2>
+  <h1>{{ this.title }}</h1>
+
+<p class="meta">
+      {% if this.pub_date %}{{ this.pub_date|dateformat('d MMM YYYY') }}{% endif %}
+</p>
+
   {{ this.body }}
 {% endblock %}

@@ -1,0 +1,149 @@
+_model: blog-post
+---
+title: Health and Society
+---
+order: 1
+---
+series: EP2025
+---
+summary: Politics, equity and fairness, outbreak responses, disaster relief, cancer real-world evidence, diagnosis of genetic diseases -- the many facets of Python's health and social impact.
+---
+pub_date: 2025-08-17
+---
+body:
+
+## Teaching Me a Lesson
+
+<span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span>
+
+I am embarrassed by the arrogance in my abstract where I said: 
+
+> “Python is everywhere—except, it seems, in public health. ... Despite its versatility, Python remains underutilised in public health. Why does this gap exist? How can we bridge the divide between Python as a tool for developers and its potential as an engine for hacking health?” 
+
+I could not have strayed farther from the truth. Indeed, in hallway conversations, I had several encounters with participants who have worked in either clinical or public health applications of Python and who would appreciate opportunities to do so again in the future. Indeed, the many health-related talks summarised below serve as a good illustration of some of the essential functions of public health.
+
+## Public Health Talks at EP2025
+
+### Python, Politics, and Public Health 
+
+In my own presentation, I gave a selection of historical examples of how I have used Python to either analyse public health data with political relevance or to help advocate for public health policies. The war stories covered:
+
+- a 2015 network analysis of a Twitter conversation on vaping and how it turned out to have a surprising connection to Brexit, 
+- a data pipeline for the graphics in a report on women’s health in Europe and how its long tail has culminated in a programme on violence against women, and 
+- the visualisation of a thought experiment that I used to illustrate the inequity in chronic diseases (NCDs) between East and West in Europe. 
+
+My examples illustrated the application of Python's data visualisation tools to public health advocacy, both within WHO as well as in discussion with policy makers in the Member States.
+
+<figure>
+    <img src="gauden_speaking.jpeg" alt="Gauden Galea speaking">
+</figure>
+
+Two phrases that I used seemed to resonate with the audience; some of the participants approached me afterwards to react to them:
+
+1. **Code as social organisation**—by this I meant that many of the inequities in society have structural causes (poverty, education, access to health services), and code is part of the causal chain in all of these determinants.
+2. **Code as activism**—one would love to live in a world where code is a neutral artefact, but this is far from the truth. Code generates a host of benefits, yet it also empowers weapons, enables surveillance capitalism, and contributes to inequity in society. Can we envisage ways, I asked, where at least code does no harm? Or where it is used more actively to advocate for public good?
+
+<span class="marginnote">
+The AI-generated report of the poll are summarised in <a href="./annex-responses-to-my-poll">this Annex</a>.
+</span>
+
+At the end of my presentation, I asked the audience to respond to a very open (and intentionally vague) question: How might Python and its community bring about a vision of an "open source public health operating system"? The answers they gave were summarised by in the annexed [AI-generated report](./annex-responses-to-my-poll).
+
+Let me now pay tribute to other speakers who gave impressive examples of the intersection between Python and population health. The following section summarises key presentations that reflected different ways in which Python can be used in both clinical and public health applications.
+
+### `Fairlearn`: assessing and mitigating harm in AI systems (Tamara Atanasoska)
+
+<span class="marginnote">
+Weerts H, Dudík M, Edgar R, Jalali A, Lutz R, Madaio M. <a href="http://jmlr.org/papers/v24/23-0389.html">Fairlearn: Assessing and Improving Fairness of AI Systems</a>. Journal of Machine Learning Research. 2023; 24.  (accessed Aug 2, 2025)
+</span>
+
+Tamara started off by presenting examples of unfair AI systems. They included a sentencing model in the US justice system that was racially biased, and child care applications in the Netherlands that were processed by an AI model biased against migrants. She pointed out that fairness concerns can arise across the whole machine learning lifecycle and thus needs disaggregated evaluation; assessing fairness is a process not a solution. She pointed out that algorithms and data frames sit within decisions made by humans and institutions at all stages in the process. 
+
+She explained core concepts in handling fairness, such as: looking out for abstraction traps, attending to construct validity, defining harms (e.g. to quality of service, allocation of resources, and representation), and then bringing all these together with fairness metrics. She introduced [Fairlearn](https://fairlearn.org),  a community-led OSS library, that is `scikit-learn` compatible and helps integrate fairness into one’s pipeline. 
+
+She gave a health example: readmission of people with diabetes released from hospitals in the US. The question: are the aftercare resources allocated fairly by race? The [ten-minute tutorial on the Fairlearn site](https://fairlearn.org/main/quickstart.html#fairlearn-in-10-minutes) covers this example. 
+
+Afterwards Tamara and I chatted about the fact that fairness and privacy are at loggerheads in public health. The privacy laws that protect patients make it impossible to collect the datasets that can emit fairness metrics. Possibly the [European Health Data Space](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en) could create opportunities to resolve this paradox. Possibly, `Fairlearn` could be used at facility level to analyse equity of access, provision, and outcomes within each facility's own population and this could be mandated by national or European legislation. 
+
+### Stopping Epidemics using the `Atomica` Python Tool (Eloisa Pérez Bennetts)
+
+Sadly, Eloisa’s talk was scheduled in the same time slot as mine, so I was not able to attend it. Her abstract, briefly summarised, said: 
+
+<span class="marginnote">
+atomicateam/atomica. 2025. <a href="https://github.com/atomicateam/atomica">https://github.com/atomicateam/atomica</a> (accessed Aug 2, 2025).
+</span>
+
+> Infectious diseases kill over 13 million people each year, and finding the best response to outbreaks depends on many shifting factors. `Atomica`, a free and open-source Python tool, makes it easier to build and analyse disease models that incorporate real-world data, interventions, and budget constraints. [The] talk demonstrated how to use `Atomica` to simulate a typhoid epidemic and guide funding decisions for maximum public health impact.
+
+Though I could not attend her talk, I was lucky to get a chance to catch up with her in person later and, together with Jannis Lübbe (see below), to discuss her work on `Atomica`—a tool that has the advantage not just of modelling an outbreak from known characteristics of the pathogen, but also to bring in social factors and resource allocation decisions to guide the response.
+
+<span class="marginnote">
+Bowring AL, Martin-Hughes R, Brink D ten, et al. <a href="https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0004548&type=printable">Optimising TB investments in Belarus, Moldova, Kyrgyz Republic, Tajikistan and Uzbekistan: An allocative efficiency analysis</a>. PLOS Global Public Health 2025; 5: e0004548.
+</span>
+
+Later I read her most recent paper: “Optimising TB investments in Belarus, Moldova, Kyrgyz Republic, Tajikistan and Uzbekistan: An allocative efficiency analysis”—discovering that not only were we working in the same region of Europe, but also that her team was bringing these new tools to bear on matters deeply connected with the TB-Free Central Asia Initiative recently launched by WHO/Europe.
+
+<span class="marginnote">
+WHO/Europe. <a href="https://iris.who.int/handle/10665/381812">TB-Free Central Asia Initiative</a>. 2025. (accessed July 27, 2025)
+</span>
+
+Eloisa, Jannis, and I had a delightful discussion about their projects and noted that we were not exceptional in our shared interest, but that there are many participants at this conference who are applying Python to health and social concerns. I lose track of who of us brought up the idea that this might be a theme to be proposed for an “Open Space” or an explicit thread of presentations in next year’s EuroPython.
+
+### Offline Disaster Relief Coordination (Jannis Lübbe)
+
+<span class="marginnote">
+<a href="https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206](https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206">Technisches Hilfswerk</a>. Wikipedia. 2025. (accessed July 27, 2025).
+</span>
+
+Somewhere I heard that good design starts with defining the constraints. There could not be a better example of this than Jannis’ project for mapping disaster relief efforts. Germany’s _Federal Agency for Technical Relief_ is a civil protection support agency where 97% of the eighty thousand members are volunteers, like Jannis.
+
+JL’s project assumes a number of realistic constraints facing the staff and helpers during a disaster. They cannot assume that the command and control vehicle has a power supply beyond fuel for its own engine. They must assume they have no internet access in any form. They cannot assume that the vehicle has its own computer (this was not clear whether this was a budget issue or an additional constraint imposed by the fact that the generator is in another vehicle, likely being deployed elsewhere).
+
+The problem: how to accurately map the affected locality using only local resources and how to use that map to deploy assistance wherever it is needed? 
+
+JL presented the (real and not infrequent) example of a WWII bomb discovered at a construction site. THW is called in to evacuate the surrounding buildings before controlled detonation. He demonstrated how his Raspberry Pi-powered Python project provides the following features: 
+
+1. Local map downloaded from OSM and available fully offline, with resolution down to the house number.
+2. Ability to delineate the affected area (by annotating the map using basic shapes e.g. to draw a 1km evacuation circle around the bomb thus defining buildings within and outside the affected area).
+3. Ability to locate specific points of intervention (e.g. a marker on a house where residents are refusing to evacuate and where police need to be called in).
+4. In the absence of GPS services, the location of teams can be added to the system using a LORAWAN gateway to receive positional information from relief workers.
+
+Jannis and I had many conversations about the utility of such a system in disaster relief and civil protection, including during conflict. 
+
+<span class="marginnote">
+Schafer M, Strohmeier M, Lenders V, Martinovic I, Wilhelm M. Bringing up OpenSky: A large-scale ADS-B sensor network for research. In: IPSN-14 Proceedings of the 13th International Symposium on Information Processing in Sensor Networks. Berlin, Germany: IEEE, 2014: 83–94.
+</span>
+
+I also learned about Jannis’ other volunteer work with the OpenSky Network, that provides flight data for [social impact and academic research](https://opensky-network.org/about/social-impact#). The paper that launched the OpenSky Network has over 250 citations with applications that include studies on environmental impact of aviation, on the modelling of COVID-19, and on the effects of the Ukraine war on global air transportation. 
+
+### Privacy-Enhancing Cancer Data Processing (Florian Stefan)
+
+Florian introduced the data pipeline for [Flatiron Health](https://flatiron.com/), a company that provides privacy-enhanced cancer data for health research (usually providing Real World Evidence — RWE — for pharma companies testing novel chemotherapeutic agents).
+
+He described a model of data processing with several strengths:
+
+1. All raw data is owned by the health care facility and resides on their servers. 
+2. Anonymised data is then transferred to AWS for pre-processing on cloud instances managed by Flatiron. 
+3. From then on various tools are used to clean, normalise, and harmonise the data before providing access to the client. 
+4. The data flow involves engineers, data scientists, and clinicians — a division of labour that allows quality control,  iteration, experimentation, and innovation.
+5. The pipeline allows Flatiron to switch between Snowflake, the standard data provider for the external clients, and a simple notebook interface that permits internal users to experiment on the pipeline, seeking efficiencies, testing quality, and adding features easily. 
+
+In chatting with Florian afterwards, I asked how they handled image data (very important for cancer patients, but they could have embedded identifiers). In certain markets, with strict privacy rules, image data is discarded. In the US it is retained. The conflict between privacy rules and population benefit kept emerging throughout these talks. 
+
+I asked him about applications of their data in public health research and he pointed out to an intriguing example of breast cancer in men, a cancer that is real enough, but so rare that no company has the incentive to run expensive clinical trials for such a small group of patients. Using Real World Evidence it becomes a possibility to at least investigate the potential impact of existing chemotherapeutic agents for this new application. 
+
+### Prenatal Diagnosis of Genetic Diseases (Helena Gómez Pozo, Marina Moro López)
+
+HGP and MML, two computational biologists, gave a gentle introduction to genetics and DNA sequencing (explained very elegantly to a lay audience) as the basis for their talk. For context, they stated that 10% of the population suffer from one of 6,000 genetic diseases and pointed out that prenatal diagnosis applies to inherited genetic disorders. 
+
+Their talk focused on a project looking for _Epidermolysis bullosa_, a condition occurring in 1:6000 of newborns. They illustrated their workflow. They began by downloading reference gene sequences from the NIH database. They wrote a script using `tkinter` to provide a simple GUI making the tool accessible to non-programmers. Their script read off the reference and patient sequences, aligned the two, identified the positions of mutations, and displaying the difference. Effectively a `git diff` on a strand of DNA.
+
+Apart from introducing the audience to their methods, they made several, highly valid ethical points:
+
+- The tool, even though a “simple” script, is regarded as a medical device and has to be regulated by EU regulations for _in vitro_ medical devices. This has implications for anyone thinking of building a library of open source public health tools...
+- The system is very simple for programmers to understand, and even to replicate, but their admonition was “don’t try this at home” as this sort of diagnostic work should only be done in the context of genetic counselling. 
+- They also counselled the audience to be cautious in the face of overly-optimistic media reports of advances in genetics. They discussed the example of mis-reporting success in the “treatment” of Down’s Syndrome, with reporters getting the science wrong quite dramatically. 
+- They reminded the audience that the human genome is under the protection of the universal declaration on human rights — one of the safeguards against eugenics. 
+

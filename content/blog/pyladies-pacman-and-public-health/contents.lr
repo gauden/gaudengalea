@@ -1,0 +1,23 @@
+_model: blog-post
+---
+title: PyLadies, PacMan, and Public Health
+---
+pub_date: 2025-08-17
+---
+series: EuroPython 2025
+---
+summary: My reflections on the EuroPython 2025 adventure
+---
+body:
+
+## EuroPython 2025: A Retrospective
+
+<span class="marginnote">
+    <img src="ep25_logo.png" alt="EuroPython 2025 logo">
+</span>
+
+On 29 March 2025, the programme committee informed me that my abstract (“Python, Politics, and Public Health”) had been accepted for a talk at EuroPython 2025 in Prague. As luck would have it, I ended up delivering it on the first day after my retirement from WHO. The talk thus became a manifesto for where I hope to go next, uniting my work in public health with my long-standing love of Python.
+
+I’ve divided my notes into short sections, aiming to capture the essence of the conference from many perspectives. I want to jog happy memories among those who attended, and to entice others to join next year. Skip to the parts that interest you.
+
+As delighted as I was to hear the news that the abstract proposal had been accepted, many questions remained: how would the Python community respond to a retired public health official from a different world? Would there be kindred spirits interested in the health and social impact of code?

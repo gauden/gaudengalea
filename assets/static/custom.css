@@ -56,7 +56,7 @@ body {
   flex: 1; /* Ensures content takes up remaining space */
 }
 
-footer {
-  padding: 10px 10px 20px 20px;
-  border-top: 1px solid #e2e2e2;
+footer.page-bottom {
+  padding: 10px 10px 20px 0px;
+  /* border-top: 1px solid #e2e2e2; */
 }

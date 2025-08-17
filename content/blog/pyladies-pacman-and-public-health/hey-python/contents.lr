@@ -1,0 +1,79 @@
+_model: blog-post
+---
+title: Hey Python...
+---
+order: 4
+---
+series: EP2025
+---
+pub_date: 2025-08-17
+---
+summary: As we await the announcement of the 2026 venue for EuroPython, it is surely time for reflection on the language, the community, and the conference. And to air a niggling concern.
+---
+body:
+
+## Hey Python, are you OK?
+
+<span class="marginnote">
+    <img src="../ep25_logo.png" alt="EuroPython 2025 logo">
+</span>
+
+Am I concerned?
+
+Why should I be? After all, did I not witness many signs of energy, growth and support? Is not Python sitting right at the heart of the AI revolution?
+
+### The Community, out in full force...
+
+I have written enthusiastically about the diversity, the joy, and the power of the Python Community, and I hope that I have provided ample evidence of the power and versatility of the language itself. Truly the idiom still holds, _batteries included_, not only in the standard library, but in the vibrant ecosystem and the energy of the people involved. It was amazing to witness the sheer creativity and virtuosity on prominent display at EP2025. 
+
+<figure>
+    <label for="ep25_org" class="margin-toggle">⊕</label><input type="checkbox" id="ep25_org" class="margin-toggle"><span class="marginnote">A big vote of thanks goes to the organisers and volunteers seen here in a group photo at the closing ceremony. These people not only organised the formal conference, but also the tutorials, the sprints, the language summits, the "open spaces", and the social events!</span>
+    <img src="ep25_org.jpeg" alt="Group photo of organisers and volunteers.">
+</figure>
+
+### With Numerous Supporters...
+
+Thanks are also due to the sponsors. They supported the meeting financially. And their representatives inserted themselves organically into the life of the conference. They deserve our appreciation. 
+
+<figure>
+    <label for="import_this" class="margin-toggle">⊕</label><input type="checkbox" id="ep25_sponsors" class="margin-toggle"><span class="marginnote">The reps manned the stands, gave their own technical talks, asked attendees to solve Rubik's cubes or to scrape websites in friendly contests, distributed swag, and held recruitment chats with anyone interested.</span>
+    <img src="ep25_sponsors.jpeg" alt="EuroPython 2025 sponsors slide.">
+</figure>
+
+### `import this`
+
+I remember (not sure how accurately) that David Crystal, in "The Stories of English", partly ascribed the global dominance of the English language to its remarkable capacity for adaptation and incorporation, borrowing vocabulary and structure, surviving by accretion of words and grammar. 
+
+I was reminded of that idea during the conference, where Pythonistas rubbed shoulders with Rustaceans, where summits were held on C and Rust and WebAssembly with equal prominence to any of the other, more Pythonic concerns, such as packaging or AI, and where Python felt more solid in the browser, with Pyodide and PyScript. And this is nothing new to Python: C extensions have always been a staple and even `NumPy` has some [legacy Fortran code](https://github.com/numpy/numpy/blob/main/numpy/f2py/src/fortranobject.c) lurking inside it. 
+
+<label for="asset_trends" class="margin-toggle">⊕</label><input type="checkbox" id="asset_trends" class="margin-toggle">
+<span class="marginnote">PEP 20: <a href="https://peps.python.org/pep-0020/" alt="Link to PEP 20, the Zen of Python" target="_blank">The Zen of Python</a>.</span>
+
+Maybe, when the Zen of Python was first written, the strength of the language lay not in any of the nineteen precepts but in the very invocation: `import this`.
+
+### So why the niggling concern?
+
+<label for="import_this" class="margin-toggle">⊕</label>
+<input type="checkbox" id="import_this" class="margin-toggle">
+<span class="marginnote">
+    <img src="psf_asset_trends.png" alt="graph of asset trends in the Python Software Foundation website">
+    Source: <a href="https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html" alt="Link to PSF announcement on the pause of the grants program" target="_blank">
+    The PSF has paused our Grants Program.
+    </a> Accessed 17 August 2025.
+</span>
+
+Soon after we closed the conference in celebration, there was an announcement on the conference Discord channel that <a href="https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html" alt="Link to PSF announcement on the pause of the grants program" target="_blank">the Python Software Foundation has paused its grants program for 2025</a>. 
+
+In the announcement, the Board pointed out the massive rise in Python popularity, but they also show this graph and commented:
+
+> By contrast, the PSF’s available resources have decreased over the last three years and are projected to decrease again in 2025 due to increasing PyCon US and foundation costs. Much of the growth shown before 2022 in the chart below comes from grants we received that were restricted funds dedicated to specific staffing and other programs. The result is increasing global community activity against a decreasing pool of available funds. 
+
+I could not fail to hear familiar echoes of [what is happening in WHO](https://healthpolicy-watch.news/nations-approve-who-membership-fee-increase-as-us-exit-squeezes-budget/). The fall in income. The need to shift whatever donations are received from earmarked grants to flexible funding. The possibility that a global good may be choked from lack of resources. The dissonance between the centrality of a major global good (whether Python or global health), and the drop in funding.
+
+Was 2022 a peak? Or was 2024 an outlier? 
+
+Perhaps I am overthinking it. Surely all will be well. Surely companies and countries profiting from the AI boom will step in. Surely the community will not takes its gains for granted and rise to the challenge.
+
+And am I really going to end this celebratory essay with an anti-climax? Am I? If I do, it will only be because I care, because I would be interested to explore what I can do, and because I would like to spur others to act: to give of their time, money, or ideas.
+
+(And anyway, who on Earth reads down to the last paragraph in a long, five-part blog?)

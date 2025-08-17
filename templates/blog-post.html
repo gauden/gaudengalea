@@ -4,20 +4,59 @@
 
 {% block body %}
   <h1>{{ this.title }}</h1>
-  {% if this.pub_date %}
-    <p class="meta">{{ this.pub_date|dateformat('d MMM YYYY') }}</p>
+
+{# --- Series navigation (shown only on child posts) --- #}
+{% set parent = this.parent %}
+{% if parent and parent._model == 'blog-post' %}
+  {# Find the series parts #}
+  {% set parts = parent.children.order_by('order', 'title') %}
+  {% set ns = namespace(prev=None, next=None, index=None, seen=False, last=None) %}
+
+  {# one pass to find index/prev/next #}
+  {% for p in parts %}
+    {% if not ns.seen %}
+      {% if p._id == this._id %}
+        {% set ns.index = loop.index0 %}
+        {% set ns.prev = ns.last %}
+        {% set ns.seen = True %}
+      {% else %}
+        {% set ns.last = p %}
+      {% endif %}
+    {% elif ns.next is none %}
+      {% set ns.next = p %}
+    {% endif %}
+  {% endfor %}
+
+  {% set total = parts.count() %}
+  {% if ns.index is not none %}
+    <p  class="meta">
+      {% if this.pub_date %}{{ this.pub_date|dateformat('d MMM YYYY') }}{% endif %}
+      <span class="divider" style="display: inline-block; width: 2em;"></span>
+      {% if ns.prev %}<a class="prev" href="{{ ns.prev|url }}">&larr;</a> {% endif %}
+      Part {{ ns.index + 1 }} of {{ total }} in <a href="{{ parent|url }}">{{ parent.series }}</a> series
+      {% if ns.next %}  <a class="next" href="{{ ns.next|url }}">&rarr;</a>{% endif %}
+   </p>
   {% endif %}
-  {{ this.body }}
+  {% else %}
+    {# No parent post, just show the date #}
+    <p class="meta">
+      {% if this.pub_date %}{{ this.pub_date|dateformat('d MMM YYYY') }}{% endif %}
+    </p>
+{% endif %}
 
 
+{# --- Content --- #}
+{{ this.body }}
 
+
+{# --- Read More, listing sub-pages in a series --- #}
 {% if this.children.count() %}
   <h3>Read more</h3>
     <ol>
       {% for part in this.children.order_by('order') %}
         <li>
           <a href="{{ part|url }}">{{ part.title }}</a>
-          {% if part.summary %}<div class="part-summary"><small>{{ part.summary }}</small></div>{% endif %}
+          {% if part.summary %}<div class="part-summary">{{ part.summary }}</div>{% endif %}
         </li>
       {% endfor %}
     </ol>
@@ -47,19 +86,13 @@
 
   {% set total = parts.count() %}
   {% if ns.index is not none %}
-    <section>
-      <nav class="series-nav">
-      <div class="series-meta">
-        Part {{ ns.index + 1 }} of {{ total }} in the <a href="{{ parent|url }}">{{ parent.title }}</a> Series.
-      </div>
-      <div class="series-links">
-        {% if ns.prev %}&larr; <a class="prev" href="{{ ns.prev|url }}">Previous</a>{% endif %}
-         &middot;
-        <!-- <a class="up" href="{{ parent|url }}">Back to series</a> -->
-        {% if ns.next %}<a class="next" href="{{ ns.next|url }}">Next</a>  &rarr;{% endif %}
-      </div>
-    </nav>
-    </section>
+    <p  class="meta" style="margin-top: 3em;">
+      {% if ns.prev %}<a class="prev" href="{{ ns.prev|url }}">&larr;</a> {% endif %}
+      Part {{ ns.index + 1 }} of {{ total }} in <a href="{{ parent|url }}">{{ parent.series }}</a> series
+      {% if ns.next %}  <a class="next" href="{{ ns.next|url }}">&rarr;</a>{% endif %}
+   </p>
   {% endif %}
 {% endif %}
+
+
 {% endblock %}

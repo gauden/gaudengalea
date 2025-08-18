@@ -1,8 +1,10 @@
 [project]
 name = Gauden Galea
+url = https://gaudengalea.com
 
 [servers.ghpages-https]
 target = ghpages+https://gauden/gaudengalea?cname=gaudengalea.com
 
 [packages]
 lektor-creative-commons = 0.1.2
+

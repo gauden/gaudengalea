@@ -6,6 +6,8 @@ order: 4
 ---
 series: EP2025
 ---
+image: ../series_banner.jpg
+---
 pub_date: 2025-08-17
 ---
 summary: As we await the announcement of the 2026 venue for EuroPython, it is surely time for reflection on the language, the community, and the conference. And to air a niggling concern.

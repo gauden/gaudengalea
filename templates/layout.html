@@ -11,36 +11,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-{# Canonical URL #}
-<meta property="og:url" content="{{ this|url(external=true) }}" />
+  {# Name (for BlueSky) and Canonical URL #}
+  <meta name="author" content="Gauden Galea">
+  <meta property="og:url" content="{{ this|url(external=true) }}" />
 
-{# Title and description #}
-<meta property="og:title" content="{{ this.title }}" />
-<meta property="og:description" content="{{ this.summary or site.config.default_description }}" />
-<meta property="og:type" content="website" />
+  {# Title and description #}
+  <meta property="og:title" content="{{ this.title }}" />
+  <meta property="og:description" content="{{ this.summary or site.config.default_description }}" />
+  <meta property="og:type" content="article" />
 
-{# Images #}
-{% if this.image %}
-  <meta property="og:image" content="{{ this.image|url(external=true) }}" />
+  {# Images #}
+  {% if this.image %}
+    <meta property="og:image" content="{{ this.image|url(external=true) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+  {% else %}
+    <meta property="og:image" content="{{ '/static/img/default-og.jpg'|url(external=true) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+  {% endif %}
+
+  {# Always include a square fallback #}
+  <meta property="og:image" content="{{ '/static/img/default-og-square.jpg'|url(external=true) }}" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="627" />
-{% else %}
-  <meta property="og:image" content="{{ '/static/img/default-og.jpg'|url(external=true) }}" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="627" />
-{% endif %}
-
-{# Always include a square fallback #}
-<meta property="og:image" content="{{ '/static/img/default-og-square.jpg'|url(external=true) }}" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="1200" />
-
-
+  <meta property="og:image:height" content="1200" />
 
   <link rel="stylesheet" href="{{ '/static/tufte.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/custom.css'|url }}">
+
+
   {{ render_prism_css() }}
   {{ render_prism_code_block() }}
+
+  {# JSON-LD structured data for LinkedIn pickup #}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ this.title }}",
+      "author": {
+        "@type": "Person",
+        "name": "Gauden Galea",
+        "url": "https://www.linkedin.com/in/gauden/"
+      },
+      "url": "{{ this|url(external=true) }}"
+    }
+  </script>
+  <!-- My social profiles -->
+  <meta property="article:author" content="https://www.facebook.com/gauden">
+  <meta name="twitter:creator" content="@gauden">
+
   <title>{% block title %}Welcome{% endblock %} Gauden Galea</title>
 </head>
 <body>

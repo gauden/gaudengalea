@@ -10,7 +10,7 @@ summary: From October 2023, I used a p5.js banner at webinars, counting weeks to
 ---
 body:
 
-<span class="marginnote"><img src="hand-drawn-sketch.jpg" alt="Hand-drawn sketch">This banner was my first experience of the power of Large Language Models—I believe it was GPT 3 at the time—to generate working code from a hand-drawn sketch. Here is the input I gave it, together with a prompt asking it to produce a `p5.js` sketch following the design.</span>
+<span class="marginnote"><img src="hand-drawn-sketch.jpg" alt="Hand-drawn sketch">This banner was my first experience of the power of Large Language Models—I believe it was GPT 3 at the time—to generate working code from a hand-drawn sketch. Here is the input I gave it, together with a prompt asking it to produce a <code>p5.js</code> sketch following the design.</span>
 
 In late 2023, I vibe-coded (the term did not exist at the time) a [Processing sketch](https://p5js.org/) to serve as a public banner during webinars. I used it to remind participants that the time to the [Fourth UN High Level Meeting on NCDs and Mental Health](https://www.un.org/en/un-high-level-meeting-prevention-and-control-noncommunicable-diseases-and-promotion-mental-health) was growing short and that we had a lot to do before then.
 

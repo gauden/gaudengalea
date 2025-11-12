@@ -1,0 +1,337 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="any" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  
+  <meta name="author" content="Gauden Galea">
+  <meta property="og:url" content="https://gaudengalea.com/blog/doubting-wisely-lecture/" />
+
+  
+  <meta property="og:title" content="Doubting Wisely" />
+  <meta property="og:description" content="Outline and references for a lecture on the uses of doubt in public health leadership, delivered at the Sixth European Public Health Leadership Course by the Quality of Care Centre, Athens, WHO/Europe." />
+  <meta property="og:type" content="article" />
+
+  
+  
+    <meta property="og:image" content="https://gaudengalea.com/blog/doubting-wisely-lecture/cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+  
+
+  
+  <meta property="og:image" content="https://gaudengalea.com/static/img/default-og-square.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+
+  <link rel="stylesheet" href="../../static/tufte.css">
+  <link rel="stylesheet" href="../../static/custom.css">
+
+
+  
+  <!-- Prism syntax highlighting -->
+  <!-- Prism syntax highlighting (light theme by default) -->
+  <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css">
+
+  
+    <!-- Prism core + useful plugins -->
+    <!-- Prism core + autoloader + line numbers -->
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // ----- Prism autoloader path -----
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+            Prism.plugins.autoloader.languages_path = 'https://cdn.jsdelivr.net/npm/prismjs/components/';
+        }
+
+        // ----- 1) Default all fenced blocks to line numbers -----
+        // Add 'line-numbers' to any <pre> that contains a Prism language class
+        document.querySelectorAll('pre').forEach(function(pre) {
+            const code = pre.querySelector('code[class*="language-"]');
+            if (code && !pre.classList.contains('line-numbers')) {
+            pre.classList.add('line-numbers');
+            }
+        });
+
+        // ----- 2) Copy-to-clipboard buttons on each code block -----
+        const addCopyButton = function(pre) {
+            if (pre.querySelector('.code-copy')) return; // already added
+            const btn = document.createElement('button');
+            btn.className = 'code-copy';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', 'Copy code');
+            btn.textContent = 'Copy';
+            btn.addEventListener('click', async () => {
+            const code = pre.querySelector('code');
+            if (!code) return;
+            const text = code.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => (btn.textContent = 'Copy'), 1200);
+            } catch (e) {
+                btn.textContent = 'Press ⌘/Ctrl+C';
+                const range = document.createRange();
+                range.selectNodeContents(code);
+                const sel = window.getSelection();
+                sel.removeAllRanges(); sel.addRange(range);
+                setTimeout(() => (btn.textContent = 'Copy'), 1500);
+            }
+            });
+            pre.style.position = 'relative';
+            pre.appendChild(btn);
+        };
+        document.querySelectorAll('pre').forEach(addCopyButton);
+    </script>   
+
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Doubting Wisely",
+      "author": {
+        "@type": "Person",
+        "name": "Gauden Galea",
+        "url": "https://www.linkedin.com/in/gauden/"
+      },
+      "url": "https://gaudengalea.com/blog/doubting-wisely-lecture/"
+    }
+  </script>
+  <!-- My social profiles -->
+  <meta property="article:author" content="https://www.facebook.com/gauden">
+  <meta name="twitter:creator" content="@gauden">
+
+  <title>Doubting Wisely —  Gauden Galea</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../../">⌂</a>
+        </li>&middot;
+        <li class="active" >
+          <a href="../">Blog</a>
+        </li> &middot;
+        <li>
+          <a href="../../pub/">Pub</a>
+        </li> &middot;
+        <li>
+          <a href="../../lab/">Lab</a>
+        </li> &middot;
+        <li>
+          <a href="../../bio/">Bio</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-container">
+    <div class="content-wrap">
+      <article>
+        <section>
+          
+  <h1>Doubting Wisely</h1>
+
+
+
+
+    
+    <p class="meta">
+      10 Nov 2025
+    </p>
+
+
+
+
+<h2>Doubting Wisely – Slide Guide</h2>
+<h3>01. WHO European Public Health Leadership Course</h3>
+<p><strong>Summary:</strong> The cover slide for the sixth edition of the WHO/Europe Public Health Leadership Course, organised by the Quality of Care Centre, Athens, Greece with the in-person element organised on 10-14th November 2025.</p>
+<h3>02. Doubting Wisely</h3>
+<p><strong>Summary:</strong> <em>Values, humility, and effectiveness in public health leadership. Cover slide for this presentation.</em></p>
+<p>This document outlines the content of the presentation, which may be <a href="https://gauden.github.io/ephlc2025/20251110_gauden_galea_ephlc_athens.pptx">downloaded in PowerPoint format</a>. This presentation is © Gauden Galea 2025. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> (the Creative Commons Attribution Licence).</p>
+<h3>03. The "Heroic" Leader</h3>
+<p><strong>Summary:</strong> <em>An AI-generated image caricaturing the idealised vision of the leader; a leader with superpowers, singular vision, and an ideal team that follows.</em></p>
+<h3>04. Knowledge or Certainty</h3>
+<p><strong>Summary:</strong> <em>Extract from the BBC documentary by Jacob Bronowski (1973), "The Ascent of Man". In this episode he shows the extreme impact that arrogance and dogma can take.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li><a href="https://youtu.be/ltjI3BXKBgY?si=k-PzmFHKRR21xcQ7"><em>https://youtu.be/ltjI3BXKBgY?si=k-PzmFHKRR21xcQ7</em></a></li>
+</ul>
+<h3>05. Conflict Index – context for leadership</h3>
+<p><strong>Summary:</strong> <em>Political violence increased; many countries at extreme or high conflict levels.</em>
+<strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Source: ACLED (Armed Conflict Location &amp; Event Data) Conflict Index Report (Dec 2024)</li>
+<li><a href="https://acleddata.com/series/acled-conflict-index">https://acleddata.com/series/acled-conflict-index</a></li>
+</ul>
+<h3>06. Leadership in Disruptive times</h3>
+<p><strong>Summary:</strong> <em>A table compares and contrasts the concepts of uncertainty and doubt from the point of view of the leader.</em></p>
+<h3>07. Exercise: doubt vs uncertainty on air</h3>
+<p><strong>Summary:</strong> <em>Provocative prompts to distinguish doubt from uncertainty in practice -- in a hypothetical interview with a journalist.</em></p>
+<h3>08. Commercial determinants of Health</h3>
+<p><strong>Summary:</strong> <em>Introduces the weaponisation of doubt by vested interests in the commercial sector, weaponising doubt through dark money, distortion of evidence, lobbying, and targeting of the vulnerable, among others.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Michaels D. <em>The Triumph of Doubt: Dark Money and the Science of Deception</em>. Oxford University Press, 2020. <a href="https://global.oup.com/academic/product/the-triumph-of-doubt-9780190922665">https://global.oup.com/academic/product/the-triumph-of-doubt-9780190922665</a></li>
+<li>Maani N, Petticrew M, Galea S (eds.). <em>The Commercial Determinants of Health</em>. Oxford University Press, 2023. <a href="https://global.oup.com/academic/product/the-commercial-determinants-of-health-9780197578759?q=commercial%20determinants%20of%20health\&amp;lang=en\&amp;cc=gr">https://global.oup.com/academic/product/the-commercial-determinants-of-health-9780197578759</a></li>
+<li>Oreskes N, Conway EM. <em>Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming</em>. Bloomsbury Press, 2010. <a href="https://www.bloomsbury.com/us/merchants-of-doubt-9781608193943">https://www.bloomsbury.com/us/merchants-of-doubt-9781608193943</a></li>
+</ul>
+<h3>09. Commercial Determinants of NCDs in Europe</h3>
+<p><strong>Summary:</strong> <em>A WHO/Europe publication revealing the impact of four industries: tobacco, alcohol, unhealthy foods, and fossil fuels.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>World Health Organization. Regional Office for Europe (2024). Commercial Determinants of Noncommunicable Diseases in the WHO European Region. World Health Organization. Regional Office for Europe. <a href="https://iris.who.int/handle/10665/376957">https://iris.who.int/handle/10665/376957</a>.&#x20;</li>
+</ul>
+<h3>10. The Rise of Mis/Dis-information and Our Response</h3>
+<p><strong>Summary:</strong> <em>How false claims spread, persist, and endanger health, starting from the original (retracted) paper that suggested a link between autism and vaccination, and what evidence-based science recommends to counter them.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li><strong>RETRACTED</strong> Wakefield AJ, Murch SH, Anthony A, Linnell J, al e. Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children. <em>The Lancet</em>. 1998;351(9103):637-41.  <a href="https://ejournals.um.edu.mt/login?url=https://www.proquest.com/scholarly-journals/ileal-lymphoid-nodular-hyperplasia-non-specific/docview/199060156/se-2">https://ejournals.um.edu.mt/login?url=https://www.proquest.com/scholarly-journals/ileal-lymphoid-nodular-hyperplasia-non-specific/docview/199060156/se-2</a>. doi: <a href="https://doi.org/10.1016/S0140-6736\(97\">https://doi.org/10.1016/S0140-6736(97)11096-0</a>11096-0).</li>
+<li>Broda, E., &amp; Strömbäck, J. (2024). Misinformation, disinformation, and fake news: lessons from an interdisciplinary, systematic literature review. <em>Annals of the International Communication Association</em>, <em>48</em>(2), 139–166. <a href="https://doi.org/10.1080/23808985.2024.2323736">https://doi.org/10.1080/23808985.2024.2323736</a></li>
+<li>van der Linden, S., Albarracín, D., Fazio, L., Freelon, D., Roozenbeek, J., Swire-Thompson, B., &amp; Van Bavel, J. (2025). Using psychological science to understand and fight health misinformation: An APA consensus statement.<em>American Psychologist.</em> Advance online publication. <a href="https://doi.org/10.1037/amp0001598">https://doi.org/10.1037/amp0001598</a> </li>
+</ul>
+<h3>11. Summary APA Recommendations</h3>
+<p><strong>Summary:</strong> <em>The eight recommendations for responding to mis/dis-information made by the Oct 2025 APA consensus statement.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>van der Linden, S., Albarracín, D., Fazio, L., Freelon, D., Roozenbeek, J., Swire-Thompson, B., &amp; Van Bavel, J. (2025). Using psychological science to understand and fight health misinformation: An APA consensus statement.<em>American Psychologist.</em> Advance online publication. <a href="https://doi.org/10.1037/amp0001598">https://doi.org/10.1037/amp0001598 </a></li>
+</ul>
+<h3>12. Know your values</h3>
+<p><strong>Summary:</strong> <em>Clarify values to guide decisions under uncertainty.</em> This is a prompt slide for participants to reflect on what their own values, what motivates their own leadership in public health.</p>
+<h3>13. Regulatory frame for data, AI, and devices (EU)</h3>
+<p><strong>Summary:</strong> <em>An example of encoding values in legislation using the EU digital innovation space and how it encodes four key sets of values: p\</em>*rivacy, community, innovation, devices, and AI risk management.* <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>GDPR (2016) <a href="https://gdpr-info.eu/">Link</a></li>
+<li>European Health Data Space (EUHDS, 2025) <a href="https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en">Link</a></li>
+<li>A Briefing on the EU AI Act (2024) <a href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2021/698792/EPRS_BRI(2021">Link</a>698792_EN.pdf)</li>
+<li>EU Medical Devices Regulation (2017) <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng">Link</a></li>
+</ul>
+<h3>14 and 15. “On Bullshit” — An essay by Harry Frankfurt</h3>
+<p><strong>Summary:</strong> <em>Contrasting "bullshit" with doubt and uncertainty; extracting from the classic paper by Harry Frankfurt the definition, means of recognition, and means of avoidance of bullshit, in oneself as much as in others.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Frankfurt H. <em>On Bullshit</em>. Raritan Quarterly Review. Volume 6, Number 2, Fall 1986) <a href="https://raritanquarterly.rutgers.edu/issue-index/all-articles/attachment/560/333">https://raritanquarterly.rutgers.edu/issue-index/all-articles/attachment/560/333</a></li>
+</ul>
+<h3>16. Know your tools&#x20;</h3>
+<p><strong>Summary:</strong> <em>Introduces a section where the pros and cons of two tools are discussed, one a mechanical, data science tool, and the other a higher level, conceptual tool defining a mindset in public health leadership.</em></p>
+<h3>17. Excel pitfalls for data science</h3>
+<p><strong>Summary:</strong> <em>A participatory exercise in which the audience participates in identifying the shortcomings of a spreadsheet in data analysis.</em> </p>
+<h3>18. Famous Excel errors</h3>
+<p><strong>Summary:</strong> <em>Three real-world spreadsheet failures that shaped public health, finance, and governance.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Hern A. <em>Covid: how Excel may have caused loss of 16,000 test results in England.</em> <em>The Guardian.</em> 6 October 2020. <a href="https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england">https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england </a></li>
+<li>Croll GJ. <em>The Reification of an Incorrect and Inappropriate Spreadsheet Model.</em> Proceedings of the EuSpRIG 2017 Conference “Spreadsheet Risk Management.” <a href="https://doi.org/10.48550/arXiv.1801.10249">https://doi.org/10.48550/arXiv.1801.10249</a></li>
+<li>Reinhart CM, Rogoff KS. <em>Growth in a Time of Debt.</em> NBER Working Paper No. 15639, January 2010. <a href="https://www.nber.org/papers/w15639">https://www.nber.org/papers/w15639</a></li>
+<li>Herndon T, Ash M, Pollin R. Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff. <em>Cambridge Journal of Economics</em> 2014; <strong>38</strong>: 257–79. <a href="https://content.csbs.utah.edu/~mli/Economics%207004/Does_High_Public_Debt_Consistently_Stifle_Economic_Growth__CJE_version.pdf">https://content.csbs.utah.edu/\~mli/Economics%207004/Does\_High\_Public\_Debt\_Consistently\_Stifle\_Economic\_Growth\_\_CJE\_version.pdf</a></li>
+</ul>
+<h3>19. Literate programming / reproducible analysis</h3>
+<p><strong>Summary:</strong> <em>Notebook‑driven, executable documents for auditable results -- an antidote to avoid or mitigate typicalspreadsheet errors.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Marimo <a href="https://marimo.io/">https://marimo.io/</a></li>
+<li>Jupyter <a href="https://jupyter.org/">https://jupyter.org/</a></li>
+<li>Shiny <a href="https://shiny.posit.co/">https://shiny.posit.co/</a></li>
+</ul>
+<h3>20. Precautionary Principle — definition</h3>
+<p><strong>Summary:</strong> <em>Act to prevent serious harm despite scientific uncertainty when cost‑effective measures exist.</em>
+<strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Rio Declaration on Environment and Development (1992) <a href="https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_CONF.151_26_Vol.I_Declaration.pdf">https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A\_CONF.151\_26\_Vol.I\_Declaration.pdf</a></li>
+</ul>
+<h3>21. Precautionary Principle — operationalisation</h3>
+<p><strong>Summary:</strong> <em>Trigger, proportional actions, integration with risk assessment/management/communication.</em></p>
+<h3>22. Precautionary Principle — examples</h3>
+<p><strong>Summary:</strong> <em>From moratoria to global treaties as pre‑emptive safeguards.</em>
+<strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Call for Heritable Gene Editing Moratorium (May 2025) <a href="https://www.isct-cytotherapy.org/article/S1465-3249\(25\">https://www.isct-cytotherapy.org/article/S1465-3249(25)00718-2/fulltext</a>00718-2/fulltext) </li>
+<li>Montreal Protocol on Substances that Deplete the Ozone Layer (1987) <a href="https://ozone.unep.org/treaties/montreal-protocol">https://ozone.unep.org/treaties/montreal-protocol</a> </li>
+<li>Stockholm Convention on Persistent Organic Pollutants (2004) <a href="https://pops.int/TheConvention/Overview/tabid/3351/Default.aspx">https://pops.int/TheConvention/Overview/tabid/3351/Default.aspx</a></li>
+</ul>
+<h3>23. Know your biases</h3>
+<p><strong>Summary:</strong> <em>Slide to introduce the section on biases.</em></p>
+<h3>24. Sir Ronald Fisher's Crusade</h3>
+<p><strong>Summary:</strong> <em>The great statistician, Sir Ronald Aylmer Fisher, had his own biases, and insisted that the link between cancer and smoking was a case of "correlation, not causation".</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Fisher, R. Cancer and Smoking. <em>Nature</em> <strong>182</strong>, 596 (1958). <a href="https://doi.org/10.1038/182596a0">https://doi.org/10.1038/182596a0</a></li>
+<li>Fisher, R. and Yates, F. Statistical tables for biological, agricultural and medical research, (6th Edition).  <a href="https://digital.library.adelaide.edu.au/server/api/core/bitstreams/21f22d02-4a39-4650-8f09-71434ad02897/content">https://digital.library.adelaide.edu.au/server/api/core/bitstreams/21f22d02-4a39-4650-8f09-71434ad02897/content</a></li>
+</ul>
+<h3>25. Thinking Fast and Slow</h3>
+<p><strong>Summary:</strong> <em>How cognitive shortcuts shape judgment and how overconfidence in ‘System 1’ thinking led to flawed research on priming and bias; the theory on fast and slow thinking is still very relevant but still needs us to evaluate the research behind it.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Kahneman D. <em>Thinking, Fast and Slow.</em> 2011. <a href="https://us.macmillan.com/books/9780374533557/thinkingfastandslow">https://us.macmillan.com/books/9780374533557/thinkingfastandslow</a></li>
+<li>Schimmack U. <em>Reconstruction of a Train Wreck: How Priming Research Went off the Rails.</em> <em>Replicability‑Index Blog</em>, 2 February 2017. <a href="https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/">https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/ </a></li>
+</ul>
+<h3>26. Cognitive Bias Definition</h3>
+<p><strong>Summary:</strong> <em>Slide opens the discussion on cognitive biases.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li><p><em>See the introduction on Wikipedia</em></p>
+<p><a href="https://en.wikipedia.org/wiki/Cognitive_bias *"><em>https://en.wikipedia.org/wiki/Cognitive\_bias</em></a></p>
+</li>
+</ul>
+<h3>27-28. Bias quiz: questions and answers</h3>
+<p><strong>Summary:</strong> <em>Introduces a light-hearted exercise in which the audience have to distinguish cognitive biases supported by empirical evidence and others that are mere inventions, generated by AI.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li><em>Galea, G. Cognitive Biases Quiz. (2025) <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><a href="https://biases.streamlit.app">https://biases.streamlit.app</a><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>.</em></li>
+</ul>
+<h3>29. Be ready to change</h3>
+<p><strong>Summary:</strong> <em>Introductory slide to the last section: update positions as evidence changes; show your workings</em>.</p>
+<h3>30. Illustrative example: The BMA changes its mind</h3>
+<p><strong>Summary:</strong> <em>Institutional learning; policy shifts with new evidence or context; how the BMA shifted over decades.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li>Two videos on YouTube set the flavour: the BMA in 1948 (<a href="https://youtu.be/kR4fOdGWdzg?si=Ae6N15LxeQsyApl0">https://youtu.be/kR4fOdGWdzg?si=Ae6N15LxeQsyApl0</a>) and again in 2025 (<a href="https://youtu.be/aDifm6tQns8?si=QE7Whj8jjjP1tn9G">https://youtu.be/aDifm6tQns8?si=QE7Whj8jjjP1tn9G</a>)</li>
+</ul>
+<h3>31. Behavioural / Structural</h3>
+<p><strong>Summary:</strong> <em>Contrast individual‑level vs structural levers for public health impact.</em>
+<strong>References &amp; further reading:</strong></p>
+<ul>
+<li><em>No specific references; this is a space for discussion.</em></li>
+</ul>
+<h3>32. Two Traditions</h3>
+<p><strong>Summary:</strong> <em>Summary of action-oriented lessons from this lecture, based in management and philosophical literature.</em> <strong>References &amp; further reading:</strong></p>
+<ul>
+<li><em>None on slide; add sources here.</em></li>
+</ul>
+<h3>33.  Thank you / Contact</h3>
+<p><strong>Summary:</strong> <em>Contact and closing.</em>
+<strong>References &amp; further reading:</strong></p>
+<ul>
+<li>URL: <a href="https://gaudengalea.com">https://gaudengalea.com</a></li>
+<li>Email: <a href="mailto\:contact@gaudengalea.com">contact@gaudengalea.com</a></li>
+<li>This presentation is © Gauden Galea 2025. Licensed under CC BY 4.0 (the Creative Commons Attribution Licence).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+      </article>
+    </div> <!-- content-wrap -->
+    <footer class="fullwidth page-bottom">
+      © 2025 Gauden Galea. All rights reserved. Subscribe to the <a href="../../feed/">site feed</a>. <br>
+      Published under
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution Non-Commercial 4.0 International
+        License</a>.<br>
+      Built with <a href="https://www.getlektor.com/">Lektor</a>,
+      <a href="https://www.python.org/">Python</a>,
+      <a href="https://pages.github.com/">Github Pages</a>, and <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+      <a href="https://github.com/gauden/gaudengalea">Github repo</a>. Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+    </footer>
+  </div> <!-- page-container -->
+</body>

@@ -30,6 +30,8 @@ I could not have strayed farther from the truth. Indeed, in hallway conversation
 
 ### Python, Politics, and Public Health 
 
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/-b63lsmHhjo?si=KWsgbMA5L8rBR6G4" title="Python, Politics, and Public Health" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 In my own presentation, I gave a selection of historical examples of how I have used Python to either analyse public health data with political relevance or to help advocate for public health policies. The war stories covered:
 
 - a 2015 network analysis of a Twitter conversation on vaping and how it turned out to have a surprising connection to Brexit, 
@@ -55,21 +57,9 @@ At the end of my presentation, I asked the audience to respond to a very open (a
 
 Let me now pay tribute to other speakers who gave impressive examples of the intersection between Python and population health. The following section summarises key presentations that reflected different ways in which Python can be used in both clinical and public health applications.
 
-### `Fairlearn`: assessing and mitigating harm in AI systems (Tamara Atanasoska)
-
-<span class="marginnote">
-Weerts H, Dudík M, Edgar R, Jalali A, Lutz R, Madaio M. <a href="http://jmlr.org/papers/v24/23-0389.html">Fairlearn: Assessing and Improving Fairness of AI Systems</a>. Journal of Machine Learning Research. 2023; 24.  (accessed Aug 2, 2025)
-</span>
-
-Tamara started off by presenting examples of unfair AI systems. They included a sentencing model in the US justice system that was racially biased, and child care applications in the Netherlands that were processed by an AI model biased against migrants. She pointed out that fairness concerns can arise across the whole machine learning lifecycle and thus needs disaggregated evaluation; assessing fairness is a process not a solution. She pointed out that algorithms and data frames sit within decisions made by humans and institutions at all stages in the process. 
-
-She explained core concepts in handling fairness, such as: looking out for abstraction traps, attending to construct validity, defining harms (e.g. to quality of service, allocation of resources, and representation), and then bringing all these together with fairness metrics. She introduced [Fairlearn](https://fairlearn.org),  a community-led OSS library, that is `scikit-learn` compatible and helps integrate fairness into one’s pipeline. 
-
-She gave a health example: readmission of people with diabetes released from hospitals in the US. The question: are the aftercare resources allocated fairly by race? The [ten-minute tutorial on the Fairlearn site](https://fairlearn.org/main/quickstart.html#fairlearn-in-10-minutes) covers this example. 
-
-Afterwards Tamara and I chatted about the fact that fairness and privacy are at loggerheads in public health. The privacy laws that protect patients make it impossible to collect the datasets that can emit fairness metrics. Possibly the [European Health Data Space](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en) could create opportunities to resolve this paradox. Possibly, `Fairlearn` could be used at facility level to analyse equity of access, provision, and outcomes within each facility's own population and this could be mandated by national or European legislation. 
-
 ### Stopping Epidemics using the `Atomica` Python Tool (Eloisa Pérez Bennetts)
+
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/G_PRanVqEr8?si=bSfJGH9rXtSmstBA" title="Stopping Epidemics using the `Atomica` Python Tool (Eloisa Pérez Bennetts)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Sadly, Eloisa’s talk was scheduled in the same time slot as mine, so I was not able to attend it. Her abstract, briefly summarised, said: 
 
@@ -94,6 +84,8 @@ WHO/Europe. <a href="https://iris.who.int/handle/10665/381812">TB-Free Central A
 Eloisa, Jannis, and I had a delightful discussion about their projects and noted that we were not exceptional in our shared interest, but that there are many participants at this conference who are applying Python to health and social concerns. I lose track of who of us brought up the idea that this might be a theme to be proposed for an “Open Space” or an explicit thread of presentations in next year’s EuroPython.
 
 ### Offline Disaster Relief Coordination (Jannis Lübbe)
+
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/arHBSQz0-Fg?si=m062If0ZeHrM8Xyw" title="Offline Disaster Relief Coordination (Jannis Lübbe)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <span class="marginnote">
 <a href="https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206](https://en.wikipedia.org/w/index.php?title=Technisches_Hilfswerk&oldid=1291621206">Technisches Hilfswerk</a>. Wikipedia. 2025. (accessed July 27, 2025).
@@ -122,6 +114,8 @@ I also learned about Jannis’ other volunteer work with the OpenSky Network, th
 
 ### Privacy-Enhancing Cancer Data Processing (Florian Stefan)
 
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/EkBKWptT-Yo?si=4S0JT_YV1HUjoxOt" title="Privacy-Enhancing Cancer Data Processing (Florian Stefan)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Florian introduced the data pipeline for [Flatiron Health](https://flatiron.com/), a company that provides privacy-enhanced cancer data for health research (usually providing Real World Evidence — RWE — for pharma companies testing novel chemotherapeutic agents).
 
 He described a model of data processing with several strengths:
@@ -138,6 +132,8 @@ I asked him about applications of their data in public health research and he po
 
 ### Prenatal Diagnosis of Genetic Diseases (Helena Gómez Pozo, Marina Moro López)
 
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/7Ma90wCN7J0?si=n-vBgcyv6jDaHA_p" title="Prenatal Diagnosis of Genetic Diseases (Helena Gómez Pozo, Marina Moro López)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 HGP and MML, two computational biologists, gave a gentle introduction to genetics and DNA sequencing (explained very elegantly to a lay audience) as the basis for their talk. For context, they stated that 10% of the population suffer from one of 6,000 genetic diseases and pointed out that prenatal diagnosis applies to inherited genetic disorders. 
 
 Their talk focused on a project looking for _Epidermolysis bullosa_, a condition occurring in 1:6000 of newborns. They illustrated their workflow. They began by downloading reference gene sequences from the NIH database. They wrote a script using `tkinter` to provide a simple GUI making the tool accessible to non-programmers. Their script read off the reference and patient sequences, aligned the two, identified the positions of mutations, and displaying the difference. Effectively a `git diff` on a strand of DNA.
@@ -149,3 +145,20 @@ Apart from introducing the audience to their methods, they made several, highly 
 - They also counselled the audience to be cautious in the face of overly-optimistic media reports of advances in genetics. They discussed the example of mis-reporting success in the “treatment” of Down’s Syndrome, with reporters getting the science wrong quite dramatically. 
 - They reminded the audience that the human genome is under the protection of the universal declaration on human rights — one of the safeguards against eugenics. 
 
+
+### `Fairlearn`: assessing and mitigating harm in AI systems (Tamara Atanasoska)
+
+<iframe width="720" height="405" style="margin-top: 1.5em" src="https://youtu.be/ZpvEY5BaZ8w?si=wkZxmX8sqPwzAn2f" title="Building fairer AI Systems with Fairlearn | AI Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<caption>Tamara's video from Europython 2025 is not yet uploaded.<br>I am linking here to a video on Fairlearn from an older web presentation on the subject.</caption>
+
+Tamara started off by presenting examples of unfair AI systems. They included a sentencing model in the US justice system that was racially biased, and child care applications in the Netherlands that were processed by an AI model biased against migrants. She pointed out that fairness concerns can arise across the whole machine learning lifecycle and thus needs disaggregated evaluation; assessing fairness is a process not a solution. She pointed out that algorithms and data frames sit within decisions made by humans and institutions at all stages in the process. 
+
+<span class="marginnote">
+Weerts H, Dudík M, Edgar R, Jalali A, Lutz R, Madaio M. <a href="http://jmlr.org/papers/v24/23-0389.html">Fairlearn: Assessing and Improving Fairness of AI Systems</a>. Journal of Machine Learning Research. 2023; 24.  (accessed Aug 2, 2025)
+</span>
+
+She explained core concepts in handling fairness, such as: looking out for abstraction traps, attending to construct validity, defining harms (e.g. to quality of service, allocation of resources, and representation), and then bringing all these together with fairness metrics. She introduced [Fairlearn](https://fairlearn.org),  a community-led OSS library, that is `scikit-learn` compatible and helps integrate fairness into one’s pipeline. 
+
+She gave a health example: readmission of people with diabetes released from hospitals in the US. The question: are the aftercare resources allocated fairly by race? The [ten-minute tutorial on the Fairlearn site](https://fairlearn.org/main/quickstart.html#fairlearn-in-10-minutes) covers this example. 
+
+Afterwards Tamara and I chatted about the fact that fairness and privacy are at loggerheads in public health. The privacy laws that protect patients make it impossible to collect the datasets that can emit fairness metrics. Possibly the [European Health Data Space](https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en) could create opportunities to resolve this paradox. Possibly, `Fairlearn` could be used at facility level to analyse equity of access, provision, and outcomes within each facility's own population and this could be mandated by national or European legislation. 

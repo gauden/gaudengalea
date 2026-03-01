@@ -175,7 +175,7 @@ wheels = [
 
 [[package]]
 name = "lektor"
-version = "3.3.12"
+version = "3.3.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "babel" },
@@ -195,9 +195,9 @@ dependencies = [
     { name = "watchdog" },
     { name = "werkzeug" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ea/8a/c2485e3e6777c409081eb5517a3a97743aac8ea000eef95230371079188f/lektor-3.3.12.tar.gz", hash = "sha256:a856e5f94f77f8c960f6c3f21675338ac32e205bf035582063b17ea137035b03", size = 2350688, upload-time = "2024-08-18T23:46:38.928Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8b/7e/24c53b35d2a3c3632d5ce95bd5427f07e606f2ef1cfe5c51b272fa6baf8c/lektor-3.3.13.tar.gz", hash = "sha256:86b30f4ad7d6ceb8a8755591712f6737e30a8701fcc5a1d0ced4c99c6903e271", size = 2350957, upload-time = "2026-02-11T00:24:33.216Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/00/ae/20001dbf0db5b9583fd6fe04334ef74fa286a3a7b8cfb1e9f4a985f376a2/Lektor-3.3.12-py3-none-any.whl", hash = "sha256:d5667647bd784ae5216fbc1a32ea0022ed0b559d9d1967744675aa39ece72075", size = 1704710, upload-time = "2024-08-18T23:46:36.687Z" },
+    { url = "https://files.pythonhosted.org/packages/da/28/91383a9f5a40e097fde5863ef52e4ef87a4b9c3b7e0f75d117dd8ea45335/lektor-3.3.13-py3-none-any.whl", hash = "sha256:81cc13dcdb7538fa6600dc8c1a33f6f9c1928276f4f3fe5cf6164ad8c076f37b", size = 1704767, upload-time = "2026-02-11T00:24:31.138Z" },
 ]
 
 [[package]]
@@ -249,11 +249,11 @@ wheels = [
 
 [[package]]
 name = "pip"
-version = "25.2"
+version = "26.0.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/20/16/650289cd3f43d5a2fadfd98c68bd1e1e7f2550a1a5326768cddfbcedb2c5/pip-25.2.tar.gz", hash = "sha256:578283f006390f85bb6282dffb876454593d637f5d1be494b5202ce4877e71f2", size = 1840021, upload-time = "2025-07-30T21:50:15.401Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/48/83/0d7d4e9efe3344b8e2fe25d93be44f64b65364d3c8d7bc6dc90198d5422e/pip-26.0.1.tar.gz", hash = "sha256:c4037d8a277c89b320abe636d59f91e6d0922d08a05b60e85e53b296613346d8", size = 1812747, upload-time = "2026-02-05T02:20:18.702Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/3f/945ef7ab14dc4f9d7f40288d2df998d1837ee0888ec3659c813487572faa/pip-25.2-py3-none-any.whl", hash = "sha256:6d67a2b4e7f14d8b31b8b52648866fa717f45a1eb70e83002f4331d07e953717", size = 1752557, upload-time = "2025-07-30T21:50:13.323Z" },
+    { url = "https://files.pythonhosted.org/packages/de/f0/c81e05b613866b76d2d1066490adf1a3dbc4ee9d9c839961c3fc8a6997af/pip-26.0.1-py3-none-any.whl", hash = "sha256:bdb1b08f4274833d62c1aa29e20907365a2ceb950410df15fc9521bad440122b", size = 1787723, upload-time = "2026-02-05T02:20:16.416Z" },
 ]
 
 [[package]]
@@ -312,11 +312,11 @@ wheels = [
 
 [[package]]
 name = "urllib3"
-version = "2.5.0"
+version = "2.6.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz", hash = "sha256:1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed", size = 435556, upload-time = "2026-01-07T16:24:43.925Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
+    { url = "https://files.pythonhosted.org/packages/39/08/aaaad47bc4e9dc8c725e68f9d04865dbcb2052843ff09c97b08904852d84/urllib3-2.6.3-py3-none-any.whl", hash = "sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4", size = 131584, upload-time = "2026-01-07T16:24:42.685Z" },
 ]
 
 [[package]]

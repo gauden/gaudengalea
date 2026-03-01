@@ -15,3 +15,9 @@
 - [x] Add setup guide for repository variables and secrets.
 - [x] Add implementation TODO tracker and complete all phases.
 - [x] Validate repository diff for sensitive data leakage in new/changed files.
+
+## Phase 4 - Dependabot Remediation (2026-03-01)
+- [x] Inspect `pyproject.toml` and `uv.lock` for vulnerable transitive dependencies.
+- [x] Apply minimal compatible lockfile upgrades for reachable advisories.
+- [x] Validate static build and repository tests after upgrades.
+- [x] Document fixed vs deferred alerts and residual risk.

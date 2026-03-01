@@ -109,3 +109,25 @@ content/.DS_Store
 .DS_Store
 .DS_Store
 content/.DS_Store
+
+# Local secrets and private ops exports
+.env
+.env.*
+*.env
+*.local.env
+*secrets*
+*tokens*
+*credential*
+*private-note*
+*_private.md
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local data exports / snapshots
+*.csv
+*.tsv
+*.bak
+*.backup
+*.dump

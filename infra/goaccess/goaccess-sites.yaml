@@ -1,0 +1,13 @@
+sites:
+  - site_id: powergraph
+    source_host: powergraph.gaudengalea.com
+    log_file: /home/ubuntu/apps/caddy/data/access-powergraph.log
+    container_name: powergraph-goaccess
+    internal_port: 7890
+    enabled: true
+  - site_id: blog
+    source_host: gaudengalea.com,www.gaudengalea.com
+    log_file: /home/ubuntu/apps/caddy/data/access-gaudengalea.log
+    container_name: blog-goaccess
+    internal_port: 7891
+    enabled: true

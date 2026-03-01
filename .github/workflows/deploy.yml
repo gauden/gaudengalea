@@ -67,7 +67,8 @@ jobs:
           mkdir -p "${DEPLOY_ROOT}/releases" "${release_dir}"
           rsync -az --delete .lektoroutput/ "${release_dir}/"
           test -s "${release_dir}/index.html"
-          ln -sfn "${release_dir}" "${current_link}"
+          # Use a relative symlink so both host and container path views resolve.
+          ln -sfn "releases/${release_id}" "${current_link}"
           find "${DEPLOY_ROOT}/releases" -mindepth 1 -maxdepth 1 -type d -printf '%P\n' | sort -r | tail -n +"$(( release_retention + 1 ))" | while read -r old; do
             rm -rf "${DEPLOY_ROOT}/releases/${old}"
           done

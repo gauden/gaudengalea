@@ -1,42 +1,73 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy to Origin
 
 on:
   push:
     branches:
-      - master # Or our default branch
+      - main
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, ARM64, molly]
+    permissions:
+      contents: read
+    env:
+      CANONICAL_HOST: ${{ vars.CANONICAL_HOST }}
+      DEPLOY_ROOT: ${{ vars.DEPLOY_ROOT }}
+      RELEASE_RETENTION: ${{ vars.RELEASE_RETENTION }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.x" # Adjust this to the version we need
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install lektor
 
-      # Build with Lektor specifying the output directory explicitly
       - name: Build site with Lektor
         run: lektor build --output-path .lektoroutput
-        # ".lektoroutput" is the directory where the site will be built;
-        # adjust to taste!
 
-      # Add CNAME to the build directory
       - name: Add CNAME
-        run: echo "www.gaudengalea.com" > .lektoroutput/CNAME
-        # Adjust to the custom domain and build directory.
+        run: |
+          if [ -z "${CANONICAL_HOST}" ]; then
+            echo "Missing repository variable CANONICAL_HOST"
+            exit 1
+          fi
+          echo "${CANONICAL_HOST}" > .lektoroutput/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # GITHUB_TOKEN is generated in the action itself and deleted afterwards;
-          # no manual action is needed, reducing risk of secrets leaking.
-          publish_dir: ./.lektoroutput
-          # Make sure this matches the directory specified in the build step.
+      - name: Validate required deployment settings
+        run: |
+          missing=0
+          for name in DEPLOY_ROOT; do
+            if [ -z "${!name}" ]; then
+              echo "Missing required setting: ${name}"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Deploy to origin host
+        run: |
+          set -euo pipefail
+
+          release_retention="${RELEASE_RETENTION:-10}"
+          release_id="$(date -u +%Y%m%d%H%M%S)-${GITHUB_SHA::7}"
+          release_dir="${DEPLOY_ROOT}/releases/${release_id}"
+          current_link="${DEPLOY_ROOT}/current"
+
+          mkdir -p "${DEPLOY_ROOT}/releases" "${release_dir}"
+          rsync -az --delete .lektoroutput/ "${release_dir}/"
+          test -s "${release_dir}/index.html"
+          ln -sfn "${release_dir}" "${current_link}"
+          find "${DEPLOY_ROOT}/releases" -mindepth 1 -maxdepth 1 -type d -printf '%P\n' | sort -r | tail -n +"$(( release_retention + 1 ))" | while read -r old; do
+            rm -rf "${DEPLOY_ROOT}/releases/${old}"
+          done

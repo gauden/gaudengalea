@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTopLevelLabEntries } from "../../lib/content";
+import { formatDate, makeExcerpt, pageTitle } from "../../lib/site";
+
+const entries = await getTopLevelLabEntries();
+---
+
+<BaseLayout title={pageTitle("Lab")} summary="Coding experiments and practical notes by Gauden Galea.">
+  <h2>Lab</h2>
+  <h1>Experiments in Code</h1>
+
+  <ul class="post-list">
+    {
+      entries.map((entry) => (
+        <li class="post-list-item">
+          <a class="post-title" href={`/lab/${entry.id}/`}>{entry.data.title}</a>
+          <div class="excerpt">
+            {makeExcerpt(entry.data.summary, entry.body)}
+            {" — "}
+            {formatDate(entry.data.pub_date)}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

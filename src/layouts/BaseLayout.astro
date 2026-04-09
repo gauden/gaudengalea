@@ -1,0 +1,158 @@
+---
+import { SITE } from "../lib/site";
+
+const {
+  title = SITE.title,
+  summary = SITE.description,
+  image = null,
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image
+  ? new URL(image, canonicalUrl).toString()
+  : new URL("/static/img/default-og.jpg", Astro.site).toString();
+const currentPath = Astro.url.pathname;
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="any" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="author" content={SITE.author} />
+    <meta property="og:url" content={canonicalUrl.toString()} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={summary} />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image" content={new URL("/static/img/default-og-square.jpg", Astro.site).toString()} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="article:author" content="https://www.facebook.com/gauden" />
+    <meta name="twitter:creator" content="@gauden" />
+
+    <link rel="stylesheet" href="/static/tufte.css" />
+    <link rel="stylesheet" href="/static/custom.css" />
+    <link id="prism-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      author: {
+        "@type": "Person",
+        name: SITE.author,
+        url: SITE.linkedin,
+      },
+      url: canonicalUrl.toString(),
+    })} />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.Prism && Prism.plugins && Prism.plugins.autoloader) {
+          Prism.plugins.autoloader.languages_path = "https://cdn.jsdelivr.net/npm/prismjs/components/";
+        }
+
+        document.querySelectorAll("pre").forEach(function (pre) {
+          const code = pre.querySelector('code[class*="language-"]');
+          if (code && !pre.classList.contains("line-numbers")) {
+            pre.classList.add("line-numbers");
+          }
+        });
+
+        document.querySelectorAll("pre").forEach(function (pre) {
+          if (pre.querySelector(".code-copy")) return;
+          const btn = document.createElement("button");
+          btn.className = "code-copy";
+          btn.type = "button";
+          btn.setAttribute("aria-label", "Copy code");
+          btn.textContent = "Copy";
+          btn.addEventListener("click", async () => {
+            const code = pre.querySelector("code");
+            if (!code) return;
+            const text = code.innerText;
+            try {
+              await navigator.clipboard.writeText(text);
+              btn.textContent = "Copied!";
+              setTimeout(() => (btn.textContent = "Copy"), 1200);
+            } catch {
+              btn.textContent = "Press ⌘/Ctrl+C";
+              const range = document.createRange();
+              range.selectNodeContents(code);
+              const sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(range);
+              setTimeout(() => (btn.textContent = "Copy"), 1500);
+            }
+          });
+          pre.style.position = "relative";
+          pre.appendChild(btn);
+        });
+      });
+    </script>
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav navbar-nav">
+          <li class={currentPath === "/" ? "active" : undefined}>
+            <a href="/">⌂</a>
+          </li>
+          &middot;
+          <li class={currentPath.startsWith("/blog") ? "active" : undefined}>
+            <a href="/blog/">Blog</a>
+          </li>
+          &middot;
+          <li class={currentPath.startsWith("/pub") ? "active" : undefined}>
+            <a href="/pub/">Pub</a>
+          </li>
+          &middot;
+          <li class={currentPath.startsWith("/lab") ? "active" : undefined}>
+            <a href="/lab/">Lab</a>
+          </li>
+          &middot;
+          <li class={currentPath.startsWith("/bio") ? "active" : undefined}>
+            <a href="/bio/">Bio</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page-container">
+      <div class="content-wrap">
+        <article>
+          <section>
+            <slot />
+          </section>
+        </article>
+      </div>
+      <footer class="fullwidth page-bottom">
+        © {currentYear} Gauden Galea. All rights reserved. Subscribe to the <a href="/feed/">site feed</a>.<br />
+        Published under
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+          Creative Commons Attribution Non-Commercial 4.0 International License
+        </a>.<br />
+        Built with <a href="https://astro.build/">Astro</a>,
+        <a href="https://pagescms.org/">Pages CMS</a>,
+        <a href="https://github.com/features/actions">GitHub Actions</a>,
+        <a href="https://caddyserver.com/">Caddy</a>, and
+        <a href="https://github.com/edwardtufte/tufte-css">tufte.css</a>.
+        Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </footer>
+    </div>
+  </body>
+</html>

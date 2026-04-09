@@ -1,0 +1,13 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPage } from "../lib/content";
+import { pageTitle } from "../lib/site";
+
+const bioPage = await getPage("bio");
+const { Content } = await render(bioPage);
+---
+
+<BaseLayout title={pageTitle(bioPage.data.title)} summary={bioPage.data.summary}>
+  <Content />
+</BaseLayout>

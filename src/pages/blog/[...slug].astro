@@ -1,0 +1,81 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDirectChildren, getParentSlug, getPublishedBlogEntries } from "../../lib/content";
+import { formatDate, pageTitle } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const entries = await getPublishedBlogEntries();
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, entries },
+  }));
+}
+
+const { entry, entries } = Astro.props;
+const { Content } = await render(entry);
+const children = getDirectChildren(entries, entry.id);
+const parentSlug = getParentSlug(entry.id);
+const parent = parentSlug ? entries.find((candidate) => candidate.id === parentSlug) : null;
+const siblings = parent ? getDirectChildren(entries, parent.id) : [];
+const currentIndex = siblings.findIndex((candidate) => candidate.id === entry.id);
+const previous = currentIndex > 0 ? siblings[currentIndex - 1] : null;
+const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : null;
+const seriesLabel = parent?.data.series || parent?.data.title;
+---
+
+<BaseLayout
+  title={pageTitle(entry.data.title)}
+  summary={entry.data.summary}
+  image={entry.data.image ? entry.data.image : null}
+>
+  <h1>{entry.data.title}</h1>
+
+  {
+    parent ? (
+      <p class="meta">
+        {formatDate(entry.data.pub_date)}
+        <span class="divider" style="display: inline-block; width: 2em;"></span>
+        {previous ? <a class="prev" href={`/blog/${previous.id}/`}>&larr;</a> : null}
+        {" "}
+        Part {currentIndex + 1} of {siblings.length} in <a href={`/blog/${parent.id}/`}>{seriesLabel}</a> series
+        {" "}
+        {next ? <a class="next" href={`/blog/${next.id}/`}>&rarr;</a> : null}
+      </p>
+    ) : (
+      <p class="meta">{formatDate(entry.data.pub_date)}</p>
+    )
+  }
+
+  <Content />
+
+  {
+    children.length > 0 && (
+      <>
+        <h3>Read more</h3>
+        <ol>
+          {
+            children.map((child) => (
+              <li>
+                <a href={`/blog/${child.id}/`}>{child.data.title}</a>
+                {child.data.summary ? <div class="part-summary">{child.data.summary}</div> : null}
+              </li>
+            ))
+          }
+        </ol>
+      </>
+    )
+  }
+
+  {
+    parent && (
+      <p class="meta" style="margin-top: 3em;">
+        {previous ? <a class="prev" href={`/blog/${previous.id}/`}>&larr;</a> : null}
+        {" "}
+        Part {currentIndex + 1} of {siblings.length} in <a href={`/blog/${parent.id}/`}>{seriesLabel}</a> series
+        {" "}
+        {next ? <a class="next" href={`/blog/${next.id}/`}>&rarr;</a> : null}
+      </p>
+    )
+  }
+</BaseLayout>

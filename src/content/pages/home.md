@@ -1,0 +1,16 @@
+---
+title: "Gauden Galea: Home Page"
+summary: "A résumé, sandbox, and hub connecting Gauden Galea's public health work with coding, digital health, AI, and other interests."
+---
+
+# “Only Connect”
+
+<label for="mn-demo" class="margin-toggle">⊕</label>
+<input type="checkbox" id="mn-demo" class="margin-toggle">
+<span class="marginnote">
+The tagline, “Only Connect”, a <a href="https://en.wikiquote.org/wiki/E._M._Forster">fragment from E. M. Forster</a>, provides a motto for this personal site, which serves as a sandbox and a hub, connecting my public health practice to extracurricular fields of interest.
+</span>
+
+I use this site to compile my occasional [writing and speeches](/blog), my peer-reviewed [papers](/pub), my [coding](/lab) experiments, and my updated [résumé](/bio). Do subscribe to my [RSS/Atom feed](/feed/) if you are so inclined.
+
+## Latest Posts

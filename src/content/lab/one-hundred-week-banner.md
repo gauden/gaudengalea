@@ -1,0 +1,21 @@
+---
+title: "One-Hundred-Week Banner"
+pub_date: "2025-08-10"
+summary: "From October 2023, I used a p5.js banner at webinars, counting weeks to the UN HLM on NCDs in 2025. Over time, it acquired new and unexpected significance."
+image: "banner.png"
+draft: false
+---
+
+<span class="marginnote"><img src="hand-drawn-sketch.jpg" alt="Hand-drawn sketch">This banner was my first experience of the power of Large Language Models—I believe it was GPT 3 at the time—to generate working code from a hand-drawn sketch. Here is the input I gave it, together with a prompt asking it to produce a <code>p5.js</code> sketch following the design.</span>
+
+In late 2023, I vibe-coded (the term did not exist at the time) a [Processing sketch](https://p5js.org/) to serve as a public banner during webinars. I used it to remind participants that the time to the [Fourth UN High Level Meeting on NCDs and Mental Health](https://www.un.org/en/un-high-level-meeting-prevention-and-control-noncommunicable-diseases-and-promotion-mental-health) was growing short and that we had a lot to do before then.
+
+I set up this banner when the count was 100, hence the name, but I publish this post when the number has dwindled to five. 
+
+The countdown became almost a marker of my own journey to retirement and life after WHO. I will keep this code repository running and switch the label to mark weeks beyond the High Level Meeting—a tiny voice, a reminder, and a conscience-prick to policy-makers and politicians—I assume they have consciences—mutely asking them to accelerate work on their commitments to 2030.
+
+Here's the [Github repo](https://github.com/gauden/100weeks) and the banner itself, more a reminder now than a call to action.
+
+<figure>
+  <a href="https://gauden.github.io/100weeks/"><img src="./banner.png" alt="Detail of banner as it appears at 5 weeks to UN High Level Meeting"></a>
+</figure>

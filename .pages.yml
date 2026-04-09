@@ -1,0 +1,195 @@
+media:
+  - name: blog_images
+    label: Blog images
+    input: public/blog
+    output: /blog
+    categories: [image]
+  - name: lab_images
+    label: Lab images
+    input: public/lab
+    output: /lab
+    categories: [image]
+  - name: bio_images
+    label: Bio images
+    input: public/bio
+    output: /bio
+    categories: [image]
+  - name: site_files
+    label: Site files
+    input: public
+    output: /
+    categories: [image, document, video, audio, code, font]
+
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: src/content/blog
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      layout: tree
+      fields: [title, pub_date, draft, series]
+      primary: title
+      sort: [pub_date, title]
+      default:
+        sort: pub_date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: pub_date
+        label: Published
+        type: date
+      - name: summary
+        label: Summary
+        type: text
+      - name: series
+        label: Series
+        type: string
+      - name: order
+        label: Order
+        type: number
+      - name: image
+        label: Hero image
+        type: image
+        options:
+          media: blog_images
+          path: public/blog
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: blog_images
+          path: public/blog
+
+  - name: publications
+    label: Publications
+    type: collection
+    path: src/content/pub
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, pub_date, venue]
+      primary: title
+      sort: [pub_date, title]
+      default:
+        sort: pub_date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: pub_date
+        label: Publication date
+        type: date
+      - name: venue
+        label: Venue
+        type: string
+      - name: url
+        label: URL
+        type: string
+      - name: author
+        label: Authors
+        type: text
+      - name: summary
+        label: Summary
+        type: text
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: body
+        label: Abstract or excerpt
+        type: rich-text
+        options:
+          format: markdown
+          media: false
+
+  - name: lab
+    label: Lab
+    type: collection
+    path: src/content/lab
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, pub_date, draft]
+      primary: title
+      sort: [pub_date, title]
+      default:
+        sort: pub_date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: pub_date
+        label: Published
+        type: date
+      - name: summary
+        label: Summary
+        type: text
+      - name: image
+        label: Image
+        type: image
+        options:
+          media: lab_images
+          path: public/lab
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: lab_images
+          path: public/lab
+
+  - name: home
+    label: Home page
+    type: file
+    path: src/content/pages/home.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: summary
+        label: Summary
+        type: text
+      - name: body
+        label: Intro
+        type: rich-text
+        options:
+          format: markdown
+          media: false
+
+  - name: bio
+    label: Bio page
+    type: file
+    path: src/content/pages/bio.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+          media: bio_images
+          path: public/bio
+
+settings:
+  merge:
+    strategy: squash

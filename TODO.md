@@ -1,23 +1,33 @@
-# TODO - Origin Deployment Migration
+# TODO - Astro + Pages CMS Migration
 
-## Phase 1 - Planning and Safety
-- [x] Define deployment target architecture (CI build + rsync + atomic release switch).
-- [x] Confirm redaction and no-secrets policy is in place for versioned docs.
-- [x] Confirm deployment configuration uses secrets/variables, not inline credentials.
+## Phase 1 - Branch Safety and Scaffolding
+- [x] Create feature branch from clean `main` rollback point.
+- [x] Replace legacy TODO with migration-specific phases.
+- [x] Scaffold Astro project files and deterministic package lockfile.
+- [x] Preserve current rollback path by keeping Lektor files until Astro parity is confirmed.
 
-## Phase 2 - Workflow Implementation
-- [x] Replace GitHub Pages publishing workflow with origin deployment workflow.
-- [x] Switch trigger branch to `main`.
-- [x] Add required setting validation and self-hosted runner deployment logic in workflow.
-- [x] Add atomic release deployment and retention pruning logic.
+## Phase 2 - Content Conversion Pipeline
+- [x] Add tested conversion tooling for `content/**/contents.lr` -> Astro content collections.
+- [x] Convert blog, publications, lab, bio, home, and feed content into Astro-managed files.
+- [x] Preserve nested blog series routes and colocated media assets.
+- [x] Add a draft migration announcement blog post excluded from production output.
 
-## Phase 3 - Documentation and Handoff
-- [x] Add setup guide for repository variables and secrets.
-- [x] Add implementation TODO tracker and complete all phases.
-- [x] Validate repository diff for sensitive data leakage in new/changed files.
+## Phase 3 - Astro Rendering Parity
+- [x] Port layout, metadata, navigation, footer, and asset loading into Astro layouts/components.
+- [x] Recreate blog index ordering, series navigation, and section listings.
+- [x] Recreate publications listing with pagination.
+- [x] Recreate homepage recent-items aggregation and Atom feed generation.
+- [x] Update tooling attribution from Lektor/Python to Astro/Pages CMS where appropriate.
 
-## Phase 4 - Dependabot Remediation (2026-03-01)
-- [x] Inspect `pyproject.toml` and `uv.lock` for vulnerable transitive dependencies.
-- [x] Apply minimal compatible lockfile upgrades for reachable advisories.
-- [x] Validate static build and repository tests after upgrades.
-- [x] Document fixed vs deferred alerts and residual risk.
+## Phase 4 - CMS and CI/CD
+- [x] Add hosted Pages CMS configuration in `.pages.yml`.
+- [x] Wire CMS fields to Astro content schemas, including `draft`.
+- [x] Replace Lektor build steps in GitHub Actions with Astro build and deploy output.
+- [x] Update local/deployment documentation for `ulysses` and `molly`.
+
+## Phase 5 - Validation and Cleanup
+- [x] Run tests for conversion tooling.
+- [x] Run Astro build and route/feed validation locally.
+- [x] Confirm draft exclusion and static asset resolution.
+- [x] Remove obsolete Lektor files once parity is confirmed.
+- [x] Review changed files for sensitive data and deployment safety.

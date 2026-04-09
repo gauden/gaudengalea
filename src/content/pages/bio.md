@@ -1,0 +1,30 @@
+---
+title: "Biosketch"
+---
+
+# Gauden Galea
+
+<p><label for="bio-photo" class="margin-toggle">⊕</label><input type="checkbox" id="bio-photo" class="margin-toggle"><span class="marginnote"><img src="./gga_pic_thumb.png" alt="Gauden Galea"><br>For print: <em><a href="./gga_pic_large.jpg">high resolution photo</a></em></span>Standard bio-sketches for conference programmes.</p>
+
+## Short form 
+
+Prof. (Hon.) Gauden Galea is a global health expert with 25 + years’ experience with WHO in Fiji, Manila, Geneva, Copenhagen, and China. A global health specialist, public‑health physician, avid programmer,  and cancer survivor, he holds an Honorary Professorship at the University of Malta and is a Fellow of the UK Faculty of Public Health. He has driven major global and European initiatives: documenting commercial determinants of NCDs, leading the creation of the “Quick Buys for NCDs” cost‑effective action suite, co-creating a step‑wise national NCD surveillance model, integrating NCD care into health systems, and linking NCDs to development goals, gender‑specific plans, and life‑course health promotion.
+
+(109 words)
+
+## Long Form
+
+Prof. (Hon.) Gauden Galea is a global health expert focused on public health strategies for the prevention and control of NCDs (a.k.a. noncommunicable or chronic diseases). A cancer survivor and public health physician, he also brings a passion for computer programming to his work. He is a Fellow of the Faculty of Public Health (UK) and holds an honorary doctorate from the University of Malta.
+
+With more than 25 years of leadership in public health, Dr. Galea has achieved significant advances in Europe and worldwide. He led the effort to document the commercial determinants of NCDs in Europe and led the team that developed the “Quick Buys for NCDs”, a suite of cost‑effective public health actions with swift payback. He also pioneered a national step‑wise model for NCD surveillance, integrated prevention and control of NCDs into health systems, and built the case for linking NCDs with global development goals. His work has informed life‑course health promotion and gender‑specific health action plans both in Europe and beyond.
+
+His WHO career (1998‑2025) spanned roles in the Western Pacific and Europe and at HQ, most recently as Strategic Advisor to the WHO/Europe Regional Director (Special Initiative on NCDs and Innovation). Earlier posts included WHO Representative in China (2018‑2023), Director of the Division of NCDs in Europe (2011‑2018), Coordinator of Health Promotion (Geneva, 2006‑2010), Regional Adviser in NCDs (Manila, 2000‑2006) and Medical Officer for Healthy Islands (1998‑2000).
+
+(246 words)
+
+### Coordinates
+
+- Email: <a href="mailto:contact@gaudengalea.com">contact@gaudengalea.com</a>
+- LinkedIn: [@gauden](https://www.linkedin.com/in/gauden/)
+- Github: [@gauden](https://github.com/gauden)
+- Bluesky: [@gauden.bsky.social‬](https://bsky.app/profile/gauden.bsky.social)

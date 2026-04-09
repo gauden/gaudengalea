@@ -1,0 +1,26 @@
+{
+  "name": "gaudengalea",
+  "version": "0.1.0",
+  "description": "Personal website for Gauden Galea",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauden/gaudengalea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gauden/gaudengalea/issues"
+  },
+  "homepage": "https://github.com/gauden/gaudengalea#readme",
+  "dependencies": {
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^6.1.5"
+  }
+}

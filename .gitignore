@@ -102,6 +102,9 @@ ENV/
 
 # mkdocs documentation
 /site
+/dist
+/node_modules
+/.astro
 
 # mypy
 .mypy_cache/

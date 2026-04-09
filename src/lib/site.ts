@@ -29,6 +29,21 @@ export function stripMarkup(value: string): string {
     .trim();
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+export function renderInlineMarkdown(value: string): string {
+  return escapeHtml(value)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/__(.+?)__/g, "<strong>$1</strong>");
+}
+
 export function makeExcerpt(summary: string | undefined, body: string, maxLength = 220): string {
   if (summary && summary.trim().length > 0) {
     return summary.trim();

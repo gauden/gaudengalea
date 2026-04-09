@@ -1,5 +1,5 @@
 ---
-import { formatDate } from "../lib/site";
+import { formatDate, renderInlineMarkdown } from "../lib/site";
 
 const { paper, fromIndex = false } = Astro.props;
 const Content = paper.Content;
@@ -17,12 +17,12 @@ const Content = paper.Content;
     <>
       <h1 style="margin-right: 4rem;">{paper.data.title}</h1>
       <p class="meta">
-        <span set:html={paper.data.author ?? ""} />
+        <span set:html={renderInlineMarkdown(paper.data.author ?? "")} />
         {" "}
         {paper.data.url ? (
-          <a href={paper.data.url} set:html={paper.data.venue ?? ""} />
+          <a href={paper.data.url} set:html={renderInlineMarkdown(paper.data.venue ?? "")} />
         ) : (
-          <span set:html={paper.data.venue ?? ""} />
+          <span set:html={renderInlineMarkdown(paper.data.venue ?? "")} />
         )}{" "}
         on {formatDate(paper.data.pub_date)}
       </p>

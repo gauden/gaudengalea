@@ -4,7 +4,7 @@ pub_date: 2026-04-10
 summary: >
   I have moved this site from Lektor to Astro with Pages CMS, keeping the same
   design while making it a little easier to publish frequent updates.
-draft: true
+draft: false
 ---
 I have made a quiet change behind the scenes of this site.
 

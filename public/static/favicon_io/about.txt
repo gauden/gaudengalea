@@ -1,0 +1,15 @@
+The favicon was generated using the following favicon generator: https://favicon.io/favicon-generator/ and the following font:
+
+- Font Title: Alfa Slab One
+- Font Author: Copyright 2016 The Alfa Slab One Project Authors (http://www.jmsole.cl | info@jmsole.cl), with Reserved Font Name "Alfa Slab".
+- Font Source: http://fonts.gstatic.com/s/alfaslabone/v19/6NUQ8FmMKwSEKjnm5-4v-4Jh6dVretWvYmE.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+
+Settings: 
+
+- Background: #222
+- Font Size: 110
+- Font Color: #fffff8
+- Text: "G"
+- Background Shape: Rounded
+- Font variant: Regular 400 Normal

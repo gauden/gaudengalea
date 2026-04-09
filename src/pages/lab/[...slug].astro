@@ -1,0 +1,27 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedLabEntries } from "../../lib/content";
+import { formatDate, pageTitle } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const entries = await getPublishedLabEntries();
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  title={pageTitle(entry.data.title)}
+  summary={entry.data.summary}
+  image={entry.data.image ? entry.data.image : null}
+>
+  <h1>{entry.data.title}</h1>
+  <p class="meta">{formatDate(entry.data.pub_date)}</p>
+  <Content />
+</BaseLayout>

@@ -21,18 +21,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "22"
+          cache: npm
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install lektor
+        run: npm ci
 
-      - name: Build site with Lektor
-        run: lektor build --output-path .lektoroutput
+      - name: Build site with Astro
+        run: npm run build
 
       - name: Add CNAME
         run: |
@@ -40,7 +39,7 @@ jobs:
             echo "Missing repository variable CANONICAL_HOST"
             exit 1
           fi
-          echo "${CANONICAL_HOST}" > .lektoroutput/CNAME
+          echo "${CANONICAL_HOST}" > dist/CNAME
 
       - name: Validate required deployment settings
         run: |
@@ -65,7 +64,7 @@ jobs:
           current_link="${DEPLOY_ROOT}/current"
 
           mkdir -p "${DEPLOY_ROOT}/releases" "${release_dir}"
-          rsync -az --delete .lektoroutput/ "${release_dir}/"
+          rsync -az --delete dist/ "${release_dir}/"
           test -s "${release_dir}/index.html"
           # Use a relative symlink so both host and container path views resolve.
           ln -sfn "releases/${release_id}" "${current_link}"

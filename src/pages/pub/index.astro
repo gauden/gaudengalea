@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Pagination from "../../components/Pagination.astro";
+import PaperEntry from "../../components/PaperEntry.astro";
+import { getPublishedPublications } from "../../lib/content";
+import { pageTitle } from "../../lib/site";
+
+const allPublications = await getPublishedPublications();
+const publications = allPublications.slice(0, 10);
+---
+
+<BaseLayout title={pageTitle("Papers")} summary="Peer-reviewed publications by Gauden Galea.">
+  <h2>Papers</h2>
+  <h1>Peer-Reviewed Publications</h1>
+  {publications.map((paper) => <PaperEntry paper={paper} fromIndex={true} />)}
+  <Pagination currentPage={1} totalPages={Math.ceil(allPublications.length / 10)} basePath="/pub" />
+</BaseLayout>

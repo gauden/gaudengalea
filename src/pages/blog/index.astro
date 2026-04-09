@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDirectChildren, getPublishedBlogEntries, getTopLevelBlogEntries } from "../../lib/content";
+import { formatDate, makeExcerpt, pageTitle } from "../../lib/site";
+
+const allEntries = await getPublishedBlogEntries();
+const entries = await getTopLevelBlogEntries();
+---
+
+<BaseLayout title={pageTitle("Blog")} summary="Writings and speeches by Gauden Galea.">
+  <h2>Blog</h2>
+  <h1>Writings and Speeches</h1>
+
+  <ul class="post-list">
+    {
+      entries.map((entry) => {
+        const children = getDirectChildren(allEntries, entry.id);
+        return (
+          <li class="post-list-item">
+            <a class="post-title" href={`/blog/${entry.id}/`}>{entry.data.title}</a>
+            {
+              children.length > 0 && (
+                <>
+                  <span class="badge">Series</span>
+                  {" "}
+                  {children.length} part{children.length === 1 ? "" : "s"}
+                </>
+              )
+            }
+            <div class="excerpt">
+              {makeExcerpt(entry.data.summary, entry.body)}
+              {" — "}
+              {formatDate(entry.data.pub_date)}
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</BaseLayout>

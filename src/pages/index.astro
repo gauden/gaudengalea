@@ -1,0 +1,26 @@
+---
+import { render } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPage, getRecentHomeItems } from "../lib/content";
+import { SITE, formatDate, makeExcerpt } from "../lib/site";
+
+const homePage = await getPage("home");
+const { Content } = await render(homePage);
+const recentItems = await getRecentHomeItems();
+---
+
+<BaseLayout title={SITE.title} summary={homePage.data.summary}>
+  <Content />
+
+  <ul>
+    {
+      recentItems.map((item) => (
+        <li>
+          <a href={`/${item.collection}/${item.id}/`}>{item.data.title}</a>
+          <span class="marginnote">{formatDate(item.data.pub_date)} &middot; {item.section}</span>
+          <div class="summary">{makeExcerpt(item.data.summary, item.body)}</div>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

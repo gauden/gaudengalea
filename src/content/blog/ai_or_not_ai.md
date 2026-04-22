@@ -17,4 +17,4 @@ The point is not that one side wins. The point is that public health has to enga
 
 The video first screened at **Plenum II: “Künstliche Intelligenz für die Öffentliche Gesundheit”** during the **75th Scientific Congress of the Öffentlicher Gesundheitsdienst**, held in Wuppertal, Germany, 20-23 April 2026.
 
-Watch the video: [[AI or Not AI? Conversations with My Agents]](https://youtu.be/r0S_aZ-7LZY)
+Watch the video: [AI or Not AI? Conversations with My Agents](https://youtu.be/r0S_aZ-7LZY)

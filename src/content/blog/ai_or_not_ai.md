@@ -5,7 +5,7 @@ summary: “Fear is not a strategy.” That line became the centre of a short vi
   I made for a session on artificial intelligence and public health at the 75th
   Public Health Scientific Congress in Germany on 22 April 2026
 image: /blog/thumbnail.png
-draft: true
+draft: false
 ---
 “Fear is not a strategy.”
 

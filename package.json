@@ -21,6 +21,6 @@
   "homepage": "https://github.com/gauden/gaudengalea#readme",
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
-    "astro": "^6.1.5"
+    "astro": "^6.1.8"
   }
 }

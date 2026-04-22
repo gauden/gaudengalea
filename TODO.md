@@ -31,3 +31,9 @@
 - [x] Confirm draft exclusion and static asset resolution.
 - [x] Remove obsolete Lektor files once parity is confirmed.
 - [x] Review changed files for sensitive data and deployment safety.
+
+## Phase 6 - Astro Dependabot Remediation (2026-04-22)
+- [x] Inspect npm manifests for the Astro alert.
+- [x] Apply minimal compatible Astro patch-line upgrade.
+- [x] Validate npm audit, Astro build, and existing tests.
+- [x] Review dependency diff for unnecessary churn.

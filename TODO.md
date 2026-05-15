@@ -37,3 +37,9 @@
 - [x] Apply minimal compatible Astro patch-line upgrade.
 - [x] Validate npm audit, Astro build, and existing tests.
 - [x] Review dependency diff for unnecessary churn.
+
+## Phase 7 - npm Vulnerability Remediation (2026-05-15)
+- [x] Inspect npm dependency graph for `fast-xml-builder` and `devalue`.
+- [x] Apply the minimal lockfile/package update needed for patched versions.
+- [x] Validate with npm audit and production build.
+- [x] Review changed files for sensitive data and dependency churn.

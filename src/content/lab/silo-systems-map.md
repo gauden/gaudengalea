@@ -8,7 +8,7 @@ summary: "I came to Silo all scepticwise and ended up proper deep-down hooked.
 image: /lab/thumbnail.png
 draft: false
 ---
-> Spoiler alert for the first three seasons
+### Spoiler alert for the first three seasons
 
 ## TL;DR
 

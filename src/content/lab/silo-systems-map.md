@@ -27,7 +27,7 @@ Despite all this, there are so many ways the internal logic of the habitat break
 
 The silo has been praised as the ultimate example of a repair ecosystem. [Charlie Sorrel runs through the key elements in an iFixit blog post](https://www.ifixit.com/News/108578/silo-is-the-ultimate-repair-ecosystem)). He covers food, water, glass, the tinkerer's workshop, the recycling chute, the improvised weapons used by the Mechanicals, and the role of women in repairing and recycling.
 
-His blog hints at the niggling doubts that stopped me suspending my disbelief. Every time a sherriff pulled out a notebook from his pocket: where did the paper come from? Who made the pencil? Whenever anyone drinks a glass of water, I imagined they had access to groundwater and distillation, but I had to ask: who repaired the pipes? Who replaced the washer in the taps? As a medic: who trained the new physicians, surgeons, nurses? How long before evidence-based practice decayed into ritual? Who makes the anaesthetic? 
+His blog hints at the niggling doubts that stopped me suspending my disbelief. Every time a sheriff pulled out a notebook from his pocket: where did the paper come from? Who made the pencil? Whenever anyone drinks a glass of water, I imagined they had access to groundwater and distillation, but I had to ask: who repaired the pipes? Who replaced the washer in the taps? As a medic: who trained the new physicians, surgeons, nurses? How long before evidence-based practice decayed into ritual? Who makes the anaesthetic? 
 
 ## Mind the Language
 
@@ -51,4 +51,4 @@ The deepest contradiction lies in The Pact itself as a tool for survival. Surviv
 
 Once you notice that, you automatically start finding other inconsistencies, in the metabolism of materials, in culture and society, in knowledge and innovation. As [my map grew larger and denser](https://github.com/gauden/silo-systems-map/blob/main/inputs/MAP.dot), I wrote it up in a familiar format the Graphviz DOT language.
 
-Finally, I thought to ask [Astra](nnn) to visualize the map in a friendlier shape and [I publish it on Github Pages](https://gauden.github.io/silo-systems-map/) for your enjoyment and experimentation. 
+Finally, I thought to ask [Astra](https://openai.com/index/gpt-6-astra/) to visualize the map in a friendlier shape and [I publish it on Github Pages](https://gauden.github.io/silo-systems-map/) for your enjoyment and experimentation. 

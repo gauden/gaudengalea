@@ -7,7 +7,7 @@ summary: "I came to Silo all scepticwise and ended up proper deep-down hooked.
   same English? So I built a systems map.
   https://gauden.github.io/silo-systems-map/"
 image: /lab/thumbnail.png
-draft: true
+draft: false
 ---
 > Spoiler alert for the first three seasons
 

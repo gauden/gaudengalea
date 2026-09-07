@@ -1,10 +1,11 @@
 ---
 title: "Seasons of Silo: spirals of (contr)addiction"
 pub_date: 2026-09-06
-summary: "I am over-thinking this. Addicted to the Apple TV series Silo, despite
-  a myriad of contradictions. Consider this a review and a dissection. I hope
-  you will enjoy playing with the tool and burrowing down your own rabbitholes.
-  "
+summary: "I came to Silo all scepticwise and ended up proper deep-down hooked.
+  Then my rassoodock started itching: who makes the paper, mends the taps,
+  trains the medics, and why do all these shut-away silos still govoreet the
+  same English? So I built a systems map.
+  https://gauden.github.io/silo-systems-map/"
 image: /lab/thumbnail.png
 draft: true
 ---

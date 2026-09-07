@@ -42,7 +42,7 @@ Herein lies my greatest series of doubts about Silo society. Their language has 
 
 Different [social networks](https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011619-030524) evolve different languages. Language itself evolves based on frequency of use of certain terms, and [frequently used words tend to survive much longer than infrequent ones](https://www-nature-com.ejournals.um.edu.mt/articles/nature06176). We should have expected that in this period of evolution, three hundred years, at the very least we would have Silo 17 English and Silo 18 English dialects, or Mechanical, Mid, and Up Top dialects, markedly different, short of being mutually unintelligible. The silo environment itself would generate extraordinary pressure for new vocabulary around vertical location, rationing, cleaning, relics, birth control, social classes, and particular machines and parts.
 
-## Silos and Rabbitholes
+## Down the Rabbithole
 
 Hence my obsession. From musing about language, I found myself drawing maps of the political, economic, social, environmental, and cultural themes of Silo. Some inherent contradictions leapt out at me. 
 

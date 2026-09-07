@@ -51,3 +51,5 @@ The deepest contradiction lies in The Pact itself as a tool for survival. Surviv
 Once you notice that, you automatically start finding other inconsistencies, in the metabolism of materials, in culture and society, in knowledge and innovation. As [my map grew larger and denser](https://github.com/gauden/silo-systems-map/blob/main/inputs/MAP.dot), I wrote it up in a format I use often for similar projects: the Graphviz DOT language.
 
 Finally, I thought to ask [Astra](https://openai.com/index/gpt-6-astra/) to visualize the map in a friendlier shape and [I publish it on Github Pages](https://gauden.github.io/silo-systems-map/) for your enjoyment and experimentation. 
+
+Welcome to the rabbithole!

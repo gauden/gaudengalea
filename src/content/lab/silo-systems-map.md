@@ -4,8 +4,7 @@ pub_date: 2026-09-06
 summary: "I came to Silo all scepticwise and ended up proper deep-down hooked.
   Then my rassoodock started itching: who makes the paper, mends the taps,
   trains the medics, and why do all these shut-away silos still govoreet the
-  same English? So I built a systems map.
-  https://gauden.github.io/silo-systems-map/"
+  same English? So I built a systems map. "
 image: /lab/thumbnail.png
 draft: false
 ---

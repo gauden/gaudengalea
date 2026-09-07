@@ -22,5 +22,5 @@ I will not dwell on the many strong points in the series, just to name a few. Th
 
 ## Breaking the "Silo"
 
-Despite all this, there are so many ways the internal logic of the habitat breaks down, that I couldn't help but obsess over little details. And the details mounted till I couldn't resist first sketching then using the newly released Astra model by OpenAI to create a systems map that summarises all the key elements, connections, and contradictions in the Silo universe. Have a look at it on Github Pages: https://gauden.github.io/silo-systems-map/
+Despite all this, there are so many ways the internal logic of the habitat breaks down, that I couldn't help but obsess over little details. And the details mounted till I couldn't resist first sketching then using the newly released Astra model by OpenAI to create a systems map that summarises all the key elements, connections, and contradictions in the Silo universe. Have a look at it on Github Pages: [https://gauden.github.io/silo-systems-map/](https://gauden.github.io/silo-systems-map/). If you fork the repo, you can modify the map to your liking by editing the input file, written in the [Graphviz DOT language](https://graphviz.org/doc/info/lang.html).
 

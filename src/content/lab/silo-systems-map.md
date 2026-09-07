@@ -12,7 +12,7 @@ draft: false
 
 ## TL;DR
 
-I review Silo, the Apple TV series, with plenty of spoilers across all seasons. I am  a fan and an addict of the show despite its obvious shortcomings. Obsessed enough to create [a systems map](https://gauden.github.io/silo-systems-map/) of the key loops, pathways, and contradictions for your enjoyment.
+I review Silo, the Apple TV series, with plenty of spoilers across all seasons. I am  a fan and an addict of the show despite its obvious shortcomings. I became obsessed enough to create [a systems map](https://gauden.github.io/silo-systems-map/) of the show's loops and contradictions for your enjoyment.
 
 ## A Reluctant Convert
 

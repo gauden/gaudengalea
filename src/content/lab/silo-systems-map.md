@@ -13,7 +13,7 @@ draft: true
 
 ## TL;DR
 
-My review of Silo, the Apple TV series, reveals me to be addicted despite its obvious shortcomings. Obsessed enough to create [a systems map](https://gauden.github.io/silo-systems-map/) of the key elements, loops, pathways, and contradictions for your exploration and enjoyment.
+I review Silo, the Apple TV series, with plenty of spoilers across all seasons. I am  a fan and an addict of the show despite its obvious shortcomings. Obsessed enough to create [a systems map](https://gauden.github.io/silo-systems-map/) of the key loops, pathways, and contradictions for your enjoyment.
 
 ## A Reluctant Convert
 

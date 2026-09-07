@@ -32,11 +32,11 @@ His blog hints at the niggling doubts that stopped me suspending my disbelief. E
 
 Probably the most troubling doubt lay in language and culture. 
 
-I remember being stunned when I first read Anthony Burgess' "A Clockwork Orange" and met the narrator and his friends:
+I remember being stunned when I first read Anthony Burgess' "A Clockwork Orange" and [met the narrator and his friends](https://en.wikiquote.org/wiki/A_Clockwork_Orange):
 
 > There was me, that is Alex, and my three droogs, that is Pete, Georgie, and Dim, Dim being really dim, and we sat in the Korova Milkbar trying to make up our rassoodocks what to do with the evening.
 
-From terms like _kartoffel_ to _devotchka_, from _baboochka_ to _gazetta_, there were hints of Russian, even to someone who had never encountered the language. From the first encounter with the world of "A Clockwork Orange" we know that society has changed radically because language has changed. Burgess' achievement lies not in telling us about the mores, norms, or pacts of Alex's society, but in plunging us into it through the language.
+From terms like *kartoffel* to *devotchka*, from *baboochka* to *gazetta*, there were hints of Russian, even to someone who had never encountered the language. From the first encounter with the world of "A Clockwork Orange" we know that society has changed radically because language has changed. Burgess' achievement lies not in telling us about the mores, norms, or pacts of Alex's society, but in plunging us into it through the language.
 
 Herein lies my greatest series of doubts about Silo society. Their language has not evolved from modern day American English. The different silos are able to talk and understand each other. Even children, isolated in another silo, still speak and understand Juliette when she turns up. All these silos are separated from each other, and from the before times, by a period as long as today's language is separated from Shakespeare. Furthermore, the levels of the Silo, prohibited as they are from building an elevator and therefore not mingling at all on a daily basis, and living lives that have very different concerns, would have evolved language and code that would have become well-nigh incomprehensible across levels over the three centuries or more of this story.
 
